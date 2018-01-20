@@ -7,7 +7,8 @@ Ada project for EPITA
   + Pierre-Adrien Estanove
   + Pierre Chavanne
 
-* This project is bout porting a C++ emulator to a STM32F7 using ADA for the sound and graphical rendering.
+* We are porting a gamboy emulator made in C++ to a STM32F7.
+* We use ADL for all the rendering.
 
 * Done so far:
   + Creating a Dockerfile to GPS with the right environment
