@@ -1,6 +1,9 @@
 FROM ubuntu:16.04
 
+# Install 32bit libraries
+RUN dpkg --add-architecture i386
 RUN apt-get update
+RUN apt-get install -y libc6:i386 libstdc++6:i386
 
 RUN apt-get install -y git && \
     apt-get install -y apt-utils && \
@@ -29,8 +32,10 @@ RUN apt-get install -y git && \
     apt-get install -y libtemplates-parser11.8.2014 &&\
     apt-get install -y libxmlada4.4.0 &&\
     apt-get install -y python-gtk2 &&\
-    apt-get install -y libxinerama1 &&\
-    apt-get install -y lib32xinerama1 &&\
+    apt-get install -y libxinerama1:i386 &&\
+    apt-get install -y libxrender1:i386 &&\
+    apt-get install -y libsm:i386 &&\
+    apt-get install -y libice:i386 &&\
 # Useful tools
     apt-get install -y vim && \
     apt-get install -y diffstat texinfo gawk chrpath wget cpio && \
