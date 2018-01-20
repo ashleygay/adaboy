@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>/home/ferryk/emu_ada/prj.gpr</vfs_file>
+    <file_marker column=" 23" line=" 6" >
+      <vfs_project />
+      <vfs_file>/home/ferryk/emu_ada/prj.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/ferryk/emu_ada/prj.gpr</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 24" line=" 24" >
+      <vfs_project />
+      <vfs_file>/home/ferryk/emu_ada/adl/boards/stm32f429_discovery/stm32f429_discovery.gpr</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
