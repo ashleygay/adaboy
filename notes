@@ -1,0 +1,4 @@
+Articles for interfacing Ada with C++:
+https://gcc.gnu.org/onlinedocs/gcc-4.9.2/gnat_ugn/Generating-Ada-Bindings-for-C-and-C_002b_002b-headers.html#Generating-Ada-Bindings-for-C-and-C_002b_002b-headers
+
+https://gcc.gnu.org/onlinedocs/gnat_ugn/Interfacing-with-C_002b_002b-at-the-Class-Level.html
