@@ -7,6 +7,8 @@ RUN apt-get update --fix-missing
 RUN apt-get install -y libc6:i386 libstdc++6:i386
 
 RUN apt-get install -y apt-utils
+RUN apt-get install -y usbutils
+RUN apt-get install -y sudo
 
 RUN apt-get install -y git && \
     apt-get install -y locales &&\
@@ -42,11 +44,15 @@ RUN apt-get install -y git && \
     apt-get install -y libice6 &&\
     apt-get install -y libbz2-1.0 &&\
     apt-get install -y libbz2-1.0:i386 &&\
+# Libs for st-link
+    apt-get install -y libusb-1.0-0 &&\
+    apt-get install -y libusb-1.0-0-dev &&\
 # Useful tools
     apt-get install -y vim && \
+    apt-get install -y cmake && \
     apt-get install -y diffstat texinfo gawk chrpath wget cpio && \
     apt-get install -y python python-dev python-pip python-virtualenv && \
-    apt-get install -y strace
+    apt-get install -y strace gcc g++
 
 # Set the locale
 RUN locale-gen en_US.UTF-8
@@ -59,3 +65,18 @@ RUN echo "export PATH=/usr/gnat/bin:\$PATH" >> /home/gps/.bashrc
 USER gps
 WORKDIR /home/gps
 
+# INSTALLING STLINK
+RUN git clone https://github.com/texane/stlink.git stlink
+WORKDIR /home/gps/stlink
+# We compile stlink
+RUN make
+# We install it system wide
+WORKDIR /home/gps/stlink/build/Release
+RUN mkdir ~/.stlink_install
+RUN make install DESTDIR=~/.stlink_install
+# End of the install
+
+USER gps
+WORKDIR /home/gps
+RUN echo "export PATH=~/.stlink_install/usr/local/bin:\$PATH" >> /home/gps/.bashrc
+RUN echo "export LD_LIBRARY_PATH=~/.stlink_install/usr/local/bin:\$LD_LIBRARY_PATH" >> /home/gps/.bashrc
