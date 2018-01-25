@@ -11,4 +11,5 @@ docker run -e DISPLAY=$DISPLAY \
 -v /usr/gnat:/usr/gnat \
 -v /dev:/dev \
 -v ~/gistre/courses/ada/ada_epita/:/home/gps/ada/ \
+-v ~/.vimrc:/home/gps/.vimrc \
 -t -i ada:latest
