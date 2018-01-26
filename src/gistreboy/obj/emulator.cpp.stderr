@@ -1,0 +1,42 @@
+In file included from /home/gps/ada/src/gistreboy/src/emulator.cpp:10:0:
+/home/gps/ada/src/gistreboy/src/emulator.hpp:49:8: error: 'future' in namespace 'std' does not name a template type
+   std::future<void> _future;
+        ^~~~~~
+/home/gps/ada/src/gistreboy/src/emulator.cpp: In static member function 'static void Emulator::mainLoop(GameBoy&)':
+/home/gps/ada/src/gistreboy/src/emulator.cpp:21:11: error: no matching function for call to 'GameBoy::step()'
+   gb.step();
+           ^
+In file included from /home/gps/ada/src/gistreboy/src/emulator.hpp:14:0,
+                 from /home/gps/ada/src/gistreboy/src/emulator.cpp:10:
+/home/gps/ada/src/gistreboy/src/gameboy.hpp:22:8: note: candidate: void GameBoy::step(Screen&)
+   void step(Screen& s);
+        ^~~~
+/home/gps/ada/src/gistreboy/src/gameboy.hpp:22:8: note:   candidate expects 1 argument, 0 provided
+/home/gps/ada/src/gistreboy/src/emulator.cpp: In member function 'void Emulator::start()':
+/home/gps/ada/src/gistreboy/src/emulator.cpp:28:3: error: '_future' was not declared in this scope
+   _future = std::async(std::launch::async,
+   ^~~~~~~
+/home/gps/ada/src/gistreboy/src/emulator.cpp:28:13: error: 'async' is not a member of 'std'
+   _future = std::async(std::launch::async,
+             ^~~
+/home/gps/ada/src/gistreboy/src/emulator.cpp:28:29: error: 'std::launch' has not been declared
+   _future = std::async(std::launch::async,
+                             ^~~~~~
+/home/gps/ada/src/gistreboy/src/emulator.cpp: In member function 'void Emulator::stop()':
+/home/gps/ada/src/gistreboy/src/emulator.cpp:40:3: error: '_future' was not declared in this scope
+   _future.get();
+   ^~~~~~~
+/home/gps/ada/src/gistreboy/src/emulator.cpp: In member function 'void Emulator::key_press(Key)':
+/home/gps/ada/src/gistreboy/src/emulator.cpp:48:17: error: 'class GameBoy' has no member named 'getAtomic'
+  auto keys = gb.getAtomic();
+                 ^~~~~~~~~
+/home/gps/ada/src/gistreboy/src/emulator.cpp:50:5: error: 'class GameBoy' has no member named 'setAtomic'
+  gb.setAtomic(keys);
+     ^~~~~~~~~
+/home/gps/ada/src/gistreboy/src/emulator.cpp: In member function 'void Emulator::key_release(Key)':
+/home/gps/ada/src/gistreboy/src/emulator.cpp:55:17: error: 'class GameBoy' has no member named 'getAtomic'
+  auto keys = gb.getAtomic();
+                 ^~~~~~~~~
+/home/gps/ada/src/gistreboy/src/emulator.cpp:57:5: error: 'class GameBoy' has no member named 'setAtomic'
+  gb.setAtomic(keys);
+     ^~~~~~~~~
