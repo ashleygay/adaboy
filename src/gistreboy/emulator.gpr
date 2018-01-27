@@ -21,7 +21,7 @@ project Emulator is
             for Default_Switches ("C++") use
               ("-g", "-O0", "-Isrc");
       end case;
-   end Compiler; 
+   end Compiler;
 
 
 end Emulator;

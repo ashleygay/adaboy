@@ -11,7 +11,6 @@
 
 #include <memory.hpp>
 #include <video.hpp>
-#include <iostream>
 #include <screen.hpp>
 
 class LCD
@@ -114,7 +113,7 @@ class LCD
 	 Bit 1 - OBJ (Sprite) Display Enable    (0=Off, 1=On)
 	 Bit 0 - BG/Window Display/Priority     (0=Off, 1=On)
 */
-		std::bitset<8> _CONTROL;
+		std::bitset<8> CONTROL;
 /*
 	<==========================>
 		STAT REGISTER
@@ -134,7 +133,7 @@ class LCD
 
 	private:
 		Memory &_mem;
-		Video &_video;
+		Video &video;
 
 		int16_t get_tile_num(uint16_t tilemap_addr, uint8_t x, uint8_t y, bool is_signed);
 
@@ -155,12 +154,15 @@ class LCD
 		// Elapsed time since last mode change
 
 		int clock = 0;
+		// Array used to render the sprites
+		std::array<Sprite, 40> sprites;
+		std::array<Sprite, 40> on_line;
 
 		using StatesArray = std::array<State, 4>;
 		const StatesArray states ={{
-		{LCDState::Mode0, 207},
-		{LCDState::Mode1, 456},
-		{LCDState::Mode2, 80},
-		{LCDState::Mode3, 169}
+			{LCDState::Mode0, 207},
+			{LCDState::Mode1, 456},
+			{LCDState::Mode2, 80},
+			{LCDState::Mode3, 169}
 		}};
 };

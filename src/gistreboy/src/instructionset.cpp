@@ -582,22 +582,13 @@ InstructionSet::InstructionSet()
         #undef add_instr
 }
 
-int InstructionSet::isValidOpCode(OpCode opCode)
+int InstructionSet::isValidOpCode(OpCode opcode)
 {
-	auto elt = map.find(opCode);
-	return (elt != map.end());
+	(void)opcode;
+	return true;
 }
 
-int InstructionSet::addInstruction(Instruction* instr)
+Instruction * InstructionSet::getInstruction(OpCode opcode)
 {
-	auto elt = map.find(instr->opCode());
-	if (elt == map.end())
-		map[instr->opCode()] = instr;
-	return (elt == map.end());
-}
-
-
-Instruction * InstructionSet::getInstruction(OpCode opCode)
-{
-	return map.find(opCode)->second;
+	return map[opcode];
 }

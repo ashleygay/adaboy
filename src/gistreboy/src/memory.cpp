@@ -3,15 +3,11 @@
 #include <utility>
 #include <iostream>
 
-Memory::Memory(Processor& proc) : processor(proc),
-	       cartridge({std::make_pair(0x00, 0x7FFF),
-			  std::make_pair(0xA000, 0xBFFF)}),
-
-	       video(proc, {std::make_pair(0xFF40, 0xFF4B),
-			    std::make_pair(0x8000, 0xFE9F),
-			    std::make_pair(0xFE00, 0xFE9F)})
+Memory::Memory(Processor& proc) : processor(proc), cartridge(), video(proc)
 {
 	memory.fill(0);
+
+	// We initalize the line-in for the buttons
 	memory[0xFF00] = 0b00111111;
 	memory[0xFF07] = 0x00;
 }
@@ -35,12 +31,11 @@ void Memory::reset()
 
 uint8_t Memory::read(uint16_t address)
 {
-	if (cartridge.isInRange(address))
+	if (cartridge.in_range(address))
 		return cartridge.read(address);
-	else if (video.isInRange(address))
+	else if (video.in_range(address))
 		return video.read(address);
 	else if (address == 0xFF00) {
-		//std::cout << "READ_FF00: 0x" << std::hex << (int)(memory[0xFF00] & 0x0F) << std::endl;
 		return memory[0xFF00] & 0x0F;
 	}
 	else
@@ -49,16 +44,15 @@ uint8_t Memory::read(uint16_t address)
 
 void Memory::write(uint8_t byte, uint16_t address)
 {
-	if (cartridge.isInRange(address))
+	if (cartridge.in_range(address))
 		cartridge.write(byte, address);
-	else if (video.isInRange(address))
+	else if (video.in_range(address))
 		video.write(byte, address);
 
 	else if (address == 0xFF04) // We are writing to DIV register, we reset it
 		memory[0xFF04] = 0;
 
 	else if (address == 0xFF00) {
-		//std::cout << "WRITE_FF00: 0x" << std::hex << (int)byte << std::endl;
 		memory[0xFF00] = (memory[0xFF00] & 0x0F) | byte;
 	}
 
@@ -68,12 +62,11 @@ void Memory::write(uint8_t byte, uint16_t address)
 
 uint8_t Memory::simple_read(uint16_t address)
 {
-	if (cartridge.isInRange(address))
+	if (cartridge.in_range(address))
 		return cartridge.read(address);
-	else if (video.isInRange(address))
+	else if (video.in_range(address))
 		return video.simple_read(address);
 	else if (address == 0xFF00) {
-		//std::cout << "READ_FF00: 0x" << std::hex << (int)(memory[0xFF00] & 0x0F) << std::endl;
 		return memory[0xFF00] & 0x0F;
 	}
 	else
@@ -82,13 +75,12 @@ uint8_t Memory::simple_read(uint16_t address)
 
 void Memory::simple_write(uint8_t byte, uint16_t address)
 {
-	if (cartridge.isInRange(address))
+	if (cartridge.in_range(address))
 		cartridge.write(byte, address);
-	else if (video.isInRange(address))
+	else if (video.in_range(address))
 		video.simple_write(byte, address);
 
 	else if (address == 0xFF00) {
-		//std::cout << "WRITE_FF00: 0x" << std::hex << (int)byte << std::endl;
 		memory[0xFF00] = (memory[0xFF00] & 0x0F) | byte;
 	}
 	else

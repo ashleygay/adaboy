@@ -9,7 +9,7 @@
 
 LCD::LCD(Memory &mem) :
 	_mem(mem),
-	_video(mem.get_video())
+	video(mem.get_video())
 {
 }
 
@@ -24,10 +24,10 @@ void LCD::step(int elapsed_time, Screen& s)
 		switch (current_mode.state)
 		{
 		case LCDState::Mode0 : //HBLANK
-			_video.set_ly(_video.get_ly()+1);
+			video.set_ly(video.get_ly()+1);
 			check_lyc();
 
-			if (_video.get_ly() >= 144) {
+			if (video.get_ly() >= 144) {
 				current_mode = states[1]; //VBLANK
 				_mem.set_interrupt_flag(Memory::Interrupt::VBLANK);
 				check_interrupt_stat(4);
@@ -39,11 +39,11 @@ void LCD::step(int elapsed_time, Screen& s)
 			}
 			break;
 		case LCDState::Mode1 : //VBLANK
-			_video.set_ly(_video.get_ly()+1);
+			video.set_ly(video.get_ly()+1);
 			check_lyc();
 
-			if (_video.get_ly() > 153) {
-				_video.set_ly(0);
+			if (video.get_ly() > 153) {
+				video.set_ly(0);
 				current_mode = states[2]; //OAM
 				check_interrupt_stat(5);
 			}
@@ -62,9 +62,9 @@ void LCD::step(int elapsed_time, Screen& s)
 		}
 
 		//FIXME Permission bug
-		_video.set_OAM_accessible(/*current_mode.can_access_OAM()*/true);
-		_video.set_VRAM_accessible(/*current_mode.can_access_VRAM()*/true);
-		_video.set_lcd_status_mode((uint8_t)current_mode.state);
+		video.set_OAM_accessible(/*current_mode.can_access_OAM()*/true);
+		video.set_VRAM_accessible(/*current_mode.can_access_VRAM()*/true);
+		video.set_lcd_status_mode((uint8_t)current_mode.state);
 	}
 }
 
@@ -110,11 +110,11 @@ void LCD::draw(Screen& s)
 
 void LCD::draw_scanline()
 {
-	line = _video.get_ly();
-	//std::cout << "lcdc : " << _CONTROL << std::endl;
-	if (_CONTROL[7] && _CONTROL[0])
+	line = video.get_ly();
+	//std::cout << "lcdc : " << CONTROL << std::endl;
+	if (CONTROL[7] && CONTROL[0])
 		render_tiles(line);
-	if (_CONTROL[7] && _CONTROL[1])
+	if (CONTROL[7] && CONTROL[1])
 		render_sprites(line);
 }
 
@@ -126,16 +126,16 @@ void LCD::check_interrupt_stat(int num_bit)
 
 void LCD::check_lyc()
 {
-	_STATUS[2] = (_video.get_ly() == _video.get_lyc());
-	_video.set_lcd_status((uint8_t)_STATUS.to_ulong());
+	_STATUS[2] = (video.get_ly() == video.get_lyc());
+	video.set_lcd_status((uint8_t)_STATUS.to_ulong());
 	check_interrupt_stat(6);
 }
 
 
 void LCD::update_variables(int elapsed_time)
 {
-	_CONTROL = _video.get_lcd_control();
-	_STATUS = _video.get_lcd_status();
+	CONTROL = video.get_lcd_control();
+	_STATUS = video.get_lcd_status();
 
 	current_mode = states[((uint8_t)(_STATUS.to_ulong()) & 0x03)];
 
@@ -148,12 +148,12 @@ void LCD::render_tiles(int current_line)
 	uint16_t tile_map_address = 0;
 	bool is_signed = false;
 	bool window_display = false;
-	uint8_t scrollx = _video.get_scrollx();
-	uint8_t scrolly = _video.get_scrolly();
-	uint8_t wx = _video.get_wx() - 7;
-	uint8_t wy = _video.get_wy();
+	uint8_t scrollx = video.get_scrollx();
+	uint8_t scrolly = video.get_scrolly();
+	uint8_t wx = video.get_wx() - 7;
+	uint8_t wy = video.get_wy();
 
-	uint8_t lcd_control = _video.get_lcd_control();
+	uint8_t lcd_control = video.get_lcd_control();
 
 	if ((lcd_control >> 5) & 1)
 		window_display = (current_line >= wy);
@@ -203,22 +203,22 @@ void LCD::render_tiles(int current_line)
 		uint8_t color_id = get_color_id(tile_address, 7-(x%8), y%8);
 
 		pixels[i][current_line] = get_color(color_id,
-						    _video.get_bgp());
+						    video.get_bgp());
 	}
 
 }
 
 void LCD::render_sprites(int current_line)
 {
-	bool is_double = _CONTROL[2];
+	bool is_double = CONTROL[2];
 
 	uint8_t height = (is_double) ? 16 : 8;
 
-	std::vector<Sprite> sprites = _video.get_sprites();
-	std::vector<Sprite> on_line;
+	// We fill sprites with the sprites to display
+	size_t size = video.get_sprites(sprites);
 
-	for (size_t i = 0; i < sprites.size(); ++i)
-	{
+	int index = 0;
+	for (size_t i = 0; i < size; ++i) {
 		if (sprites[i].get_x() == 0
 		    || sprites[i].get_x() >= 168
 		    || sprites[i].get_y() == 0
@@ -227,13 +227,13 @@ void LCD::render_sprites(int current_line)
 		    || sprites[i].get_y_pos() + height <= current_line)
 			continue;
 
-		on_line.push_back(sprites[i]);
+		on_line[index] = (sprites[i]);
+		++index;
 	}
 
 	int count = 0;
 
-	for (auto& it : on_line)
-	{
+	for (auto& it : on_line) {
 		if (count >= 10)
 			break;
 		uint16_t tile_num = it.get_tile();
@@ -245,12 +245,11 @@ void LCD::render_sprites(int current_line)
 		if (it.is_y_flipped())
 			y = height - y - 1;
 
-		uint8_t palette = _video.get_obp0();
+		uint8_t palette = video.get_obp0();
 		if (it.is_obp1())
-			palette = _video.get_obp1();
+			palette = video.get_obp1();
 
-		for (int i = 0; i < 8; ++i)
-		{
+		for (int i = 0; i < 8; ++i) {
 			if (it.get_x_pos() + i < 0 || it.get_x_pos()+i >= 160)
 				continue;
 
@@ -272,9 +271,9 @@ int16_t LCD::get_tile_num(uint16_t tilemap_addr, uint8_t x,
 {
 	uint16_t addr = tilemap_addr + (y / 8) * 32 + (x / 8);
 	if (is_signed)
-		return (int8_t) _video.simple_read(addr);
+		return (int8_t) video.simple_read(addr);
 	else
-		return _video.simple_read(addr);
+		return video.simple_read(addr);
 }
 
 uint16_t LCD::get_tile_address(uint16_t tile_addr, int16_t tilenum,
@@ -288,8 +287,8 @@ uint16_t LCD::get_tile_address(uint16_t tile_addr, int16_t tilenum,
 
 uint8_t LCD::get_color_id(uint16_t tile_addr, uint8_t x, uint8_t y)
 {
-	uint8_t byte1 = _video.simple_read(tile_addr + y * 2);
-	uint8_t byte2 = _video.simple_read(tile_addr + y * 2 + 1);
+	uint8_t byte1 = video.simple_read(tile_addr + y * 2);
+	uint8_t byte2 = video.simple_read(tile_addr + y * 2 + 1);
 
 	uint8_t result = 0;
 

@@ -3,12 +3,16 @@
 #include <bitset>
 #include <array>
 
-Video::Video(Processor& proc,
-	std::vector<std::pair<uint16_t, uint16_t>> range) :
-	MemoryObject(range),
-	_proc(proc)
+Video::Video(Processor& proc): _proc(proc)
 {
 	video_memory.fill(0);
+}
+
+bool Video::in_range(uint16_t address)
+{
+	return (address >= 0xFF40 && address <= 0xFF4B)
+	    || (address >= 0x8000 && address <= 0x9FFF)
+	    || (address >= 0xFE00 && address <= 0xFE9F);
 }
 
 uint8_t Video::read(uint16_t address)
@@ -170,16 +174,16 @@ bool Video::_is_OAM(uint16_t address)
 	return (address <= 0xFE9F && address >= 0xFE00);
 }
 
-std::vector<Sprite> Video::get_sprites()
+size_t Video::get_sprites(std::array<Sprite, 40>& sprites)
 {
-	std::vector<Sprite> sprites;
-	for (uint16_t i = 0xFE00; i <= 0xFE9F; i+=4)
-	{
+	size_t size = 0;
+	for (uint16_t i = 0xFE00; i <= 0xFE9F; i+=4) {
 		Sprite sprite(video_memory[i], video_memory[i+1],
 			      video_memory[i+2], video_memory[i+3]);
-		sprites.push_back(sprite);
+		sprites[size] = sprite;
+		++size;
 	}
-	return sprites;
+	return size;
 }
 
 void Video::set_lcd_status_mode(uint8_t mode)

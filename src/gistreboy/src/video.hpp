@@ -1,19 +1,17 @@
 #pragma once
 
 #include <processor.hpp>
-#include <memoryobject.hpp>
 #include <sprite.hpp>
 
 #include <array>
-#include <vector>
-#include <string>
 
-class Video : public MemoryObject {
+class Video {
 
 public :
 
- 	Video(Processor& proc,
-		std::vector<std::pair<uint16_t, uint16_t>> range);
+ 	Video(Processor& proc);
+
+	bool in_range(uint16_t address);
 
 	uint8_t read(uint16_t address);
 	void write(uint8_t byte, uint16_t address);
@@ -36,7 +34,7 @@ public :
 	void set_VRAM_accessible(bool accessible);
 	void set_OAM_accessible(bool accessible);
 
-	std::vector<Sprite> get_sprites();
+	size_t get_sprites(std::array<Sprite, 40>& sprites);
 
 	uint8_t get_lcd_control();
 	uint8_t get_lcd_status();

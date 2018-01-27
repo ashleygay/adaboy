@@ -1,10 +1,15 @@
 #include <cartridge.hpp>
 
-Cartridge::Cartridge(std::vector<std::pair<uint16_t, uint16_t>> range) :
-			MemoryObject(range)
+bool Cartridge::in_range(uint16_t address)
 {
+	return (address >= 0x00 && address <= 0x7FFF)
+	    || (address >= 0xA000 && address <= 0xBFFF);
 }
 
+bool Cartridge::addr_in_range(uint16_t address, uint16_t min, uint16_t max)
+{
+		return address >= min && address <= max;
+}
 
 void Cartridge::change_game(uint8_t *cart)
 {

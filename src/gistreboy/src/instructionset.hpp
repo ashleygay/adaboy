@@ -1,12 +1,12 @@
 #pragma once
 
-#include <unordered_map>
+#include <array>
 
 class Instruction;
 
-#include <opcode.hpp>
+using OpCode = uint16_t;
 
-using OpCodeToInstruction = std::unordered_map<OpCode, Instruction *>;
+using OpCodeToInstruction = std::array<Instruction *, 0xCFFF>;
 
 class InstructionSet
 {
@@ -15,12 +15,10 @@ class InstructionSet
 
 		// -1 invalid instruction
 		// otherwise, the number of arguments it takes
-		int isValidOpCode(OpCode opCode);
-
-		int addInstruction(Instruction* instr);
+		int isValidOpCode(OpCode opcode);
 
 		// Function not safe on its own, use isOpCodeValid() first
-		Instruction * getInstruction(OpCode opCode);
+		Instruction * getInstruction(OpCode opcode);
 
 	private:
 		OpCodeToInstruction map;

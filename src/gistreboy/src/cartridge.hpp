@@ -1,22 +1,21 @@
 #pragma once
 
-#include <vector>
 #include <array>
-#include <string>
-#include <fstream>
 
-#include <memoryobject.hpp>
-
-class Cartridge : public MemoryObject {
+class Cartridge {
 
 public :
 
-	Cartridge(std::vector<std::pair<uint16_t, uint16_t>> range);
+	Cartridge();
   
 	// We use this method to change the currently running game.
 	// The gameboy should not be running while calling it.
 	// It initializes the rom and the ram to zero.
 	void change_game(uint8_t *cart);
+
+	bool in_range(uint16_t address);
+
+	bool addr_in_range(uint16_t address, uint16_t min, uint16_t max);
 
 	uint8_t read(uint16_t address);
 	void write(uint8_t byte, uint16_t address);  
@@ -35,9 +34,6 @@ public :
 	bool has_rumble();
 
 private :
-
-	//uint8_t get_current_rom_bank();
-	//uint8_t get_current_ram_bank();
 
 	/*the actual assembly of the cartridge separated in banks of 32kB */
 	std::array<uint8_t, 2097152> rom;

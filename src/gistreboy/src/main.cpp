@@ -1,10 +1,7 @@
 #include <gameboy.hpp>
-#include <stdio.h>
+#include <iostream>
 
 int main()
 {
-	Gameboy gb;
-	while (1) {
-		printf("Compiled with GNAT\n");
-	}
+  std::cout << "Hello world" << std::endl;
 }
