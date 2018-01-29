@@ -9,10 +9,6 @@
 
 #pragma once
 
-#include <iostream>
-#include <atomic>
-#include <exception>
-
 class InstructionSet;
 class Memory;
 
@@ -20,8 +16,9 @@ class Memory;
 #include <instructionset.hpp>
 #include <instructionargs.hpp>
 #include <registers.hpp>
-#include <opcode.hpp>
 #include <word_operations.hpp>
+
+#include "bitset.hpp"
 
 class Processor {
 
@@ -131,8 +128,6 @@ class Processor {
 		void _setupInterrupt(unsigned int inter);
 
 		int _execCurrentInstruction();
-
-		void _BUG(std::string str, int value) const;
 
 		void _fetchNextInstruction();
 	public:

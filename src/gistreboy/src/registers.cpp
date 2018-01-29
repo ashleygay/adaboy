@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "registers.hpp"
 
 void FlagRegister::setFlag(FlagRegister::Flag flag)

@@ -1,17 +1,15 @@
 #include <memory.hpp>
-#include <vector>
-#include <utility>
-#include <iostream>
 
 Memory::Memory(Processor& proc) : processor(proc), cartridge(), video(proc)
 {
-	memory.fill(0);
+	for (unsigned int i = 0; i < 0x10000; ++i) {
+		memory[i] = 0;
+	}
 
 	// We initalize the line-in for the buttons
 	memory[0xFF00] = 0b00111111;
 	memory[0xFF07] = 0x00;
 }
-
 
 void Memory::change_game(uint8_t *cart)
 {

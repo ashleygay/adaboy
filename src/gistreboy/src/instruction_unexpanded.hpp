@@ -1,12 +1,10 @@
 #pragma once
-
-#include <iostream>
-#include <vector>
-
+/*
 #include <processor.hpp>
 #include <instructionargs.hpp>
 #include <registers.hpp>
 #include <word_operations.hpp>
+*/
 
 class Instruction {
 	public:
@@ -26,7 +24,7 @@ class Instruction {
 			virtual const char *toStr() { return #name; }\
 			virtual uint16_t opCode() { return opc; } \
 			virtual int nbCycles() { return nb_cycles; } \
-			virtual bool hasArg() {return nb_args;}\
+			virtual bool hasArg() {return (nb_args == 1);}\
 			virtual void setArg(InstructionArg &arg) {_arg = arg;}\
 			virtual int argSize()\
 				{return size_arg0;}\

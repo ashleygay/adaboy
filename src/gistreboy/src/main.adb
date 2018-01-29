@@ -1,7 +1,7 @@
 with Text_IO;
 
    -- We import the gameboy
-with gameboy_hpp;
+-- with gameboy_hpp;
 
 procedure Main
 is

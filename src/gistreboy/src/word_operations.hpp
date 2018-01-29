@@ -7,7 +7,12 @@
 
 #pragma once
 
-#include <stdint.h>
+using uint16_t = unsigned short int;
+using int16_t = signed short int;
+using uint8_t = unsigned char;
+using int8_t = signed char;
+using size_t = unsigned long long;
+using uint = unsigned int;
 
 uint16_t make_word(uint8_t low, uint8_t high);
 uint8_t get_high(uint16_t word);

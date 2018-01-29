@@ -120,14 +120,14 @@ void LCD::draw_scanline()
 
 void LCD::check_interrupt_stat(int num_bit)
 {
-	if (_STATUS[num_bit])
+	if (STATUS[num_bit])
 		_mem.set_interrupt_flag(Memory::Interrupt::STAT);
 }
 
 void LCD::check_lyc()
 {
-	_STATUS[2] = (video.get_ly() == video.get_lyc());
-	video.set_lcd_status((uint8_t)_STATUS.to_ulong());
+	STATUS[2] = (video.get_ly() == video.get_lyc());
+	video.set_lcd_status((uint8_t)STATUS.to_ulong());
 	check_interrupt_stat(6);
 }
 
@@ -135,9 +135,9 @@ void LCD::check_lyc()
 void LCD::update_variables(int elapsed_time)
 {
 	CONTROL = video.get_lcd_control();
-	_STATUS = video.get_lcd_status();
+	STATUS = video.get_lcd_status();
 
-	current_mode = states[((uint8_t)(_STATUS.to_ulong()) & 0x03)];
+	current_mode = states[((uint8_t)(STATUS.to_ulong()) & 0x03)];
 
 	clock += elapsed_time;
 }
@@ -157,26 +157,22 @@ void LCD::render_tiles(int current_line)
 
 	if ((lcd_control >> 5) & 1)
 		window_display = (current_line >= wy);
-	if ((lcd_control >> 4) & 1)
-	{
+	if ((lcd_control >> 4) & 1) {
 		tiles_address = 0x8000;
 		is_signed = false;
 	}
-	else
-	{
+	else {
 		tiles_address = 0x8800;
 		is_signed = true;
 	}
 
-	if (!window_display)
-	{
+	if (!window_display) {
 		if ((lcd_control >> 3) & 1)
 			tile_map_address = 0x9c00;
 		else
 			tile_map_address = 0x9800;
 	}
-	else
-	{
+	else {
 		if ((lcd_control >> 6) & 1)
 			tile_map_address = 0x9c00;
 		else
@@ -188,8 +184,7 @@ void LCD::render_tiles(int current_line)
 	if (window_display)
 		y = current_line - wy;
 
-	for (int i = 0; i < 160; i++)
-	{
+	for (int i = 0; i < 160; i++) {
 		uint8_t x = i + scrollx;
 		if (window_display)
 			x = i - wx;
@@ -202,8 +197,7 @@ void LCD::render_tiles(int current_line)
 
 		uint8_t color_id = get_color_id(tile_address, 7-(x%8), y%8);
 
-		pixels[i][current_line] = get_color(color_id,
-						    video.get_bgp());
+		pixels[i][current_line] = get_color(color_id, video.get_bgp());
 	}
 
 }
@@ -233,14 +227,16 @@ void LCD::render_sprites(int current_line)
 
 	int count = 0;
 
-	for (auto& it : on_line) {
+	// We iterate over each sprite that is on the current scan_line
+	// TODO: actually implement iterators on our arrays
+	for (unsigned int i = 0; i < index; ++i) {
+		auto& it = on_line[i];
 		if (count >= 10)
 			break;
 		uint16_t tile_num = it.get_tile();
 		if (is_double)
 			tile_num &= 0xfe;
-		uint16_t tile_addr = get_tile_address(0x8000, tile_num,
-						      false);
+		uint16_t tile_addr = get_tile_address(0x8000, tile_num, false);
 		uint16_t y = current_line - it.get_y_pos();
 		if (it.is_y_flipped())
 			y = height - y - 1;

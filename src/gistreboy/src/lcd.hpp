@@ -7,7 +7,9 @@
 
 #pragma once
 
-#include <array>
+#include "array.hpp"
+#include "bitset.hpp"
+#include "word_operations.hpp"
 
 #include <memory.hpp>
 #include <video.hpp>
@@ -73,8 +75,6 @@ class LCD
 		 *	to represent the different registers of the LCD.
 		 */
 
-		std::array<std::array<int,144>, 160> pixels;
-
 		void update_variables(int elapsed_time);
 
 		void step(int elapsed_time, Screen& s);
@@ -99,6 +99,9 @@ class LCD
 		void draw(Screen& s);
 
 		void draw_scanline();
+
+	private:
+		std::array<std::array<int,144>, 160> pixels;
 
 /*
 	<==========================>
@@ -129,15 +132,16 @@ class LCD
            2: During Searching OAM
            3: During Transferring Data to LCD Driver
 */
-		std::bitset<8> _STATUS;
+		std::bitset<8> STATUS;
 
-	private:
 		Memory &_mem;
 		Video &video;
 
-		int16_t get_tile_num(uint16_t tilemap_addr, uint8_t x, uint8_t y, bool is_signed);
+		int16_t get_tile_num(uint16_t tilemap_addr, uint8_t x,
+					uint8_t y, bool is_signed);
 
-		uint16_t get_tile_address(uint16_t tile_addr, int16_t tilenum, bool is_signed);
+		uint16_t get_tile_address(uint16_t tile_addr, int16_t tilenum,
+					bool is_signed);
 
 		uint8_t get_color_id(uint16_t tile_addr, uint8_t x, uint8_t y);
 
@@ -158,11 +162,10 @@ class LCD
 		std::array<Sprite, 40> sprites;
 		std::array<Sprite, 40> on_line;
 
-		using StatesArray = std::array<State, 4>;
-		const StatesArray states ={{
+		const State states[4] ={
 			{LCDState::Mode0, 207},
 			{LCDState::Mode1, 456},
 			{LCDState::Mode2, 80},
 			{LCDState::Mode3, 169}
-		}};
+		};
 };

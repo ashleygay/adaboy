@@ -1,11 +1,13 @@
 #include <video.hpp>
 #include <sprite.hpp>
-#include <bitset>
-#include <array>
+#include "bitset.hpp"
+#include "array.hpp"
 
 Video::Video(Processor& proc): _proc(proc)
 {
-	video_memory.fill(0);
+	for (unsigned int i = 0; i < sizeof(video_memory); ++i) {
+		video_memory[i] = 0;
+	}
 }
 
 bool Video::in_range(uint16_t address)

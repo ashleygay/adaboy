@@ -1,5 +1,7 @@
 #pragma once
 
+#include <word_operations.hpp>
+
 class Sprite {
 
 public :

@@ -1,7 +1,5 @@
 #pragma once
 
-#include <bitset>
-
 struct Register {
 	unsigned char value;
 };

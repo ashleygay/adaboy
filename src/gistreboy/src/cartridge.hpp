@@ -1,6 +1,6 @@
 #pragma once
 
-#include <array>
+#include <word_operations.hpp>
 
 class Cartridge {
 
@@ -33,17 +33,19 @@ public :
 	bool has_timer();
 	bool has_rumble();
 
+	void fill_zeroes(uint8_t *memory, size_t size);
+
 private :
 
 	/*the actual assembly of the cartridge separated in banks of 32kB */
-	std::array<uint8_t, 2097152> rom;
+	uint8_t rom[2097152];
 
   /* a program inside the gameboy that boots the machine
      and jumps to the location of the animated sequence
      inside the rom */
 
 	//This array has been generated with the xd utility tool.
-std::array<uint8_t,  256> boot_rom= { {
+    uint8_t boot_rom[256]= {
     0x31,0xFE,0xFF,0xAF,0x21,0xFF,0x9F,0x32,0xCB,0x7C,0x20,0xFB,0x21,0x26,
     0xFF,0x0E,0x11,0x3E,0x80,0x32,0xE2,0x0C,0x3E,0xF3,0xE2,0x32,0x3E,0x77,
     0x77,0x3E,0xFC,0xE0,0x47,0x11,0x04,0x01,0x21,0x10,0x80,0x1A,0xCD,0x95,
@@ -63,7 +65,7 @@ std::array<uint8_t,  256> boot_rom= { {
     0x21,0x04,0x01,0x11,0xA8,0x00,0x1A,0x13,0xBE,0x20,0xFE,0x23,0x7D,0xFE,
     0x34,0x20,0xF5,0x06,0x19,0x78,0x86,0x23,0x05,0x20,0xFB,0x86,0x20,0xFE,
     0x3E,0x01,0xE0,0x50
-} };
+  };
 
   /* the type of the cartidge see manual */
   uint8_t type = 0;
@@ -74,7 +76,7 @@ std::array<uint8_t,  256> boot_rom= { {
   int mbc = 0;
 
   /* the internal ram of the cartridge */
-  std::array<uint8_t, 32768> ram;
+	uint8_t ram[32768];
 
   size_t rom_size = 0;
   size_t ram_size = 0;
@@ -91,8 +93,6 @@ std::array<uint8_t,  256> boot_rom= { {
   bool has_rumble_ = false;
 
   bool has_boot_ = false; /* true when boot rom is finished */
-
-  std::string name;
 
   bool initialized = false;
 

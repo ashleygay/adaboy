@@ -8,7 +8,6 @@
 #include <processor.hpp>
 #include <instruction.hpp>
 #include <memory.hpp>
-#include <iostream>
 
 /* PUBLIC METHODS */
 
@@ -30,9 +29,6 @@ void Processor::enableIMEDelay()
 
 int Processor::step()
 {
-	if (!_mem)
-	throw std::runtime_error("Memory or handler pointer not set.");
-
 	int interrupts = _handleInterrupts();
 
 #if 0
@@ -152,8 +148,6 @@ void Processor::_fetchNextInstruction()
 		if (!iset.isValidOpCode(opcode)) {
 			// We dont really care if the program crashes,
 			// the rom is bad or there is a bug.
-			_BUG("Unknown opcode : ", opcode);
-			throw std::runtime_error("Unknown opcode, check the logs");
 		}
 		else //OpCode is on 16bits, we increment PC for args
 			++PC.value;
@@ -202,20 +196,4 @@ uint8_t Processor::_simple_read(uint16_t address)
 void Processor::_simple_write(uint8_t value, uint16_t address)
 {
 	_mem->simple_write(value, address);
-}
-
-void Processor::_BUG(std::string str, int value) const
-{
-	//We dump everything.
-	std::cout << str << "0x" << std::hex << value << std::dec << std::endl;
-	std::cout << "REGISTERS" << std::endl;
-	std::cout << "Register A : 0x"  << std::hex << (int)A.value << std::dec << std::endl;
-	std::cout << "Register B : 0x"  << std::hex << (int)B.value << std::dec << std::endl;
-	std::cout << "Register C : 0x"  << std::hex << (int)C.value << std::dec << std::endl;
-	std::cout << "Register D : 0x"  << std::hex << (int)D.value << std::dec << std::endl;
-	std::cout << "Register E : 0x"  << std::hex << (int)E.value << std::dec << std::endl;
-	std::cout << "Register H : 0x"  << std::hex << (int)H.value << std::dec << std::endl;
-	std::cout << "Register L : 0x"  << std::hex << (int)L.value << std::dec << std::endl;
-	std::cout << "Program Counter : 0x"  << std::hex << PC.value << std::dec << std::endl;
-	std::cout << "Stack Pointer : 0x"  << std::hex << SP.value << std::dec << std::endl;
 }

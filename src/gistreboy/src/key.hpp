@@ -6,8 +6,4 @@
  */
 #pragma once
 
-#include <iostream>
-
 enum Key {RIGHT, LEFT, UP, DOWN, A, B, START, SELECT};
-
-void display_key(Key k);

@@ -2,8 +2,7 @@
 
 #include <processor.hpp>
 #include <sprite.hpp>
-
-#include <array>
+#include "array.hpp"
 
 class Video {
 
@@ -58,7 +57,7 @@ private:
 private :
 
 	Processor &_proc;
-	std::array<uint8_t, 0x10000> video_memory;
+	uint8_t video_memory[0x10000];
 	bool _OAM_accessible = false;
 	bool _VRAM_accessible = true;
 };

@@ -11,15 +11,19 @@ bool Cartridge::addr_in_range(uint16_t address, uint16_t min, uint16_t max)
 		return address >= min && address <= max;
 }
 
+void Cartridge::fill_zeroes(uint8_t *memory, size_t size)
+{
+	for (unsigned int i = 0; i < size; ++i) {
+		memory[i] = 0;
+	}
+}
+
 void Cartridge::change_game(uint8_t *cart)
 {
 	initialized = true;
 
-	rom.fill(0);
-  	ram.fill(0);
-
-	for (uint16_t i = 0x134; i < 0x144; i++)
-		name.push_back((char)cart[i]);
+	fill_zeroes(rom, sizeof(rom));
+	fill_zeroes(ram, sizeof(ram));
 
 	type = cart[0x147];
 

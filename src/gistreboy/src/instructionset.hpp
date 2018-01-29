@@ -1,12 +1,9 @@
 #pragma once
 
-#include <array>
-
 class Instruction;
 
+#include <word_operations.hpp>
 using OpCode = uint16_t;
-
-using OpCodeToInstruction = std::array<Instruction *, 0xCFFF>;
 
 class InstructionSet
 {
@@ -21,5 +18,5 @@ class InstructionSet
 		Instruction * getInstruction(OpCode opcode);
 
 	private:
-		OpCodeToInstruction map;
+		Instruction* map[0xCFFF];
 };

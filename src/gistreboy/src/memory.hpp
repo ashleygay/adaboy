@@ -1,6 +1,6 @@
 #pragma once
 
-#include <array>
+#include "array.hpp"
 
 #include <processor.hpp>
 #include <cartridge.hpp>
