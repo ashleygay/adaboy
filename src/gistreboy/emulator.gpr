@@ -17,6 +17,8 @@ project Emulator is
          when "Production" =>
             for Default_Switches ("C++") use
               ("-g", "-O3", "-Isrc", "-nostdlib");
+	    for Default_Switches ("Ada") use
+              ("-g", "-O3", "-gnatp", "-gnatn");
          when "Debug" =>
             for Default_Switches ("C++") use
               ("-g", "-O0", "-Isrc", "-nostdlib");
