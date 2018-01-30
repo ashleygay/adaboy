@@ -7,3 +7,4 @@
 # Objects directories
 obj/*
 src/gistreboy/obj/*
+docker.sh
