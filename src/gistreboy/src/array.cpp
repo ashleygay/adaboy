@@ -13,11 +13,11 @@ namespace std {
 		return underlying_array[index];
 	}
 
-	template <typename T, unsigned int internal_size>
+	/*template <typename T, unsigned int internal_size>
 	const T& array<T, internal_size>::operator[](unsigned int index) const
 	{
 		return underlying_array[index];
-	}
+	}*/
 
 	template <typename T, unsigned int internal_size>
 	unsigned int array<T, internal_size>::size() const

@@ -22,11 +22,11 @@ namespace std {
 		return internal_array[index];
 	}
 
-	template <unsigned int internal_size>
+/*	template <unsigned int internal_size>
 	const bool& bitset<internal_size>::operator[](unsigned int index) const
 	{
 		return internal_array[index];
-	}
+	}*/
 
 	template <unsigned int internal_size>
 	unsigned int bitset<internal_size>::size()

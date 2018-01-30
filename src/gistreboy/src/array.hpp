@@ -9,7 +9,7 @@ namespace std {
 	{
 		public:
 			T& operator[](size_type index);
-			const T& operator[](size_type index) const;
+			//const T& operator[](size_type index) const;
 			size_type size() const;
 		private:
 			T underlying_array[internal_size];

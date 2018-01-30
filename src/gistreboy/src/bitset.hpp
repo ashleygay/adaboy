@@ -9,7 +9,7 @@ namespace std {
 		public:
 			bitset();
 			bitset(size_type value);
-			const bool& operator[](size_type index) const;
+			//const bool& operator[](size_type index) const;
 			bool& operator[](size_type index);
 			size_type size();
 			bool any();
