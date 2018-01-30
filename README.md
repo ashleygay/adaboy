@@ -1,4 +1,4 @@
-# ada_epita
+# Ada_Boy
 Ada project for EPITA
 
 * Group members:
@@ -24,4 +24,6 @@ Ada project for EPITA
    + Skipped functions but not skipped variables ?
    + Enum declared in classes are not supported
    + Classes that are inherited are considered abstract objects
+   + Cannot have overloaded functions based on constness
+      * IE: 2 [] operators that return const reference or plain reference
 
