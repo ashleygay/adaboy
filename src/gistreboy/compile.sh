@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# We generate the Ada bindings
+{
+	cd src
+	g++ -fdump-ada-spec -C -I. gameboy.hpp
+	cd ..
+}
+
+# We compile the project
+gprbuild emulator.gpr
+
+# We strip the executable to get only the binary
+# Not for now, will be used when compiling is going well
+# ./strip.sh main
