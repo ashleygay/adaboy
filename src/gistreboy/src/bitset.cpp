@@ -64,8 +64,8 @@ namespace std {
 };
 
 template <unsigned int size>
-std::bitset<size> operator&(const std::bitset<size>& left,
-			    const std::bitset<size>& right)
+std::bitset<size> operator&(std::bitset<size>& left,
+			    std::bitset<size>& right)
 {
 	std::bitset<size> b;
 	for (unsigned int i = 0; i < size; ++i) {
