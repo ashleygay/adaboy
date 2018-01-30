@@ -15,7 +15,13 @@ Ada project for EPITA
   + We are modifying the emulator to make it compile nicely without the STL
 
 * TODO:
-  + include all the toolchains used in the git:
+  + include all the toolchains used such as :
 	+ Linaro toolchain for arm-eabi-g++
 	+ GNAT x86_64 toolchain
 	+ GNAT arm toolchaain
+
++ Quirks of the bindings generator encountered so far:
+   + Skipped functions but not skipped variables ?
+   + Enum declared in classes are not supported
+   + Classes that are inherited are considered abstract objects
+
