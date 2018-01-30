@@ -13,3 +13,8 @@ CppCon 2016: Rian Quinn “Making C++ and the STL Work in the Linux / Windows Ke
 For porting the emulator
 	- replacing all std::vectors with std::arrays
 	- reimplementing a simple version of std::array
+   -> that way we do not call malloc()
+
+For the C++ compiler, we installed arm-eabi-g++ from linaro
+and we only copied arrm-eabi-g++ from the toolchain.
+We installed the 32bit version
