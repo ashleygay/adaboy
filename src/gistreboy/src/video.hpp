@@ -33,7 +33,7 @@ public :
 	void set_VRAM_accessible(bool accessible);
 	void set_OAM_accessible(bool accessible);
 
-	//size_t get_sprites(std::array<Sprite, 40>& sprites);
+	size_t get_sprites(std::array<Sprite, 40>& sprites);
 
 	uint8_t get_lcd_control();
 	uint8_t get_lcd_status();

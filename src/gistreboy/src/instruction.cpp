@@ -316,17 +316,17 @@ void LD_HLSPn::exec(Processor *p)
 	p->L.value = get_low(HL);
 	p->H.value = get_high(HL);
 
-	p->flag.unsetFlag(FlagRegister::HALFCARRY);
-	p->flag.unsetFlag(FlagRegister::CARRY);
+	p->flag.unsetFlag(HALFCARRY);
+	p->flag.unsetFlag(CARRY);
 	// Carry if (b1 + b1) != (b1 | b2)
 	//if ((HL & 0xF) != ((p->SP.value | n) & 0xF))
 	if (((p->SP.value ^ n ^ (result & 0xFFFF)) & 0x10) == 0x10)
-		p->flag.setFlag(FlagRegister::HALFCARRY);
+		p->flag.setFlag(HALFCARRY);
 	//if (HL != (p->SP.value | n))
 	if (((p->SP.value ^ n ^ (result & 0xFFFF)) & 0x100) == 0x100)
-		p->flag.setFlag(FlagRegister::CARRY);
-	p->flag.unsetFlag(FlagRegister::ZERO);
-	p->flag.unsetFlag(FlagRegister::SUBTRACT);
+		p->flag.setFlag(CARRY);
+	p->flag.unsetFlag(ZERO);
+	p->flag.unsetFlag(SUBTRACT);
 }
 
 /////////////////////////////////////
@@ -396,16 +396,16 @@ void NOP::exec(Processor *p)
   {\
         uint val = p->reg1.value + p->reg2.value;\
 	uint8_t result = static_cast<uint8_t>(val);\
-	p->flag.unsetFlag(FlagRegister::ZERO);\
-	p->flag.unsetFlag(FlagRegister::HALFCARRY);\
-	p->flag.unsetFlag(FlagRegister::CARRY);\
+	p->flag.unsetFlag(ZERO);\
+	p->flag.unsetFlag(HALFCARRY);\
+	p->flag.unsetFlag(CARRY);\
 	if (result == 0)\
-	  p->flag.setFlag(FlagRegister::ZERO);\
-	p->flag.unsetFlag(FlagRegister::SUBTRACT);\
+	  p->flag.setFlag(ZERO);\
+	p->flag.unsetFlag(SUBTRACT);\
 	if (((p->reg1.value & 0xF) + (p->reg2.value & 0xF)) > 0xF)\
-	  p->flag.setFlag(FlagRegister::HALFCARRY);\
+	  p->flag.setFlag(HALFCARRY);\
 	if (val & 0x100)\
-	  p->flag.setFlag(FlagRegister::CARRY);	\
+	  p->flag.setFlag(CARRY);	\
 	p->reg1.value = result;\
 }
 
@@ -422,16 +422,16 @@ void ADD_AHL::exec(Processor *p)
     auto tmp = HLReadDereference(p);
     uint val = p->A.value + tmp;	
     uint8_t result = static_cast<uint8_t>(val);
-    p->flag.unsetFlag(FlagRegister::ZERO);
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);
-    p->flag.unsetFlag(FlagRegister::CARRY);
+    p->flag.unsetFlag(ZERO);
+    p->flag.unsetFlag(HALFCARRY);
+    p->flag.unsetFlag(CARRY);
     if (result == 0)
-      p->flag.setFlag(FlagRegister::ZERO);
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);
+      p->flag.setFlag(ZERO);
+    p->flag.unsetFlag(SUBTRACT);
     if (((p->A.value & 0xF) + (tmp & 0xF)) > 0xF)
-      p->flag.setFlag(FlagRegister::HALFCARRY);
+      p->flag.setFlag(HALFCARRY);
     if (val & 0x100)
-      p->flag.setFlag(FlagRegister::CARRY); 
+      p->flag.setFlag(CARRY); 
     p->A.value = result;
   }
 
@@ -440,16 +440,16 @@ void ADD_AX::exec(Processor *p)
   auto tmp = _arg.byte;
   uint val = p->A.value + tmp;
   uint8_t result = static_cast<uint8_t>(val);
-  p->flag.unsetFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::HALFCARRY);
-  p->flag.unsetFlag(FlagRegister::CARRY);
+  p->flag.unsetFlag(ZERO);
+  p->flag.unsetFlag(HALFCARRY);
+  p->flag.unsetFlag(CARRY);
   if (result == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::SUBTRACT);
+    p->flag.setFlag(ZERO);
+  p->flag.unsetFlag(SUBTRACT);
   if (((p->A.value & 0xF) + (tmp & 0xF)) > 0xF)
-    p->flag.setFlag(FlagRegister::HALFCARRY);
+    p->flag.setFlag(HALFCARRY);
   if (val & 0x100)
-    p->flag.setFlag(FlagRegister::CARRY);
+    p->flag.setFlag(CARRY);
   p->A.value = result;
 }
 
@@ -460,13 +460,13 @@ void ADD_AX::exec(Processor *p)
 	uint16_t hl = make_word(p->L.value, p->H.value);\
   	uint val = hl + value_reg;\
 	uint16_t result = static_cast<uint16_t>(val);\
-	p->flag.unsetFlag(FlagRegister::HALFCARRY);\
-	p->flag.unsetFlag(FlagRegister::CARRY);\
-	p->flag.unsetFlag(FlagRegister::SUBTRACT);\
+	p->flag.unsetFlag(HALFCARRY);\
+	p->flag.unsetFlag(CARRY);\
+	p->flag.unsetFlag(SUBTRACT);\
 	if (((hl & 0xFFF) + (value_reg & 0xFFF)) > 0xFFF)\
-	  p->flag.setFlag(FlagRegister::HALFCARRY);\
+	  p->flag.setFlag(HALFCARRY);\
 	if (val & 0x10000)\
-	  p->flag.setFlag(FlagRegister::CARRY);	\
+	  p->flag.setFlag(CARRY);	\
 	p->H.value = get_high(result);\
 	p->L.value = get_low(result);\
 }
@@ -481,13 +481,13 @@ void ADD_HLSP::exec(Processor *p)
 	uint16_t hl = make_word(p->L.value, p->H.value);
   	uint val = hl + value_reg;
 	uint16_t result = static_cast<uint16_t>(val);
-	p->flag.unsetFlag(FlagRegister::HALFCARRY);
-	p->flag.unsetFlag(FlagRegister::CARRY);
-	p->flag.unsetFlag(FlagRegister::SUBTRACT);
+	p->flag.unsetFlag(HALFCARRY);
+	p->flag.unsetFlag(CARRY);
+	p->flag.unsetFlag(SUBTRACT);
 	if (((hl & 0xFFF) + (value_reg & 0xFFF)) > 0xFFF)
-	  p->flag.setFlag(FlagRegister::HALFCARRY);
+	  p->flag.setFlag(HALFCARRY);
 	if ((val & 0x10000) != 0)
-	  p->flag.setFlag(FlagRegister::CARRY);
+	  p->flag.setFlag(CARRY);
 	p->H.value = get_high(result);
 	p->L.value = get_low(result);
 }
@@ -498,14 +498,14 @@ void ADD_SPX::exec(Processor *p)
 	uint16_t sp = p->SP.value;
 	int val = sp + byte;
 	uint16_t result = static_cast<uint16_t>(val);
-	p->flag.unsetFlag(FlagRegister::ZERO);
-	p->flag.unsetFlag(FlagRegister::HALFCARRY);
-	p->flag.unsetFlag(FlagRegister::CARRY);
-	p->flag.unsetFlag(FlagRegister::SUBTRACT);
+	p->flag.unsetFlag(ZERO);
+	p->flag.unsetFlag(HALFCARRY);
+	p->flag.unsetFlag(CARRY);
+	p->flag.unsetFlag(SUBTRACT);
 	if (((sp ^ byte ^ (val & 0xFFFF)) & 0x10) == 0x10)
-	  p->flag.setFlag(FlagRegister::HALFCARRY);
+	  p->flag.setFlag(HALFCARRY);
 	if (((sp ^ byte ^ (val & 0xFFFF)) & 0x100) == 0x100)
-	  p->flag.setFlag(FlagRegister::CARRY);
+	  p->flag.setFlag(CARRY);
 	p->SP.value = result;
 }
 
@@ -514,19 +514,19 @@ void ADD_SPX::exec(Processor *p)
 #define ADC_XY_def(reg1, reg2)			\
   void ADC_##reg1##reg2::exec(Processor *p)\
   {\
-    uint val = p->reg1.value + p->reg2.value + p->flag.getFlag(FlagRegister::CARRY);\
+    uint val = p->reg1.value + p->reg2.value + p->flag.getFlag(CARRY);\
     uint8_t result = static_cast<uint8_t>(val);\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
+    p->flag.unsetFlag(ZERO);\
+    p->flag.unsetFlag(HALFCARRY);\
     if (result == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);\
-    if (((p->reg1.value & 0xF) + (p->reg2.value & 0xF) + p->flag.getFlag(FlagRegister::CARRY)) > 0xF) \
-      p->flag.setFlag(FlagRegister::HALFCARRY);\
+      p->flag.setFlag(ZERO);\
+    p->flag.unsetFlag(SUBTRACT);\
+    if (((p->reg1.value & 0xF) + (p->reg2.value & 0xF) + p->flag.getFlag(CARRY)) > 0xF) \
+      p->flag.setFlag(HALFCARRY);\
     if (val > 0xFF)\
-      p->flag.setFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(CARRY);\
     else\
-      p->flag.unsetFlag(FlagRegister::CARRY);\
+      p->flag.unsetFlag(CARRY);\
     p->reg1.value = result;	   \
   }
 
@@ -541,38 +541,38 @@ ADC_XY_def(A, L)
 void ADC_AHL::exec(Processor *p)
 {
     auto tmp = HLReadDereference(p);
-    uint val = p->A.value + tmp + p->flag.getFlag(FlagRegister::CARRY);
+    uint val = p->A.value + tmp + p->flag.getFlag(CARRY);
     uint8_t result = static_cast<uint8_t>(val);
-    p->flag.unsetFlag(FlagRegister::ZERO);
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);
+    p->flag.unsetFlag(ZERO);
+    p->flag.unsetFlag(HALFCARRY);
     if (result == 0)
-      p->flag.setFlag(FlagRegister::ZERO);	
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);
-    if (((p->A.value & 0xF) + (tmp & 0xF) + p->flag.getFlag(FlagRegister::CARRY)) > 0xF) 
-      p->flag.setFlag(FlagRegister::HALFCARRY);
+      p->flag.setFlag(ZERO);	
+    p->flag.unsetFlag(SUBTRACT);
+    if (((p->A.value & 0xF) + (tmp & 0xF) + p->flag.getFlag(CARRY)) > 0xF) 
+      p->flag.setFlag(HALFCARRY);
     if (val > 0xFF)
-      p->flag.setFlag(FlagRegister::CARRY);
+      p->flag.setFlag(CARRY);
     else
-      p->flag.unsetFlag(FlagRegister::CARRY);
+      p->flag.unsetFlag(CARRY);
     p->A.value = result;       
 }
 
 void ADC_AX::exec(Processor *p)
 {
   auto tmp = _arg.byte; 
-  uint val = p->A.value + tmp + p->flag.getFlag(FlagRegister::CARRY);
+  uint val = p->A.value + tmp + p->flag.getFlag(CARRY);
   uint8_t result = static_cast<uint8_t>(val);
-  p->flag.unsetFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::HALFCARRY);
+  p->flag.unsetFlag(ZERO);
+  p->flag.unsetFlag(HALFCARRY);
   if (result == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::SUBTRACT);
-  if (((p->A.value & 0xF) + (tmp & 0xF) + p->flag.getFlag(FlagRegister::CARRY)) > 0xF)
-    p->flag.setFlag(FlagRegister::HALFCARRY);
+    p->flag.setFlag(ZERO);
+  p->flag.unsetFlag(SUBTRACT);
+  if (((p->A.value & 0xF) + (tmp & 0xF) + p->flag.getFlag(CARRY)) > 0xF)
+    p->flag.setFlag(HALFCARRY);
   if (val > 0xFF)
-    p->flag.setFlag(FlagRegister::CARRY);
+    p->flag.setFlag(CARRY);
   else
-    p->flag.unsetFlag(FlagRegister::CARRY);
+    p->flag.unsetFlag(CARRY);
   p->A.value = result;
 }  
 
@@ -583,16 +583,16 @@ void ADC_AX::exec(Processor *p)
   {\
     uint val = p->reg1.value - p->reg2.value;\
     uint8_t result = static_cast<uint8_t>(val);\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
-    p->flag.unsetFlag(FlagRegister::CARRY);\
+    p->flag.unsetFlag(ZERO);\
+    p->flag.unsetFlag(HALFCARRY);\
+    p->flag.unsetFlag(CARRY);\
     if (result == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
-    p->flag.setFlag(FlagRegister::SUBTRACT);\
+      p->flag.setFlag(ZERO);\
+    p->flag.setFlag(SUBTRACT);\
     if (((p->reg1.value & 0xF) - (p->reg2.value & 0xF)) < 0) \
-      p->flag.setFlag(FlagRegister::HALFCARRY);\
+      p->flag.setFlag(HALFCARRY);\
     if (p->reg1.value < p->reg2.value)		       \
-      p->flag.setFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(CARRY);\
     p->reg1.value = result;       \
   }
 
@@ -609,16 +609,16 @@ void SUB_AHL::exec(Processor *p)
     auto tmp = HLReadDereference(p);
     uint val = p->A.value - tmp;
     uint8_t result = static_cast<uint8_t>(val);
-    p->flag.unsetFlag(FlagRegister::ZERO);
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);
-    p->flag.unsetFlag(FlagRegister::CARRY);
+    p->flag.unsetFlag(ZERO);
+    p->flag.unsetFlag(HALFCARRY);
+    p->flag.unsetFlag(CARRY);
     if (result == 0)
-      p->flag.setFlag(FlagRegister::ZERO);
-    p->flag.setFlag(FlagRegister::SUBTRACT);
+      p->flag.setFlag(ZERO);
+    p->flag.setFlag(SUBTRACT);
     if (((p->A.value & 0xF) - (tmp & 0xF)) < 0)
-      p->flag.setFlag(FlagRegister::HALFCARRY);
+      p->flag.setFlag(HALFCARRY);
     if (p->A.value < tmp)                 
-      p->flag.setFlag(FlagRegister::CARRY);
+      p->flag.setFlag(CARRY);
     p->A.value = result;       
 }
 
@@ -628,16 +628,16 @@ void SUB_AX::exec(Processor *p)
   auto tmp = _arg.byte;    
   uint val = p->A.value - tmp;
   uint8_t result = static_cast<uint8_t>(val);
-  p->flag.unsetFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::HALFCARRY);
-  p->flag.unsetFlag(FlagRegister::CARRY);
+  p->flag.unsetFlag(ZERO);
+  p->flag.unsetFlag(HALFCARRY);
+  p->flag.unsetFlag(CARRY);
   if (result == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.setFlag(FlagRegister::SUBTRACT);
+    p->flag.setFlag(ZERO);
+  p->flag.setFlag(SUBTRACT);
   if (((p->A.value & 0xF) - (tmp & 0xF)) < 0)
-    p->flag.setFlag(FlagRegister::HALFCARRY);
+    p->flag.setFlag(HALFCARRY);
   if (p->A.value < tmp)
-    p->flag.setFlag(FlagRegister::CARRY);
+    p->flag.setFlag(CARRY);
   p->A.value = result;
 }
 
@@ -646,19 +646,19 @@ void SUB_AX::exec(Processor *p)
 #define SBC_XY_def(reg1, reg2)                  \
   void SBC_##reg1##reg2::exec(Processor *p)\
   {\
-    int val = p->reg1.value - p->reg2.value - p->flag.getFlag(FlagRegister::CARRY); \
+    int val = p->reg1.value - p->reg2.value - p->flag.getFlag(CARRY); \
     uint8_t result = static_cast<uint8_t>(val);\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
+    p->flag.unsetFlag(ZERO);\
+    p->flag.unsetFlag(HALFCARRY);\
     if (result == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
-    p->flag.setFlag(FlagRegister::SUBTRACT);\
-    if (((p->reg1.value & 0xF) - (p->reg2.value & 0xF) - p->flag.getFlag(FlagRegister::CARRY)) < 0) \
-      p->flag.setFlag(FlagRegister::HALFCARRY);\
+      p->flag.setFlag(ZERO);\
+    p->flag.setFlag(SUBTRACT);\
+    if (((p->reg1.value & 0xF) - (p->reg2.value & 0xF) - p->flag.getFlag(CARRY)) < 0) \
+      p->flag.setFlag(HALFCARRY);\
     if (val < 0)                 \
-      p->flag.setFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(CARRY);\
     else \
-      p->flag.unsetFlag(FlagRegister::CARRY);\
+      p->flag.unsetFlag(CARRY);\
     p->reg1.value = result;       \
   }
 
@@ -673,38 +673,38 @@ SBC_XY_def(A, L)
 void SBC_AHL::exec(Processor *p)
 {
   auto tmp = HLReadDereference(p);
-  int val = p->A.value - tmp - p->flag.getFlag(FlagRegister::CARRY);
+  int val = p->A.value - tmp - p->flag.getFlag(CARRY);
   uint8_t result = static_cast<uint8_t>(val);
-  p->flag.unsetFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::HALFCARRY);
+  p->flag.unsetFlag(ZERO);
+  p->flag.unsetFlag(HALFCARRY);
   if (result == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.setFlag(FlagRegister::SUBTRACT);
-  if (((p->A.value & 0xF) - (tmp & 0xF) - p->flag.getFlag(FlagRegister::CARRY)) < 0) 
-    p->flag.setFlag(FlagRegister::HALFCARRY);
+    p->flag.setFlag(ZERO);
+  p->flag.setFlag(SUBTRACT);
+  if (((p->A.value & 0xF) - (tmp & 0xF) - p->flag.getFlag(CARRY)) < 0) 
+    p->flag.setFlag(HALFCARRY);
   if (val < 0)                 
-    p->flag.setFlag(FlagRegister::CARRY);
+    p->flag.setFlag(CARRY);
   else
-    p->flag.unsetFlag(FlagRegister::CARRY);
+    p->flag.unsetFlag(CARRY);
   p->A.value = result;       
 }
 
 void SBC_AX::exec(Processor *p)
 {
   auto tmp = _arg.byte;
-  int val = p->A.value - tmp - p->flag.getFlag(FlagRegister::CARRY);
+  int val = p->A.value - tmp - p->flag.getFlag(CARRY);
   uint8_t result = static_cast<uint8_t>(val);
-  p->flag.unsetFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::HALFCARRY);
+  p->flag.unsetFlag(ZERO);
+  p->flag.unsetFlag(HALFCARRY);
   if (result == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.setFlag(FlagRegister::SUBTRACT);
-  if (((p->A.value & 0xF) - (tmp & 0xF) - p->flag.getFlag(FlagRegister::CARRY)) < 0)
-    p->flag.setFlag(FlagRegister::HALFCARRY);
+    p->flag.setFlag(ZERO);
+  p->flag.setFlag(SUBTRACT);
+  if (((p->A.value & 0xF) - (tmp & 0xF) - p->flag.getFlag(CARRY)) < 0)
+    p->flag.setFlag(HALFCARRY);
   if (val < 0)
-    p->flag.setFlag(FlagRegister::CARRY);
+    p->flag.setFlag(CARRY);
   else
-    p->flag.unsetFlag(FlagRegister::CARRY);
+    p->flag.unsetFlag(CARRY);
   p->A.value = result;
 }
 
@@ -714,12 +714,12 @@ void SBC_AX::exec(Processor *p)
   void AND_##reg1##reg2::exec(Processor *p)\
   {\
     p->reg1.value &= p->reg2.value; \
-    p->flag.unsetFlag(FlagRegister::ZERO); \
+    p->flag.unsetFlag(ZERO); \
     if (p->reg1.value == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);\
-    p->flag.setFlag(FlagRegister::HALFCARRY);\
-    p->flag.unsetFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(ZERO);\
+    p->flag.unsetFlag(SUBTRACT);\
+    p->flag.setFlag(HALFCARRY);\
+    p->flag.unsetFlag(CARRY);\
   }
 
 AND_XY_def(A, A)
@@ -734,24 +734,24 @@ void AND_AHL::exec(Processor *p)
 {
   auto tmp = HLReadDereference(p);
   p->A.value &= tmp;
-  p->flag.unsetFlag(FlagRegister::ZERO);
+  p->flag.unsetFlag(ZERO);
   if (p->A.value == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::SUBTRACT);
-  p->flag.setFlag(FlagRegister::HALFCARRY);
-  p->flag.unsetFlag(FlagRegister::CARRY);
+    p->flag.setFlag(ZERO);
+  p->flag.unsetFlag(SUBTRACT);
+  p->flag.setFlag(HALFCARRY);
+  p->flag.unsetFlag(CARRY);
 }
 
 void AND_AX::exec(Processor *p)
 {
   auto tmp = _arg.byte;
   p->A.value &= tmp;
-  p->flag.unsetFlag(FlagRegister::ZERO);
+  p->flag.unsetFlag(ZERO);
   if (p->A.value == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::SUBTRACT);
-  p->flag.setFlag(FlagRegister::HALFCARRY);
-  p->flag.unsetFlag(FlagRegister::CARRY);
+    p->flag.setFlag(ZERO);
+  p->flag.unsetFlag(SUBTRACT);
+  p->flag.setFlag(HALFCARRY);
+  p->flag.unsetFlag(CARRY);
 } 
 
 //OR instructions
@@ -760,12 +760,12 @@ void AND_AX::exec(Processor *p)
   void OR_##reg1##reg2::exec(Processor *p)\
   {\
     p->reg1.value |= p->reg2.value; \
-    p->flag.unsetFlag(FlagRegister::ZERO); \
+    p->flag.unsetFlag(ZERO); \
     if (p->reg1.value == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
-    p->flag.unsetFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(ZERO);\
+    p->flag.unsetFlag(SUBTRACT);\
+    p->flag.unsetFlag(HALFCARRY);\
+    p->flag.unsetFlag(CARRY);\
   }
 
 OR_XY_def(A, A)
@@ -781,24 +781,24 @@ void OR_AHL::exec(Processor *p)
 {
   auto tmp = HLReadDereference(p);
   p->A.value |= tmp;
-  p->flag.unsetFlag(FlagRegister::ZERO);
+  p->flag.unsetFlag(ZERO);
   if (p->A.value == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::SUBTRACT);
-  p->flag.unsetFlag(FlagRegister::HALFCARRY);
-  p->flag.unsetFlag(FlagRegister::CARRY);
+    p->flag.setFlag(ZERO);
+  p->flag.unsetFlag(SUBTRACT);
+  p->flag.unsetFlag(HALFCARRY);
+  p->flag.unsetFlag(CARRY);
 }
 
 void OR_AX::exec(Processor *p)
 {
   auto tmp = _arg.byte;
   p->A.value |= tmp;
-  p->flag.unsetFlag(FlagRegister::ZERO);
+  p->flag.unsetFlag(ZERO);
   if (p->A.value == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::SUBTRACT);
-  p->flag.unsetFlag(FlagRegister::HALFCARRY);
-  p->flag.unsetFlag(FlagRegister::CARRY);
+    p->flag.setFlag(ZERO);
+  p->flag.unsetFlag(SUBTRACT);
+  p->flag.unsetFlag(HALFCARRY);
+  p->flag.unsetFlag(CARRY);
 }  
     
 //XOR instructions
@@ -807,12 +807,12 @@ void OR_AX::exec(Processor *p)
   void XOR_##reg1##reg2::exec(Processor *p)\
   {\
     p->reg1.value ^= p->reg2.value; \
-    p->flag.unsetFlag(FlagRegister::ZERO); \
+    p->flag.unsetFlag(ZERO); \
     if (p->reg1.value == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
-    p->flag.unsetFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(ZERO);\
+    p->flag.unsetFlag(SUBTRACT);\
+    p->flag.unsetFlag(HALFCARRY);\
+    p->flag.unsetFlag(CARRY);\
   }
 
 XOR_XY_def(A, A)
@@ -828,24 +828,24 @@ void XOR_AHL::exec(Processor *p)
 {
   auto tmp = HLReadDereference(p);
   p->A.value ^= tmp;
-  p->flag.unsetFlag(FlagRegister::ZERO);
+  p->flag.unsetFlag(ZERO);
   if (p->A.value == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::SUBTRACT);
-  p->flag.unsetFlag(FlagRegister::HALFCARRY);
-  p->flag.unsetFlag(FlagRegister::CARRY);
+    p->flag.setFlag(ZERO);
+  p->flag.unsetFlag(SUBTRACT);
+  p->flag.unsetFlag(HALFCARRY);
+  p->flag.unsetFlag(CARRY);
 }
 
 void XOR_AX::exec(Processor *p)
 {
   auto tmp = _arg.byte; 
   p->A.value ^= tmp;
-  p->flag.unsetFlag(FlagRegister::ZERO);
+  p->flag.unsetFlag(ZERO);
   if (p->A.value == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::SUBTRACT);
-  p->flag.unsetFlag(FlagRegister::HALFCARRY);
-  p->flag.unsetFlag(FlagRegister::CARRY);
+    p->flag.setFlag(ZERO);
+  p->flag.unsetFlag(SUBTRACT);
+  p->flag.unsetFlag(HALFCARRY);
+  p->flag.unsetFlag(CARRY);
 } 
 
 //CP instructions
@@ -855,16 +855,16 @@ void XOR_AX::exec(Processor *p)
   {\
     uint val = p->reg1.value - p->reg2.value;\
     uint8_t result = static_cast<uint8_t>(val);\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
-    p->flag.unsetFlag(FlagRegister::CARRY);\
+    p->flag.unsetFlag(ZERO);\
+    p->flag.unsetFlag(HALFCARRY);\
+    p->flag.unsetFlag(CARRY);\
     if (result == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
-    p->flag.setFlag(FlagRegister::SUBTRACT);\
+      p->flag.setFlag(ZERO);\
+    p->flag.setFlag(SUBTRACT);\
     if (((p->reg1.value & 0xF) - (p->reg2.value & 0xF)) < 0) \
-      p->flag.setFlag(FlagRegister::HALFCARRY);\
+      p->flag.setFlag(HALFCARRY);\
     if (p->reg1.value < p->reg2.value)                 \
-      p->flag.setFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(CARRY);\
   }
 
 CP_XY_def(A, A)
@@ -881,32 +881,32 @@ void CP_AHL::exec(Processor *p)
     auto tmp = HLReadDereference(p);
     uint val = p->A.value - tmp;
     uint8_t result = static_cast<uint8_t>(val);
-    p->flag.unsetFlag(FlagRegister::ZERO);
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);
-    p->flag.unsetFlag(FlagRegister::CARRY);
+    p->flag.unsetFlag(ZERO);
+    p->flag.unsetFlag(HALFCARRY);
+    p->flag.unsetFlag(CARRY);
     if (result == 0)
-      p->flag.setFlag(FlagRegister::ZERO);
-    p->flag.setFlag(FlagRegister::SUBTRACT);
+      p->flag.setFlag(ZERO);
+    p->flag.setFlag(SUBTRACT);
     if (((p->A.value & 0xF) - (tmp & 0xF)) < 0)
-      p->flag.setFlag(FlagRegister::HALFCARRY);
+      p->flag.setFlag(HALFCARRY);
     if (p->A.value < tmp)                 
-      p->flag.setFlag(FlagRegister::CARRY);
+      p->flag.setFlag(CARRY);
 }
 
 void CP_AX::exec(Processor *p)
 {
   auto tmp = _arg.byte;
   uint8_t result = p->A.value - tmp;
-  p->flag.unsetFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::HALFCARRY);
-  p->flag.unsetFlag(FlagRegister::CARRY);
+  p->flag.unsetFlag(ZERO);
+  p->flag.unsetFlag(HALFCARRY);
+  p->flag.unsetFlag(CARRY);
   if (result == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.setFlag(FlagRegister::SUBTRACT);
+    p->flag.setFlag(ZERO);
+  p->flag.setFlag(SUBTRACT);
   if (((p->A.value & 0xF) - (tmp & 0xF)) < 0)
-    p->flag.setFlag(FlagRegister::HALFCARRY);
+    p->flag.setFlag(HALFCARRY);
   if (p->A.value < tmp)
-    p->flag.setFlag(FlagRegister::CARRY);
+    p->flag.setFlag(CARRY);
 }  
 
 // INC instructions
@@ -914,14 +914,14 @@ void CP_AX::exec(Processor *p)
 #define INC_Reg_def(reg)                  \
   void INC_##reg::exec(Processor *p)\
   {\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
+    p->flag.unsetFlag(ZERO);\
+    p->flag.unsetFlag(HALFCARRY);\
     p->reg.value += 1;\
     if (p->reg.value == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);\
+      p->flag.setFlag(ZERO);\
+    p->flag.unsetFlag(SUBTRACT);\
     if ((p->reg.value & 0xF) == 0x00) \
-      p->flag.setFlag(FlagRegister::HALFCARRY);\
+      p->flag.setFlag(HALFCARRY);\
   }
 
 INC_Reg_def(A)
@@ -960,13 +960,13 @@ void INC_HLdereference::exec(Processor *p)
 {
   auto tmp = HLReadDereference(p);
   tmp += 1;
-  p->flag.unsetFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::HALFCARRY);
+  p->flag.unsetFlag(ZERO);
+  p->flag.unsetFlag(HALFCARRY);
   if (tmp == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::SUBTRACT);
+    p->flag.setFlag(ZERO);
+  p->flag.unsetFlag(SUBTRACT);
   if ((tmp & 0xF) == 0x00)
-    p->flag.setFlag(FlagRegister::HALFCARRY);
+    p->flag.setFlag(HALFCARRY);
   HLWriteDereference(p, tmp);
 } 
 
@@ -975,15 +975,15 @@ void INC_HLdereference::exec(Processor *p)
 #define DEC_Reg_def(reg)                  \
   void DEC_##reg::exec(Processor *p)\
   {\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
+    p->flag.unsetFlag(ZERO);\
+    p->flag.unsetFlag(HALFCARRY);\
     p->reg.value -= 1;\
     if (p->reg.value == 0) {\
-      p->flag.setFlag(FlagRegister::ZERO);\
+      p->flag.setFlag(ZERO);\
 	}\
-    p->flag.setFlag(FlagRegister::SUBTRACT);\
+    p->flag.setFlag(SUBTRACT);\
     if ((p->reg.value & 0xF) == 0x0F) \
-      p->flag.setFlag(FlagRegister::HALFCARRY);\
+      p->flag.setFlag(HALFCARRY);\
   }
 
 DEC_Reg_def(A)
@@ -1020,13 +1020,13 @@ void DEC_HLdereference::exec(Processor *p)
 {
   auto tmp = HLReadDereference(p);
   tmp -= 1;
-  p->flag.unsetFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::HALFCARRY);
+  p->flag.unsetFlag(ZERO);
+  p->flag.unsetFlag(HALFCARRY);
   if (tmp == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.setFlag(FlagRegister::SUBTRACT);
+    p->flag.setFlag(ZERO);
+  p->flag.setFlag(SUBTRACT);
   if ((tmp & 0xF) == 0x0F)
-    p->flag.setFlag(FlagRegister::HALFCARRY);
+    p->flag.setFlag(HALFCARRY);
   HLWriteDereference(p, tmp);
 }
 
@@ -1035,16 +1035,16 @@ void DEC_HLdereference::exec(Processor *p)
 #define SWAP_Reg_def(reg)                  \
   void SWAP_##reg::exec(Processor *p)\
   {\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
+    p->flag.unsetFlag(ZERO);\
     auto high = p->reg.value >> 4;\
     auto low = p->reg.value << 4;\
     auto temp = high | low;\
     p->reg.value = temp;\
     if (p->reg.value == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
-    p->flag.unsetFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(ZERO);\
+    p->flag.unsetFlag(SUBTRACT);\
+    p->flag.unsetFlag(HALFCARRY);\
+    p->flag.unsetFlag(CARRY);\
     }
 
 SWAP_Reg_def(A)
@@ -1057,40 +1057,40 @@ SWAP_Reg_def(L)
 
 void SWAP_HL::exec(Processor *p)
 {
-  p->flag.unsetFlag(FlagRegister::ZERO);
+  p->flag.unsetFlag(ZERO);
   auto value = HLReadDereference(p);
   auto high = value >> 4;
   auto low = value << 4;
   auto temp = high | low;
   if (temp == 0)
-    p->flag.setFlag(FlagRegister::ZERO);
-  p->flag.unsetFlag(FlagRegister::SUBTRACT);
-  p->flag.unsetFlag(FlagRegister::HALFCARRY);
-  p->flag.unsetFlag(FlagRegister::CARRY);
+    p->flag.setFlag(ZERO);
+  p->flag.unsetFlag(SUBTRACT);
+  p->flag.unsetFlag(HALFCARRY);
+  p->flag.unsetFlag(CARRY);
   HLWriteDereference(p, temp);
 }
 
 #define DAA_def()                  \
   void DAA::exec(Processor *p)\
   {\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
+    p->flag.unsetFlag(ZERO);\
     auto a = p->A.value;\
-    uint16_t tmp = p->flag.getFlag(FlagRegister::CARRY) ? 0x60 : 0x00;	\
-    if (p->flag.getFlag(FlagRegister::HALFCARRY) ||\
-	(!p->flag.getFlag(FlagRegister::SUBTRACT) && ((a & 0x0F) > 9)))\
+    uint16_t tmp = p->flag.getFlag(CARRY) ? 0x60 : 0x00;	\
+    if (p->flag.getFlag(HALFCARRY) ||\
+	(!p->flag.getFlag(SUBTRACT) && ((a & 0x0F) > 9)))\
       tmp |= 0x06;\
-    if (p->flag.getFlag(FlagRegister::CARRY) ||\
-	(!p->flag.getFlag(FlagRegister::SUBTRACT) && (a > 0x99)))	\
+    if (p->flag.getFlag(CARRY) ||\
+	(!p->flag.getFlag(SUBTRACT) && (a > 0x99)))	\
       tmp |= 0x60;\
-    if (p->flag.getFlag(FlagRegister::SUBTRACT))\
+    if (p->flag.getFlag(SUBTRACT))\
       a = static_cast<uint8_t>(a - tmp);\
     else\
       a = static_cast<uint8_t>(a + tmp);\
     if ((tmp << 2) & 0x100)\
-      p->flag.setFlag(FlagRegister::CARRY);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
+      p->flag.setFlag(CARRY);\
+    p->flag.unsetFlag(HALFCARRY);\
     if (a == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
+      p->flag.setFlag(ZERO);\
     p->A.value = a;\
   }
 
@@ -1103,8 +1103,8 @@ DAA_def()
     auto temp = p->A.value;\
     auto result = ~temp;\
     p->A.value = result;\
-    p->flag.setFlag(FlagRegister::SUBTRACT);\
-    p->flag.setFlag(FlagRegister::HALFCARRY);\
+    p->flag.setFlag(SUBTRACT);\
+    p->flag.setFlag(HALFCARRY);\
   }
 
 CPL_def()
@@ -1112,12 +1112,12 @@ CPL_def()
 #define CCF_def()                  \
   void CCF::exec(Processor *p)\
   {\
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
-    if (p->flag.getFlag(FlagRegister::CARRY))\
-      p->flag.unsetFlag(FlagRegister::CARRY);\
+    p->flag.unsetFlag(SUBTRACT);\
+    p->flag.unsetFlag(HALFCARRY);\
+    if (p->flag.getFlag(CARRY))\
+      p->flag.unsetFlag(CARRY);\
     else\
-      p->flag.setFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(CARRY);\
   }
 
 CCF_def()
@@ -1125,9 +1125,9 @@ CCF_def()
 #define SCF_def()                  \
   void SCF::exec(Processor *p)\
   {\
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
-    p->flag.setFlag(FlagRegister::CARRY);\
+    p->flag.unsetFlag(SUBTRACT);\
+    p->flag.unsetFlag(HALFCARRY);\
+    p->flag.setFlag(CARRY);\
   }
 
 SCF_def()
@@ -1135,11 +1135,11 @@ SCF_def()
 #define BIT_BITX_def(bit, reg)		\
   void BIT_##bit##reg::exec(Processor *p)\
   {\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
+    p->flag.unsetFlag(ZERO);\
     if (!(p->reg.value & (1 << bit)))\
-      p->flag.setFlag(FlagRegister::Flag::ZERO);\
-    p->flag.unsetFlag(FlagRegister::Flag::SUBTRACT);\
-    p->flag.setFlag(FlagRegister::Flag::HALFCARRY);\
+      p->flag.setFlag(ZERO);\
+    p->flag.unsetFlag(SUBTRACT);\
+    p->flag.setFlag(HALFCARRY);\
   }
 
 BIT_BITX_def(0, A)
@@ -1202,12 +1202,12 @@ BIT_BITX_def(7, L)
 #define BIT_BITHL_def(bit)          \
   void BIT_##bit##HL::exec(Processor *p)\
   {\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
+    p->flag.unsetFlag(ZERO);\
     auto tmp = HLReadDereference(p);\
     if (!(tmp & (1 << bit)))\
-      p->flag.setFlag(FlagRegister::Flag::ZERO);\
-    p->flag.unsetFlag(FlagRegister::Flag::SUBTRACT);\
-    p->flag.setFlag(FlagRegister::Flag::HALFCARRY);\
+      p->flag.setFlag(ZERO);\
+    p->flag.unsetFlag(SUBTRACT);\
+    p->flag.setFlag(HALFCARRY);\
  }
 
 BIT_BITHL_def(0)
@@ -1387,40 +1387,40 @@ RES_BITHL_def(7)
 
 void RRCA::exec(Processor *p)
 {
-	p->flag.unsetFlag(FlagRegister::ZERO);
+	p->flag.unsetFlag(ZERO);
 	auto flag_carry = check_bit(p->A.value, 0);
 	auto truncated_bit = check_bit(p->A.value, 0);
 	auto temp = static_cast<uint8_t>((p->A.value >> 1)
 					 | (truncated_bit << 7));
 	p->A.value = temp;
 	//if (p->A.value == 0)
-	//	p->flag.setFlag(FlagRegister::ZERO);
-	p->flag.unsetFlag(FlagRegister::SUBTRACT);
-	p->flag.unsetFlag(FlagRegister::HALFCARRY);
+	//	p->flag.setFlag(ZERO);
+	p->flag.unsetFlag(SUBTRACT);
+	p->flag.unsetFlag(HALFCARRY);
 	if (flag_carry)
-		p->flag.setFlag(FlagRegister::CARRY);
+		p->flag.setFlag(CARRY);
 	else
-		p->flag.unsetFlag(FlagRegister::CARRY);
+		p->flag.unsetFlag(CARRY);
 }
 
 
 #define RRC_RegX_def(reg)                  \
   void RRC_##reg##X::exec(Processor *p)\
   {\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
+    p->flag.unsetFlag(ZERO);\
     auto flag_carry = check_bit(p->reg.value, 0);\
     auto truncated_bit = check_bit(p->reg.value, 0);\
     auto temp = static_cast<uint8_t>((p->reg.value >> 1)\
 					| (truncated_bit << 7));\
     p->reg.value = temp;\
     if (p->reg.value == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
+      p->flag.setFlag(ZERO);\
+    p->flag.unsetFlag(SUBTRACT);\
+    p->flag.unsetFlag(HALFCARRY);\
     if (flag_carry)\
-      p->flag.setFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(CARRY);\
     else\
-      p->flag.unsetFlag(FlagRegister::CARRY);\
+      p->flag.unsetFlag(CARRY);\
   }
 
 RRC_RegX_def(A)
@@ -1434,55 +1434,55 @@ RRC_RegX_def(L)
 
 void RRC_HL::exec(Processor *p)
 {
-    p->flag.unsetFlag(FlagRegister::ZERO);
+    p->flag.unsetFlag(ZERO);
     auto tmp = HLReadDereference(p);
     auto flag_carry = check_bit(tmp, 0);
     auto truncated_bit = check_bit(tmp, 0);
     auto temp = static_cast<uint8_t>((tmp >> 1) | (truncated_bit << 7));
     if (temp == 0)
-      p->flag.setFlag(FlagRegister::ZERO);
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);
+      p->flag.setFlag(ZERO);
+    p->flag.unsetFlag(SUBTRACT);
+    p->flag.unsetFlag(HALFCARRY);
     if (flag_carry)
-      p->flag.setFlag(FlagRegister::CARRY);
+      p->flag.setFlag(CARRY);
     else
-      p->flag.unsetFlag(FlagRegister::CARRY);
+      p->flag.unsetFlag(CARRY);
     HLWriteDereference(p, temp);
 }
 
 void RLCA::exec(Processor *p)
 {
-	p->flag.unsetFlag(FlagRegister::ZERO);
+	p->flag.unsetFlag(ZERO);
 	auto flag_carry = check_bit(p->A.value, 7);
 	auto truncated_bit = check_bit(p->A.value, 7);
 	auto temp = static_cast<uint8_t>((p->A.value << 1) | truncated_bit);
 	p->A.value = temp;
 	//if (p->A.value == 0)
-	//	p->flag.setFlag(FlagRegister::ZERO);
-	p->flag.unsetFlag(FlagRegister::SUBTRACT);
-	p->flag.unsetFlag(FlagRegister::HALFCARRY);
+	//	p->flag.setFlag(ZERO);
+	p->flag.unsetFlag(SUBTRACT);
+	p->flag.unsetFlag(HALFCARRY);
 	if (flag_carry)
-		p->flag.setFlag(FlagRegister::CARRY);
+		p->flag.setFlag(CARRY);
 	else
-		p->flag.unsetFlag(FlagRegister::CARRY);
+		p->flag.unsetFlag(CARRY);
 }
 
 #define RLC_RegX_def(reg)                  \
   void RLC_##reg##X::exec(Processor *p)\
   {\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
+    p->flag.unsetFlag(ZERO);\
     auto flag_carry = check_bit(p->reg.value, 7);\
     auto truncated_bit = check_bit(p->reg.value, 7);\
     auto temp = static_cast<uint8_t>((p->reg.value << 1) | truncated_bit); \
     p->reg.value = temp;\
     if (p->reg.value == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
+      p->flag.setFlag(ZERO);\
+    p->flag.unsetFlag(SUBTRACT);\
+    p->flag.unsetFlag(HALFCARRY);\
     if (flag_carry)\
-      p->flag.setFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(CARRY);\
     else\
-      p->flag.unsetFlag(FlagRegister::CARRY);\
+      p->flag.unsetFlag(CARRY);\
   }
 
 RLC_RegX_def(A)
@@ -1495,38 +1495,38 @@ RLC_RegX_def(L)
 
 void RLC_HL::exec(Processor *p)
 {
-    p->flag.unsetFlag(FlagRegister::ZERO);
+    p->flag.unsetFlag(ZERO);
     auto tmp = HLReadDereference(p);
     auto flag_carry = check_bit(tmp, 7);
     auto truncated_bit = check_bit(tmp, 7);
     auto temp = static_cast<uint8_t>((tmp << 1) | truncated_bit);
     if (temp == 0)
-      p->flag.setFlag(FlagRegister::ZERO);
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);
+      p->flag.setFlag(ZERO);
+    p->flag.unsetFlag(SUBTRACT);
+    p->flag.unsetFlag(HALFCARRY);
     if (flag_carry)
-      p->flag.setFlag(FlagRegister::CARRY);
+      p->flag.setFlag(CARRY);
     else
-      p->flag.unsetFlag(FlagRegister::CARRY);
+      p->flag.unsetFlag(CARRY);
     HLWriteDereference(p, temp);
 }
 
 
 void RLA::exec(Processor *p)
 {
-	p->flag.unsetFlag(FlagRegister::ZERO);
-	auto carry = p->flag.getFlag(FlagRegister::CARRY);
+	p->flag.unsetFlag(ZERO);
+	auto carry = p->flag.getFlag(CARRY);
 	auto flag_carry = check_bit(p->A.value, 7);
 	if (flag_carry)
-		p->flag.setFlag(FlagRegister::CARRY);
+		p->flag.setFlag(CARRY);
 	else
-		p->flag.unsetFlag(FlagRegister::CARRY);
+		p->flag.unsetFlag(CARRY);
 	auto temp = static_cast<uint8_t>(p->A.value << 1);
 	temp |= carry;
 	//if (temp == 0)
-	//	p->flag.setFlag(FlagRegister::ZERO);
-	p->flag.unsetFlag(FlagRegister::SUBTRACT);
-	p->flag.unsetFlag(FlagRegister::HALFCARRY);
+	//	p->flag.setFlag(ZERO);
+	p->flag.unsetFlag(SUBTRACT);
+	p->flag.unsetFlag(HALFCARRY);
 	p->A.value = temp;
 }
 
@@ -1534,19 +1534,19 @@ void RLA::exec(Processor *p)
 #define RL_RegX_def(reg)                  \
   void RL_##reg##X::exec(Processor *p)\
   {\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
-    auto carry = p->flag.getFlag(FlagRegister::CARRY);\
+    p->flag.unsetFlag(ZERO);\
+    auto carry = p->flag.getFlag(CARRY);\
     auto flag_carry = check_bit(p->reg.value, 7);\
     if (flag_carry)\
-      p->flag.setFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(CARRY);\
     else\
-      p->flag.unsetFlag(FlagRegister::CARRY);\
+      p->flag.unsetFlag(CARRY);\
     auto temp = static_cast<uint8_t>(p->reg.value << 1);	\
     temp |= carry;\
     if (temp == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
+      p->flag.setFlag(ZERO);\
+    p->flag.unsetFlag(SUBTRACT);\
+    p->flag.unsetFlag(HALFCARRY);\
     p->reg.value = temp;\
   }
 
@@ -1561,39 +1561,39 @@ RL_RegX_def(L)
 
 void RL_HL::exec(Processor *p)
 {
-    p->flag.unsetFlag(FlagRegister::ZERO); 
+    p->flag.unsetFlag(ZERO); 
     auto tmp = HLReadDereference(p);
-    auto carry = p->flag.getFlag(FlagRegister::CARRY);
+    auto carry = p->flag.getFlag(CARRY);
     auto flag_carry = check_bit(tmp, 7);
     if (flag_carry)
-      p->flag.setFlag(FlagRegister::CARRY);
+      p->flag.setFlag(CARRY);
     else
-      p->flag.unsetFlag(FlagRegister::CARRY);
+      p->flag.unsetFlag(CARRY);
     auto temp = static_cast<uint8_t>(tmp << 1);
     temp |= carry;
     if (temp == 0)
-      p->flag.setFlag(FlagRegister::ZERO);
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);
+      p->flag.setFlag(ZERO);
+    p->flag.unsetFlag(SUBTRACT);
+    p->flag.unsetFlag(HALFCARRY);
     HLWriteDereference(p, temp);
 }
 
 
 void RRA::exec(Processor *p)
 {
-	p->flag.unsetFlag(FlagRegister::ZERO);
-	auto carry = p->flag.getFlag(FlagRegister::CARRY);
+	p->flag.unsetFlag(ZERO);
+	auto carry = p->flag.getFlag(CARRY);
 	auto flag_carry = check_bit(p->A.value, 0);
 	if (flag_carry)
-		p->flag.setFlag(FlagRegister::CARRY);
+		p->flag.setFlag(CARRY);
 	else
-		p->flag.unsetFlag(FlagRegister::CARRY);
+		p->flag.unsetFlag(CARRY);
 	auto temp = static_cast<uint8_t>(p->A.value >> 1);
 	temp |= (carry << 7);
 	//if (temp == 0)
-	//	p->flag.setFlag(FlagRegister::ZERO);
-	p->flag.unsetFlag(FlagRegister::SUBTRACT);
-	p->flag.unsetFlag(FlagRegister::HALFCARRY);
+	//	p->flag.setFlag(ZERO);
+	p->flag.unsetFlag(SUBTRACT);
+	p->flag.unsetFlag(HALFCARRY);
 	p->A.value = temp;
 }
 
@@ -1601,19 +1601,19 @@ void RRA::exec(Processor *p)
 #define RR_RegX_def(reg)                  \
   void RR_##reg##X::exec(Processor *p)\
   {\
-   p->flag.unsetFlag(FlagRegister::ZERO);\
-   auto carry = p->flag.getFlag(FlagRegister::CARRY);\
+   p->flag.unsetFlag(ZERO);\
+   auto carry = p->flag.getFlag(CARRY);\
    auto flag_carry = check_bit(p->reg.value, 0);\
    if (flag_carry)\
-     p->flag.setFlag(FlagRegister::CARRY);\
+     p->flag.setFlag(CARRY);\
    else\
-     p->flag.unsetFlag(FlagRegister::CARRY);\
+     p->flag.unsetFlag(CARRY);\
    auto temp = static_cast<uint8_t>(p->reg.value >> 1);	\
    temp |= (carry << 7);\
    if (temp == 0)\
-     p->flag.setFlag(FlagRegister::ZERO);\
-   p->flag.unsetFlag(FlagRegister::SUBTRACT);\
-   p->flag.unsetFlag(FlagRegister::HALFCARRY);\
+     p->flag.setFlag(ZERO);\
+   p->flag.unsetFlag(SUBTRACT);\
+   p->flag.unsetFlag(HALFCARRY);\
    p->reg.value = temp;\
 }
 
@@ -1628,37 +1628,37 @@ RR_RegX_def(L)
 
 void RR_HL::exec(Processor *p)
 {
-    p->flag.unsetFlag(FlagRegister::ZERO);
+    p->flag.unsetFlag(ZERO);
     auto tmp = HLReadDereference(p);
-    auto carry = p->flag.getFlag(FlagRegister::CARRY);
+    auto carry = p->flag.getFlag(CARRY);
     auto flag_carry = check_bit(tmp, 0);
     if (flag_carry)
-      p->flag.setFlag(FlagRegister::CARRY);
+      p->flag.setFlag(CARRY);
     else
-      p->flag.unsetFlag(FlagRegister::CARRY);
+      p->flag.unsetFlag(CARRY);
     auto temp = static_cast<uint8_t>(tmp >> 1);
     temp |= (carry << 7);
     if (temp == 0)
-      p->flag.setFlag(FlagRegister::ZERO);
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);
+      p->flag.setFlag(ZERO);
+    p->flag.unsetFlag(SUBTRACT);
+    p->flag.unsetFlag(HALFCARRY);
     HLWriteDereference(p, temp);
 }
 
 #define SLA_RegX_def(reg)                  \
   void SLA_##reg##X::exec(Processor *p)\
   {\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
+    p->flag.unsetFlag(ZERO);\
     auto flag_carry = check_bit(p->reg.value, 7);\
     if (flag_carry)\
-      p->flag.setFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(CARRY);\
     else\
-      p->flag.unsetFlag(FlagRegister::CARRY);\
+      p->flag.unsetFlag(CARRY);\
     auto temp = static_cast<uint8_t>(p->reg.value << 1);	\
     if (temp == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
+      p->flag.setFlag(ZERO);\
+    p->flag.unsetFlag(SUBTRACT);\
+    p->flag.unsetFlag(HALFCARRY);\
     p->reg.value = temp;\
   }
 
@@ -1673,37 +1673,37 @@ SLA_RegX_def(L)
 
 void SLA_HL::exec(Processor *p)
 {
-    p->flag.unsetFlag(FlagRegister::ZERO);
+    p->flag.unsetFlag(ZERO);
     auto tmp = HLReadDereference(p);
     auto flag_carry = check_bit(tmp, 7);
     if (flag_carry)
-      p->flag.setFlag(FlagRegister::CARRY);
+      p->flag.setFlag(CARRY);
     else
-      p->flag.unsetFlag(FlagRegister::CARRY);
+      p->flag.unsetFlag(CARRY);
     auto temp = static_cast<uint8_t>(tmp << 1);
     if (temp == 0)
-      p->flag.setFlag(FlagRegister::ZERO);
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);
+      p->flag.setFlag(ZERO);
+    p->flag.unsetFlag(SUBTRACT);
+    p->flag.unsetFlag(HALFCARRY);
     HLWriteDereference(p, temp);
 }
 
 #define SRA_RegX_def(reg)                  \
   void SRA_##reg##X::exec(Processor *p)\
   {\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
+    p->flag.unsetFlag(ZERO);\
     auto bit_carry = check_bit(p->reg.value, 0);\
     auto top_bit = check_bit(p->reg.value, 7);\
     auto temp = static_cast<uint8_t>(p->reg.value >> 1);\
     temp = set_bit_to(temp, 7, top_bit);\
     if (temp == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
+      p->flag.setFlag(ZERO);\
     if (bit_carry)\
-      p->flag.setFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(CARRY);\
     else\
-      p->flag.unsetFlag(FlagRegister::CARRY);\
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
+      p->flag.unsetFlag(CARRY);\
+    p->flag.unsetFlag(SUBTRACT);\
+    p->flag.unsetFlag(HALFCARRY);\
     p->reg.value = temp;\
   }
 
@@ -1718,37 +1718,37 @@ SRA_RegX_def(L)
 
 void SRA_HL::exec(Processor *p)
 {
-    p->flag.unsetFlag(FlagRegister::ZERO);
+    p->flag.unsetFlag(ZERO);
     auto tmp = HLReadDereference(p);
     auto bit_carry = check_bit(tmp, 0);
     auto top_bit = check_bit(tmp, 7);
     auto temp = static_cast<uint8_t>(tmp >> 1);
     temp = set_bit_to(temp, 7, top_bit);
     if (temp == 0)
-      p->flag.setFlag(FlagRegister::ZERO);
+      p->flag.setFlag(ZERO);
     if (bit_carry)
-      p->flag.setFlag(FlagRegister::CARRY);
+      p->flag.setFlag(CARRY);
     else
-      p->flag.unsetFlag(FlagRegister::CARRY);
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);
+      p->flag.unsetFlag(CARRY);
+    p->flag.unsetFlag(SUBTRACT);
+    p->flag.unsetFlag(HALFCARRY);
     HLWriteDereference(p, temp);
 }
 
 #define SRL_RegX_def(reg)                  \
   void SRL_##reg##X::exec(Processor *p)\
   {\
-    p->flag.unsetFlag(FlagRegister::ZERO);\
+    p->flag.unsetFlag(ZERO);\
     bool leastbitset = check_bit(p->reg.value, 0);\
     auto temp = static_cast<uint8_t>(p->reg.value >> 1);        \
     if (temp == 0)\
-      p->flag.setFlag(FlagRegister::ZERO);\
+      p->flag.setFlag(ZERO);\
     if (leastbitset)\
-      p->flag.setFlag(FlagRegister::CARRY);\
+      p->flag.setFlag(CARRY);\
     else\
-      p->flag.unsetFlag(FlagRegister::CARRY);\
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);\
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);\
+      p->flag.unsetFlag(CARRY);\
+    p->flag.unsetFlag(SUBTRACT);\
+    p->flag.unsetFlag(HALFCARRY);\
     p->reg.value = temp;\
   }
 
@@ -1762,18 +1762,18 @@ SRL_RegX_def(L)
 
 void SRL_HL::exec(Processor *p)
 {
-    p->flag.unsetFlag(FlagRegister::ZERO); 
+    p->flag.unsetFlag(ZERO); 
     auto tmp = HLReadDereference(p);
     bool leastbitset = check_bit(tmp, 0);
     auto temp = static_cast<uint8_t>(tmp >> 1);
     if (temp == 0)
-      p->flag.setFlag(FlagRegister::ZERO);
+      p->flag.setFlag(ZERO);
     if (leastbitset)
-      p->flag.setFlag(FlagRegister::CARRY);
+      p->flag.setFlag(CARRY);
     else
-      p->flag.unsetFlag(FlagRegister::CARRY);
-    p->flag.unsetFlag(FlagRegister::SUBTRACT);
-    p->flag.unsetFlag(FlagRegister::HALFCARRY);
+      p->flag.unsetFlag(CARRY);
+    p->flag.unsetFlag(SUBTRACT);
+    p->flag.unsetFlag(HALFCARRY);
     HLWriteDereference(p, temp);
 }
 
@@ -1808,25 +1808,25 @@ void JP::exec(Processor *p)
 
 void JPNZ::exec(Processor *p)
 {
-	if ( !p->flag.getFlag(FlagRegister::ZERO))
+	if ( !p->flag.getFlag(ZERO))
 		p->PC.value = _arg.word;
 }
 
 void JPZ::exec(Processor *p)
 {
-	if ( p->flag.getFlag(FlagRegister::ZERO))
+	if ( p->flag.getFlag(ZERO))
 		p->PC.value = _arg.word;
 }
 
 void JPNC::exec(Processor *p)
 {
-	if ( !p->flag.getFlag(FlagRegister::CARRY))
+	if ( !p->flag.getFlag(CARRY))
 		p->PC.value = _arg.word;
 }
 
 void JPC::exec(Processor *p)
 {
-	if ( p->flag.getFlag(FlagRegister::CARRY))
+	if ( p->flag.getFlag(CARRY))
 		p->PC.value = _arg.word;
 }
 
@@ -1842,26 +1842,26 @@ void JR::exec(Processor *p)
 
 void JRNZ::exec(Processor *p)
 {
-	if ( !p->flag.getFlag(FlagRegister::ZERO))
+	if ( !p->flag.getFlag(ZERO))
 		p->PC.value += (int8_t) _arg.byte;
 }
 
 void JRZ::exec(Processor *p)
 {
-	if ( p->flag.getFlag(FlagRegister::ZERO)) {
+	if ( p->flag.getFlag(ZERO)) {
 		p->PC.value += (int8_t) _arg.byte;
 	}
 }
 
 void JRNC::exec(Processor *p)
 {
-	if ( !p->flag.getFlag(FlagRegister::CARRY))
+	if ( !p->flag.getFlag(CARRY))
 		p->PC.value += (int8_t) _arg.byte;
 }
 
 void JRC::exec(Processor *p)
 {
-	if ( p->flag.getFlag(FlagRegister::CARRY))
+	if ( p->flag.getFlag(CARRY))
 		p->PC.value += (int8_t) _arg.byte;
 }
 
@@ -1877,7 +1877,7 @@ void CALL::exec(Processor *p)
 
 void CALLNZ::exec(Processor *p)
 {
-	if ( !p->flag.getFlag(FlagRegister::ZERO)) {
+	if ( !p->flag.getFlag(ZERO)) {
 		_callPush(p);
 		p->PC.value = _arg.word;
 	}
@@ -1885,7 +1885,7 @@ void CALLNZ::exec(Processor *p)
 
 void CALLZ::exec(Processor *p)
 {
-	if ( p->flag.getFlag(FlagRegister::ZERO)) {
+	if ( p->flag.getFlag(ZERO)) {
 		_callPush(p);
 		p->PC.value = _arg.word;
 	}
@@ -1893,7 +1893,7 @@ void CALLZ::exec(Processor *p)
 
 void CALLNC::exec(Processor *p)
 {
-	if ( !p->flag.getFlag(FlagRegister::CARRY)) {
+	if ( !p->flag.getFlag(CARRY)) {
 		_callPush(p);
 		p->PC.value = _arg.word;
 	}
@@ -1901,7 +1901,7 @@ void CALLNC::exec(Processor *p)
 
 void CALLC::exec(Processor *p)
 {
-	if ( p->flag.getFlag(FlagRegister::CARRY)) {
+	if ( p->flag.getFlag(CARRY)) {
 		_callPush(p);
 		p->PC.value = _arg.word;
 	}
@@ -1940,25 +1940,25 @@ void RET::exec(Processor *p)
 
 void RETNZ::exec(Processor *p)
 {
-	if ( !p->flag.getFlag(FlagRegister::ZERO))
+	if ( !p->flag.getFlag(ZERO))
 		_return(p);
 }
 
 void RETZ::exec(Processor *p)
 {
-	if ( p->flag.getFlag(FlagRegister::ZERO))
+	if ( p->flag.getFlag(ZERO))
 		_return(p);
 }
 
 void RETNC::exec(Processor *p)
 {
-	if ( !p->flag.getFlag(FlagRegister::CARRY))
+	if ( !p->flag.getFlag(CARRY))
 		_return(p);
 }
 
 void RETC::exec(Processor *p)
 {
-	if ( p->flag.getFlag(FlagRegister::CARRY))
+	if ( p->flag.getFlag(CARRY))
 		_return(p);
 }
 
