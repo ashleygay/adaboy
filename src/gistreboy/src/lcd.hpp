@@ -57,12 +57,9 @@ class LCD
 		// that we are spending in that mode.
 		int duration = 0;
 
-		bool can_access_VRAM() const
-		{return state != LCDState::Mode3;}
+		bool can_access_VRAM() const;
 
-		bool can_access_OAM() const
-		{return (state != LCDState::Mode2
-			&& state != LCDState::Mode3);}
+		bool can_access_OAM() const;
 
 	};
 

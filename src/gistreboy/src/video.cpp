@@ -71,8 +71,8 @@ void Video::dma_transfer(uint16_t beg_src, uint16_t end_src)
 
 	while (inc_src <= end_src)
 	{
-		byte = _proc._simple_read(inc_src);
-		_proc._simple_write(byte, inc_dest);
+		byte = _proc.simple_read(inc_src);
+		_proc.simple_write(byte, inc_dest);
 		++inc_src;
 		++inc_dest;
 	}
@@ -80,9 +80,9 @@ void Video::dma_transfer(uint16_t beg_src, uint16_t end_src)
 
 bool Video::is_accessible(uint16_t address)
 {
-	if (_is_VRAM(address))
+	if (is_VRAM(address))
 		return _VRAM_accessible;
-	if (_is_OAM(address))
+	if (is_OAM(address))
 		return _OAM_accessible;
 	return true;
 }
@@ -164,13 +164,13 @@ uint8_t Video::get_obp1()
 	return video_memory[0xFF49];
 }
 
-bool Video::_is_VRAM(uint16_t address)
+bool Video::is_VRAM(uint16_t address)
 {
  	// VRAM (0x8000-0x9FFF)
 	return (address <= 0x9FFF && address >= 0x8000);
 }
 
-bool Video::_is_OAM(uint16_t address)
+bool Video::is_OAM(uint16_t address)
 {
  	// OAM (0xFE00-0xFE9F)
 	return (address <= 0xFE9F && address >= 0xFE00);

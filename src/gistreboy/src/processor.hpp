@@ -23,20 +23,7 @@ class Memory;
 class Processor {
 
 	public:
-		Processor()
-		{
-			// Default values taken from TCAGBD docs
-			A.value = 0x01;
-			B.value = 0x00;
-			C.value = 0x13;
-			D.value = 0x00;
-			E.value = 0xD8;
-			H.value = 0x01;
-			L.value = 0x4D;
-			PC.value = 0x0000;
-			SP.value = 0xfffe;
-		}
-
+		Processor();
 	public:
 		FlagRegister flag;
 
@@ -65,7 +52,7 @@ class Processor {
 
 		// Used to resolve all memory operations
 		// Read/Write as wall as charging next instruction etc
-		Memory *_mem = nullptr;
+		Memory *mem = nullptr;
 
 		// They cannot be both true at the same time
 		bool halted = false;
@@ -78,16 +65,16 @@ class Processor {
 
 		// Those functions are used by the instructions to read/write
 		// memory values
-		uint8_t _read(uint16_t address);
+		uint8_t read(uint16_t address);
 
-		void _write(uint8_t value, uint16_t address);
+		void write(uint8_t value, uint16_t address);
 
-		uint8_t _simple_read(uint16_t address);
+		uint8_t simple_read(uint16_t address);
 
-		void _simple_write(uint8_t value, uint16_t address);
+		void simple_write(uint8_t value, uint16_t address);
 
-		void setMemory(Memory *mem)
-			{_mem = mem;}
+		void setMemory(Memory *memo)
+			{mem = memo;}
 
 		// Enable/Disable IME
 		void enableIME();
@@ -122,14 +109,14 @@ class Processor {
 
 	private:
 		// Returns 0 if there was no interrupt to do
-		int _handleInterrupts();
+		int handleInterrupts();
 	
 		// Setup PC and the stack for a jump to the interrupt vect
-		void _setupInterrupt(unsigned int inter);
+		void setupInterrupt(unsigned int inter);
 
-		int _execCurrentInstruction();
+		int execCurrentInstruction();
 
-		void _fetchNextInstruction();
+		void fetchNextInstruction();
 	public:
 		Processor(Processor const&) = delete;
 		void operator=(Processor const&)  = delete;

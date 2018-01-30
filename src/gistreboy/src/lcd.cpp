@@ -131,6 +131,16 @@ void LCD::check_lyc()
 	check_interrupt_stat(6);
 }
 
+bool LCD::State::can_access_VRAM() const
+{
+	return state != LCDState::Mode3;
+}
+
+bool LCD::State::can_access_OAM() const
+{
+	return (state != LCDState::Mode2 && state != LCDState::Mode3);
+}
+
 
 void LCD::update_variables(int elapsed_time)
 {

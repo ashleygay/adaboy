@@ -52,8 +52,8 @@ public :
 	void set_ly(uint8_t ly);
 
 private:
-	bool _is_OAM(uint16_t address);
-	bool _is_VRAM(uint16_t address);
+	bool is_OAM(uint16_t address);
+	bool is_VRAM(uint16_t address);
 private :
 
 	Processor &_proc;

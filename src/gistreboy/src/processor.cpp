@@ -11,6 +11,19 @@
 
 /* PUBLIC METHODS */
 
+Processor::Processor()
+{
+	A.value = 0x01;
+ 	B.value = 0x00;
+	C.value = 0x13;
+ 	D.value = 0x00;
+ 	E.value = 0xD8;
+ 	H.value = 0x01;
+ 	L.value = 0x4D;
+ 	PC.value = 0x0000;
+ 	SP.value = 0xfffe;
+}
+
 void Processor::enableIME()
 {
 	IME = true;
@@ -29,7 +42,7 @@ void Processor::enableIMEDelay()
 
 int Processor::step()
 {
-	int interrupts = _handleInterrupts();
+	int interrupts = handleInterrupts();
 
 #if 0
 	if (stopped || halted)
@@ -44,19 +57,19 @@ int Processor::step()
 			IMEDelay = false;
 		}
 		// No interrupts to handle and we are not halted/stopped
-		_fetchNextInstruction();
-		return _execCurrentInstruction();
+		fetchNextInstruction();
+		return execCurrentInstruction();
 	}
 	else
 		return interrupts;
 }
 
-int Processor::_handleInterrupts()
+int Processor::handleInterrupts()
 {
 	//TODO maybe factorize IF and IE
 	if (stopped) {
 		// Check if any selected button is pressed
-		uint8_t joypad_status = _mem->get_joypad();
+		uint8_t joypad_status = mem->get_joypad();
 
 		// Get bits [0-3] check that a button is pressed
 		bool pressed = ~joypad_status & 0x0F;
@@ -72,8 +85,8 @@ int Processor::_handleInterrupts()
 	}
 	else { // We are either halted or doing an interrupt
 
-		std::bitset<5> IF = _mem->get_interrupt_flags();
-		std::bitset<5> IE = _mem->get_interrupt_enable();
+		std::bitset<5> IF = mem->get_interrupt_flags();
+		std::bitset<5> IE = mem->get_interrupt_enable();
 		std::bitset<5> res = IF & IE;
 
 		// Check that the selected interrupt is triggered
@@ -87,10 +100,10 @@ int Processor::_handleInterrupts()
 
 			// Clear interrupt flag
 			// Disable IME so we do not interrupt whil interrupting
-			_mem->reset_interrupt_flag(index);
+			mem->reset_interrupt_flag(index);
 			IME = false;
 			halted = false;
-			_setupInterrupt(index);
+			setupInterrupt(index);
 			return 5;
 		}
 	}
@@ -100,19 +113,19 @@ int Processor::_handleInterrupts()
 
 void Processor::push_word(uint16_t word)
 {
-	_mem->write(get_high(word), --SP.value);
-	_mem->write(get_low(word), --SP.value);
+	mem->write(get_high(word), --SP.value);
+	mem->write(get_low(word), --SP.value);
 }
 
 uint16_t Processor::pop_word()
 {
-	uint8_t low = _read(SP.value++);
-	uint8_t high = _read(SP.value++);
+	uint8_t low = read(SP.value++);
+	uint8_t high = read(SP.value++);
 	uint16_t tmp = make_word(low, high);
 	return tmp;
 }
 
-void Processor::_setupInterrupt(unsigned int interrupt)
+void Processor::setupInterrupt(unsigned int interrupt)
 {
 	// We push PC onto the stack
 	push_word(PC.value);
@@ -132,19 +145,19 @@ void Processor::STOP()
 
 /* PRIVATE METHODS */
 
-int Processor::_execCurrentInstruction()
+int Processor::execCurrentInstruction()
 {
 	currentInstruction->exec(this);
 	return currentInstruction->nbCycles();
 }
 
-void Processor::_fetchNextInstruction()
+void Processor::fetchNextInstruction()
 {
-	uint16_t opcode = _mem->read(PC.value);
+	uint16_t opcode = mem->read(PC.value);
 	++PC.value;
 	if (!iset.isValidOpCode(opcode)) {
 		// We try the to get the instruction over 16bits
-		opcode = (opcode << 8) | (_mem->read(PC.value));
+		opcode = (opcode << 8) | (mem->read(PC.value));
 		if (!iset.isValidOpCode(opcode)) {
 			// We dont really care if the program crashes,
 			// the rom is bad or there is a bug.
@@ -162,13 +175,13 @@ void Processor::_fetchNextInstruction()
 
 		int size = currentInstruction->argSize();
 		if (size == 1) { // We add a byte to the argument vector
-			arg.byte = _mem->read(PC.value);
+			arg.byte = mem->read(PC.value);
 //			std::cout << std::hex << (int)arg.byte;
 		}
 		else { // Argument of size 2, we add a short to the argument vector
-			uint16_t word = _mem->read(PC.value);
+			uint16_t word = mem->read(PC.value);
 			++PC.value;
-			word = word | (_mem->read(PC.value) << 8);
+			word = word | (mem->read(PC.value) << 8);
 			arg.word = word;
 //			std::cout << std::hex << (int)arg.word;
 		}
@@ -178,22 +191,22 @@ void Processor::_fetchNextInstruction()
 	currentInstruction->setArg(arg);
 }
 
-uint8_t Processor::_read(uint16_t address)
+uint8_t Processor::read(uint16_t address)
 {
-	return _mem->read(address);
+	return mem->read(address);
 }
 
-void Processor::_write(uint8_t value, uint16_t address)
+void Processor::write(uint8_t value, uint16_t address)
 {
-	_mem->write(value, address);
+	mem->write(value, address);
 }
 
-uint8_t Processor::_simple_read(uint16_t address)
+uint8_t Processor::simple_read(uint16_t address)
 {
-	return _mem->simple_read(address);
+	return mem->simple_read(address);
 }
 
-void Processor::_simple_write(uint8_t value, uint16_t address)
+void Processor::simple_write(uint8_t value, uint16_t address)
 {
-	_mem->simple_write(value, address);
+	mem->simple_write(value, address);
 }

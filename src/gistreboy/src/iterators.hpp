@@ -1,5 +1,7 @@
 #pragma once
 
+/*file not used*/
+
 template <typename T>
 class iterator {
 	public:

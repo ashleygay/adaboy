@@ -4,25 +4,25 @@
 static uint8_t BCReadDereference(Processor *p)
 {
 	uint16_t address = make_word(p->C.value, p->B.value);
-	return p->_read(address);
+	return p->read(address);
 }
 
 static uint8_t DEReadDereference(Processor *p)
 {
 	uint16_t address = make_word(p->E.value, p->D.value);
-	return p->_read(address);
+	return p->read(address);
 }
 
 static uint8_t HLReadDereference(Processor *p)
 {
 	uint16_t address = make_word(p->L.value, p->H.value);
-	return p->_read(address);
+	return p->read(address);
 }
 
 static void HLWriteDereference(Processor *p, uint8_t value)
 {
 	uint16_t address = make_word(p->L.value, p->H.value);
-	p->_write(value, address);
+	p->write(value, address);
 }
 
 static uint8_t check_bit(uint8_t value, uint8_t bit)
@@ -92,7 +92,7 @@ LD_RegX_def(L)
 	{\
 		uint16_t address = make_word(p->L.value, p->H.value);\
 		uint8_t value = p->reg.value;\
-		p->_write(value, address);\
+		p->write(value, address);\
 	}
 
 LD_XY_def(A,A)
@@ -162,7 +162,7 @@ void LD_HLn::exec(Processor *p)
 {
 	uint16_t address = make_word(p->L.value, p->H.value);
 	uint8_t value = _arg.byte;
-	p->_write(value, address);
+	p->write(value, address);
 }
 
 #undef LD_XY_def
@@ -183,43 +183,43 @@ void LD_ADE::exec(Processor *p)
 void LD_Ann::exec(Processor *p)
 {
 	uint16_t address = _arg.word;
-	p->A.value = p->_read(address);
+	p->A.value = p->read(address);
 }
 
 void LD_BCA::exec(Processor *p)
 {
 	uint16_t address = make_word(p->C.value, p->B.value);
-	p->_write(p->A.value, address);
+	p->write(p->A.value, address);
 }
 
 void LD_DEA::exec(Processor *p)
 {
 	uint16_t address = make_word(p->E.value, p->D.value);
-	p->_write(p->A.value, address);
+	p->write(p->A.value, address);
 }
 
 void LD_HLA::exec(Processor *p)
 {
 	uint16_t address = make_word(p->L.value, p->H.value);
-	p->_write(p->A.value, address);
+	p->write(p->A.value, address);
 }
 
 void LD_nnA::exec(Processor *p)
 {
 	uint16_t address = _arg.word;
-	p->_write(p->A.value, address);
+	p->write(p->A.value, address);
 }
 
 void LD_AC2::exec(Processor *p)
 {
 	uint16_t address = 0xFF00 + p->C.value;
-	p->A.value = p->_read(address);
+	p->A.value = p->read(address);
 }
 
 void LD_C2A::exec(Processor *p)
 {
 	uint16_t address = 0xFF00 + p->C.value;
-	p->_write(p->A.value, address);
+	p->write(p->A.value, address);
 }
 
 void LDD_AHL::exec(Processor *p)
@@ -233,7 +233,7 @@ void LDD_AHL::exec(Processor *p)
 void LDD_HLA::exec(Processor *p)
 {
 	uint16_t HL = make_word(p->L.value, p->H.value);
-	p->_write(p->A.value, HL--); // Note: HL decremented
+	p->write(p->A.value, HL--); // Note: HL decremented
 	p->L.value = get_low(HL);
 	p->H.value = get_high(HL);
 }
@@ -249,7 +249,7 @@ void LDI_AHL::exec(Processor *p)
 void LDI_HLA::exec(Processor *p)
 {
 	uint16_t HL = make_word(p->L.value, p->H.value);
-	p->_write(p->A.value, HL++); // Note: HL incremented
+	p->write(p->A.value, HL++); // Note: HL incremented
 	p->L.value = get_low(HL);
 	p->H.value = get_high(HL);
 }
@@ -257,13 +257,13 @@ void LDI_HLA::exec(Processor *p)
 void LDH_nA::exec(Processor *p)
 {
 	uint16_t address = 0xFF00 + _arg.byte;
-	p->_write(p->A.value, address);
+	p->write(p->A.value, address);
 }
 
 void LDH_An::exec(Processor *p)
 {
 	uint16_t address = 0xFF00 + _arg.byte;
-	p->A.value = p->_read(address);
+	p->A.value = p->read(address);
 }
 
 void LD_BCnn::exec(Processor *p)
@@ -298,8 +298,8 @@ void LD_nnSP::exec(Processor *p)
 	uint8_t SP_low = get_low(p->SP.value);
 	uint8_t SP_high = get_high(p->SP.value);
 
-	p->_write(SP_low, address);
-	p->_write(SP_high, address + 1);
+	p->write(SP_low, address);
+	p->write(SP_high, address + 1);
 }
 
 
