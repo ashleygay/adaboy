@@ -1,6 +1,6 @@
 #include "registers.hpp"
 
-void FlagRegister::setFlag(FlagRegister::Flag flag)
+void FlagRegister::setFlag(Flag flag)
 {
 	switch(flag) {
 		case ZERO:
@@ -18,7 +18,7 @@ void FlagRegister::setFlag(FlagRegister::Flag flag)
 	}
 }
 
-void FlagRegister::unsetFlag(FlagRegister::Flag flag)
+void FlagRegister::unsetFlag(Flag flag)
 {
 	switch(flag) {
 		case ZERO:
@@ -36,7 +36,7 @@ void FlagRegister::unsetFlag(FlagRegister::Flag flag)
 	}
 }
 
-bool FlagRegister::getFlag(FlagRegister::Flag flag)
+bool FlagRegister::getFlag(Flag flag)
 {
 	switch(flag) {
 		case ZERO:

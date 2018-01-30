@@ -15,6 +15,25 @@
 #include <video.hpp>
 #include <screen.hpp>
 
+
+enum LCDState {Mode0, Mode1, Mode2, Mode3};
+
+struct State
+{
+
+	LCDState state = LCDState::Mode0;
+
+	// Represents the number of clock cycles
+	// that we are spending in that mode.
+	int duration = 0;
+
+	bool can_access_VRAM() const;
+
+	bool can_access_OAM() const;
+
+};
+
+
 class LCD
 {
 
@@ -46,7 +65,7 @@ class LCD
  Mode 0  ___000___000___000___000___000___000________________000
  Mode 1  ____________________________________11111111111111_____
 */
-	enum LCDState {Mode0, Mode1, Mode2, Mode3};
+	/*enum LCDState {Mode0, Mode1, Mode2, Mode3};
 
 	struct State
 	{
@@ -61,7 +80,7 @@ class LCD
 
 		bool can_access_OAM() const;
 
-	};
+	};*/
 
 
 	public:
