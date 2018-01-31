@@ -3,8 +3,8 @@
 # We generate the Ada bindings
 {
 	cd src
-	rm *.ads
-	g++ -fdump-ada-spec -C -I. gameboy.hpp
+#	rm *.ads
+#	g++ -fdump-ada-spec -C -I. gameboy.hpp
 	cd ..
 }
 
