@@ -4,6 +4,12 @@
 namespace std {
 
 	template <typename T, unsigned int internal_size>
+	array<T, internal_size>::array()
+	{
+		//Do nothing
+	}
+
+	template <typename T, unsigned int internal_size>
 	T& array<T, internal_size>::operator[](unsigned int index)
 	{
 		// We update the internal_size of the array

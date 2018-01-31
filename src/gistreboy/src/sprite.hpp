@@ -26,15 +26,15 @@ public :
 	bool is_obp1() { return obp1; }
 
 private :
-	uint8_t x_pos_;
-	uint8_t y_pos_;
+	uint8_t x_pos_ = 0;
+	uint8_t y_pos_ = 0;
 
-	uint8_t tile_;
+	uint8_t tile_ = 0;
 
-	bool x_flipped;
-	bool y_flipped;
-	bool above_bg;
+	bool x_flipped = false;
+	bool y_flipped = false;
+	bool above_bg = false;
 
-	bool obp1;
+	bool obp1 = false;
 
 };

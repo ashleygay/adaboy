@@ -8,6 +8,7 @@ namespace std {
 	class array
 	{
 		public:
+			array();
 			T& operator[](size_type index);
 			//const T& operator[](size_type index) const;
 			size_type size() const;
