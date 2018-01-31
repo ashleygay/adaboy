@@ -7,6 +7,8 @@ Ada project for EPITA
   + Pierre-Adrien Estanove
   + Pierre Chavanne
 
+  Corentin Gay and Arnaud Bastie worked on the project.
+
 * We are porting a gameboy emulator made in C++ to a STM32F7.
 
 * Requirements:
