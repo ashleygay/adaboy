@@ -3,6 +3,9 @@
 
 # Ada Library Information
 *.ali
+*.ci
+*.a
+*.lexch
 
 # Objects directories
 obj/*
