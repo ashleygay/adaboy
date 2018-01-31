@@ -1,5 +1,10 @@
 #include <cartridge.hpp>
 
+Cartridge::Cartridge()
+{
+
+}
+
 bool Cartridge::in_range(uint16_t address)
 {
 	return (address >= 0x00 && address <= 0x7FFF)
