@@ -6,6 +6,7 @@
 *.ci
 *.a
 *.lexch
+*.bexch
 
 # Objects directories
 obj/*
