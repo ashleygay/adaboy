@@ -1,0 +1,23 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads"
+node: { title: "stm32_svd__i2c__i2c_peripheralIP" label: "I2C_PERIPHERALIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:433:9\n16 bytes (static)" }
+edge: { sourcename: "stm32_svd__i2c__i2c_peripheralIP" targetname: "stm32_svd__i2c__txdr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:455:7" }
+edge: { sourcename: "stm32_svd__i2c__i2c_peripheralIP" targetname: "stm32_svd__i2c__icr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:449:7" }
+edge: { sourcename: "stm32_svd__i2c__i2c_peripheralIP" targetname: "stm32_svd__i2c__isr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:447:7" }
+edge: { sourcename: "stm32_svd__i2c__i2c_peripheralIP" targetname: "stm32_svd__i2c__timeoutr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:445:7" }
+edge: { sourcename: "stm32_svd__i2c__i2c_peripheralIP" targetname: "stm32_svd__i2c__timingr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:443:7" }
+edge: { sourcename: "stm32_svd__i2c__i2c_peripheralIP" targetname: "stm32_svd__i2c__oar2_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:441:7" }
+edge: { sourcename: "stm32_svd__i2c__i2c_peripheralIP" targetname: "stm32_svd__i2c__oar1_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:439:7" }
+edge: { sourcename: "stm32_svd__i2c__i2c_peripheralIP" targetname: "stm32_svd__i2c__cr2_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:437:7" }
+edge: { sourcename: "stm32_svd__i2c__i2c_peripheralIP" targetname: "stm32_svd__i2c__cr1_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:435:7" }
+node: { title: "stm32_svd__i2c__txdr_registerIP" label: "TXDR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:414:9\n16 bytes (static)" }
+node: { title: "stm32_svd__i2c__rxdr_registerIP" label: "RXDR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:397:9\n16 bytes (static)" }
+node: { title: "stm32_svd__i2c__pecr_registerIP" label: "PECR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:380:9\n16 bytes (static)" }
+node: { title: "stm32_svd__i2c__icr_registerIP" label: "ICR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:333:9\n16 bytes (static)" }
+node: { title: "stm32_svd__i2c__isr_registerIP" label: "ISR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:267:9\n16 bytes (static)" }
+node: { title: "stm32_svd__i2c__timeoutr_registerIP" label: "TIMEOUTR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:235:9\n16 bytes (static)" }
+node: { title: "stm32_svd__i2c__timingr_registerIP" label: "TIMINGR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:205:9\n16 bytes (static)" }
+node: { title: "stm32_svd__i2c__oar2_registerIP" label: "OAR2_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:172:9\n16 bytes (static)" }
+node: { title: "stm32_svd__i2c__oar1_registerIP" label: "OAR1_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:145:9\n16 bytes (static)" }
+node: { title: "stm32_svd__i2c__cr2_registerIP" label: "CR2_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:98:9\n16 bytes (static)" }
+node: { title: "stm32_svd__i2c__cr1_registerIP" label: "CR1_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-i2c.ads:20:9\n16 bytes (static)" }
+}

@@ -1,0 +1,164 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb"
+node: { title: "stm32__rtc__rtc_deviceIP" label: "RTC_DEVICEIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.ads:59:9" shape : ellipse }
+node: { title: "stm32__sdmmc__sdmmc_controllerIP" label: "SDMMC_CONTROLLERIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sd/stm32-sdmmc.ads:187:9" shape : ellipse }
+node: { title: "stm32__i2s__i2s_portIP" label: "I2S_PORTIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-i2s.ads:136:9" shape : ellipse }
+node: { title: "stm32__spi__dma__spi_port_dmaIP" label: "SPI_PORT_DMAIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.ads:79:9" shape : ellipse }
+node: { title: "stm32__spi__spi_portIP" label: "SPI_PORTIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi.ads:218:9" shape : ellipse }
+node: { title: "stm32__i2c__dma__i2c_port_dmaIP" label: "I2C_PORT_DMAIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f4/stm32-i2c-dma.ads:52:9" shape : ellipse }
+node: { title: "stm32__i2c__i2c_portIP" label: "I2C_PORTIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f4/stm32-i2c.ads:170:9" shape : ellipse }
+node: { title: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "DMA_INTERRUPT_CONTROLLERVIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/dma_interrupts/stm32-dma-interrupts.ads:36:4" shape : ellipse }
+node: { title: "stm32__usarts__usartIP" label: "USARTIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/uart_stm32f4/stm32-usarts.ads:268:9" shape : ellipse }
+node: { title: "stm32_svd__rcc__pllsaicfgr_registerIP" label: "PLLSAICFGR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f429x/stm32_svd-rcc.ads:1368:9" shape : ellipse }
+node: { title: "system__assertions__raise_assert_failure" label: "Raise_Assert_Failure\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnat/s-assert.ads:46:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnat/a-except.adb:41:17" shape : ellipse }
+node: { title: "stm32__device___elabs" label: "DEVICE\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:65:1\n8 bytes (static)" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__rtc__rtc_deviceIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:577:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__sdmmc__sdmmc_controllerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:509:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__i2s__i2s_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:481:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__i2s__i2s_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:480:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__i2s__i2s_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:479:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__i2s__i2s_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:478:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__i2s__i2s_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:477:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__i2s__i2s_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:476:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__i2s__i2s_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:475:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__i2s__i2s_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:474:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__spi__dma__spi_port_dmaIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:460:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__spi__dma__spi_port_dmaIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:459:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__spi__dma__spi_port_dmaIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:458:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__spi__dma__spi_port_dmaIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:457:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__spi__dma__spi_port_dmaIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:456:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__spi__dma__spi_port_dmaIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:455:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__spi__spi_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:453:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__spi__spi_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:452:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__spi__spi_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:451:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__spi__spi_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:450:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__spi__spi_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:449:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__spi__spi_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:448:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__i2c__dma__i2c_port_dmaIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:431:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__i2c__dma__i2c_port_dmaIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:430:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__i2c__dma__i2c_port_dmaIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:429:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__i2c__i2c_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:427:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__i2c__i2c_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:426:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__i2c__i2c_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:425:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:413:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:411:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:409:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:407:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:405:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:403:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:401:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:399:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:396:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:394:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:392:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:390:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:388:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:386:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:384:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__dma__interrupts__dma_interrupt_controllerVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:382:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__usarts__usartIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:373:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__usarts__usartIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:372:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__usarts__usartIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:371:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__usarts__usartIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:370:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__usarts__usartIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:369:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__usarts__usartIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:368:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__usarts__usartIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:367:4" }
+edge: { sourcename: "stm32__device___elabs" targetname: "stm32__usarts__usartIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:366:4" }
+node: { title: "stm32__device__reset__13" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:934:4\n16 bytes (static)" }
+node: { title: "stm32__device__disable_clock" label: "DISABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:924:4\n16 bytes (static)" }
+node: { title: "stm32__device__enable_clock__14" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:914:4\n16 bytes (static)" }
+node: { title: "stm32__device__reset__12" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:899:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__reset__12" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:903:10" }
+node: { title: "stm32__device__enable_clock__13" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:885:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__enable_clock__13" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:889:10" }
+node: { title: "stm32__device__reset_dcmi" label: "RESET_DCMI\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:875:4\n4 bytes (static)" }
+node: { title: "stm32__device__enable_dcmi_clock" label: "ENABLE_DCMI_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:866:4\n4 bytes (static)" }
+node: { title: "stm32__device__set_pllsai_factors" label: "SET_PLLSAI_FACTORS\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:848:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__device__set_pllsai_factors" targetname: "stm32_svd__rcc__pllsaicfgr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:852:7" }
+node: { title: "stm32__device__disable_pllsai" label: "DISABLE_PLLSAI\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:836:4\n4 bytes (static)" }
+node: { title: "stm32__device__enable_pllsai" label: "ENABLE_PLLSAI\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:819:4\n8 bytes (static)" }
+edge: { sourcename: "stm32__device__enable_pllsai" targetname: "stm32__device__pllsai_ready" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:828:20" }
+node: { title: "stm32__device__pllsai_ready" label: "PLLSAI_READY\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:808:4\n4 bytes (static)" }
+node: { title: "stm32__device__disable_plli2s" label: "DISABLE_PLLI2S\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:796:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__device__disable_plli2s" targetname: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:stm32__device__disable_plli2s___postconditions.10343" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:802:8" }
+edge: { sourcename: "stm32__device__disable_plli2s" targetname: "stm32__device__plli2s_enabled" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:800:24" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:stm32__device__disable_plli2s___postconditions.10343" label: "DISABLE_PLLI2S\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:796:4\n24 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:stm32__device__disable_plli2s___postconditions.10343" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:553:19" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:stm32__device__disable_plli2s___postconditions.10343" targetname: "stm32__device__plli2s_enabled" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:553:23" }
+node: { title: "stm32__device__enable_plli2s" label: "ENABLE_PLLI2S\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:784:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__device__enable_plli2s" targetname: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:stm32__device__enable_plli2s___postconditions.10335" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:790:8" }
+edge: { sourcename: "stm32__device__enable_plli2s" targetname: "stm32__device__plli2s_enabled" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:788:20" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:stm32__device__enable_plli2s___postconditions.10335" label: "ENABLE_PLLI2S\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:784:4\n24 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:stm32__device__enable_plli2s___postconditions.10335" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:550:19" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:stm32__device__enable_plli2s___postconditions.10335" targetname: "stm32__device__plli2s_enabled" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:550:19" }
+node: { title: "stm32__device__set_plli2s_factors" label: "SET_PLLI2S_FACTORS\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:771:4\n16 bytes (static)" }
+node: { title: "stm32__device__plli2s_enabled" label: "PLLI2S_ENABLED\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:764:4\n4 bytes (static)" }
+node: { title: "stm32__device__system_clock_frequencies" label: "SYSTEM_CLOCK_FREQUENCIES\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:647:4\n96 bytes (static)" }
+edge: { sourcename: "stm32__device__system_clock_frequencies" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:753:56" }
+edge: { sourcename: "stm32__device__system_clock_frequencies" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:744:10" }
+edge: { sourcename: "stm32__device__system_clock_frequencies" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:698:38" }
+edge: { sourcename: "stm32__device__system_clock_frequencies" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:697:38" }
+edge: { sourcename: "stm32__device__system_clock_frequencies" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:696:40" }
+edge: { sourcename: "stm32__device__system_clock_frequencies" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:685:40" }
+edge: { sourcename: "stm32__device__system_clock_frequencies" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:679:33" }
+edge: { sourcename: "stm32__device__system_clock_frequencies" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:654:12" }
+node: { title: "stm32__device__reset__11" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:594:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__reset__11" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:639:10" }
+node: { title: "stm32__device__enable_clock__12" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:555:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__enable_clock__12" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:586:10" }
+node: { title: "stm32__device__reset__10" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:520:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__reset__10" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:547:10" }
+node: { title: "stm32__device__enable_clock__11" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:491:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__enable_clock__11" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:512:10" }
+node: { title: "stm32__device__reset__9" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:462:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__reset__9" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:483:10" }
+node: { title: "stm32__device__enable_clock__10" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:439:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__enable_clock__10" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:454:10" }
+node: { title: "stm32__device__reset__8" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:420:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__device__reset__8" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:422:12" }
+node: { title: "stm32__device__reset__7" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:411:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__device__reset__7" targetname: "stm32__device__reset__8" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:413:7" }
+edge: { sourcename: "stm32__device__reset__7" targetname: "stm32__device__as_port_id" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:413:14" }
+node: { title: "stm32__device__enable_clock__9" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:395:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__device__enable_clock__9" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:397:12" }
+node: { title: "stm32__device__enable_clock__8" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:386:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__device__enable_clock__8" targetname: "stm32__device__enable_clock__9" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:388:7" }
+edge: { sourcename: "stm32__device__enable_clock__8" targetname: "stm32__device__as_port_id" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:388:21" }
+node: { title: "stm32__device__as_port_id" label: "AS_PORT_ID\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:369:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__as_port_id" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:378:10" }
+node: { title: "stm32__device__reset__6" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:352:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__reset__6" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:361:10" }
+node: { title: "stm32__device__enable_clock__7" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:337:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__enable_clock__7" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:344:10" }
+node: { title: "stm32__device__reset__5" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:302:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__reset__5" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:329:10" }
+node: { title: "stm32__device__enable_clock__6" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:275:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__enable_clock__6" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:294:10" }
+node: { title: "stm32__device__reset__4" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:264:4\n16 bytes (static)" }
+node: { title: "stm32__device__enable_clock__5" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:253:4\n16 bytes (static)" }
+node: { title: "stm32__device__reset_all_adc_units" label: "RESET_ALL_ADC_UNITS\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:243:4\n4 bytes (static)" }
+node: { title: "stm32__device__enable_clock__4" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:225:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__enable_clock__4" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:235:10" }
+node: { title: "stm32__device__gpio_port_representation" label: "GPIO_PORT_REPRESENTATION\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:191:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__device__gpio_port_representation" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:217:10" }
+node: { title: "stm32__device__reset__3" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:167:4\n64 bytes (static)" }
+edge: { sourcename: "stm32__device__reset__3" targetname: "stm32__device__reset" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:182:13" }
+edge: { sourcename: "stm32__device__reset__3" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:182:38" }
+edge: { sourcename: "stm32__device__reset__3" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:174:16" }
+edge: { sourcename: "stm32__device__reset__3" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:173:37" }
+node: { title: "stm32__device__reset__2" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:158:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__device__reset__2" targetname: "stm32__device__reset" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:160:7" }
+edge: { sourcename: "stm32__device__reset__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:160:27" }
+node: { title: "stm32__device__reset" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:114:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__reset" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:150:10" }
+node: { title: "stm32__device__enable_clock__3" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:102:4\n40 bytes (static)" }
+edge: { sourcename: "stm32__device__enable_clock__3" targetname: "stm32__device__enable_clock" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:106:10" }
+edge: { sourcename: "stm32__device__enable_clock__3" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:106:37" }
+node: { title: "stm32__device__enable_clock__2" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:92:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__device__enable_clock__2" targetname: "stm32__device__enable_clock" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:95:7" }
+edge: { sourcename: "stm32__device__enable_clock__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:95:34" }
+node: { title: "stm32__device__enable_clock" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:59:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__device__enable_clock" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.adb:84:10" }
+node: { title: "stm32__device__rcc_system_clocksIP" label: "RCC_SYSTEM_CLOCKSIP\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:532:9\n16 bytes (static)" }
+}

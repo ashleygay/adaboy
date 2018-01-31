@@ -1,0 +1,155 @@
+edge: { sourcename: "ov2640__write"
+  targetname: "3:hal__i2c__i2c_port,hal__i2c__i2c_port"
+  label: "ov2640.adb:258:15"
+}
+edge: { sourcename: "ov2640__read"
+  targetname: "4:hal__i2c__i2c_port,hal__i2c__i2c_port"
+  label: "ov2640.adb:276:15"
+}
+graph: { title: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb"
+node: { title: "system__secondary_stack__ss_release" label: "Ss_Release\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnat/s-secsta.ads:70:14" shape : ellipse }
+node: { title: "bit_fields__to_uint16" label: "To_Uint16\n/home/gps/ada/adl/components/src/camera/OV2640/bit_fields.ads:39:13" shape : ellipse }
+node: { title: "bit_fields__to_uint8" label: "To_Uint8\n/home/gps/ada/adl/components/src/camera/OV2640/bit_fields.ads:40:13" shape : ellipse }
+node: { title: "bit_fields__to_bit_field__2" label: "To_Bit_Field\n/home/gps/ada/adl/components/src/camera/OV2640/bit_fields.ads:46:13" shape : ellipse }
+node: { title: "system__secondary_stack__ss_mark" label: "Ss_Mark\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnat/s-secsta.ads:67:13" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "ov2640__enable_auto_band_filter" label: "ENABLE_AUTO_BAND_FILTER\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:557:4\n24 bytes (static)" }
+edge: { sourcename: "ov2640__enable_auto_band_filter" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:570:7" }
+edge: { sourcename: "ov2640__enable_auto_band_filter" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__read" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:563:12" }
+edge: { sourcename: "ov2640__enable_auto_band_filter" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__select_sensor_bank" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:562:7" }
+node: { title: "ov2640__enable_auto_exposure_control" label: "ENABLE_AUTO_EXPOSURE_CONTROL\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:537:4\n24 bytes (static)" }
+edge: { sourcename: "ov2640__enable_auto_exposure_control" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:550:7" }
+edge: { sourcename: "ov2640__enable_auto_exposure_control" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__read" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:543:13" }
+edge: { sourcename: "ov2640__enable_auto_exposure_control" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__select_dsp_bank" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:542:7" }
+node: { title: "ov2640__enable_auto_white_balance" label: "ENABLE_AUTO_WHITE_BALANCE\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:517:4\n24 bytes (static)" }
+edge: { sourcename: "ov2640__enable_auto_white_balance" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:530:7" }
+edge: { sourcename: "ov2640__enable_auto_white_balance" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__read" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:523:13" }
+edge: { sourcename: "ov2640__enable_auto_white_balance" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__select_dsp_bank" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:522:7" }
+node: { title: "ov2640__enable_auto_gain_control" label: "ENABLE_AUTO_GAIN_CONTROL\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:497:4\n24 bytes (static)" }
+edge: { sourcename: "ov2640__enable_auto_gain_control" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:510:7" }
+edge: { sourcename: "ov2640__enable_auto_gain_control" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__read" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:503:12" }
+edge: { sourcename: "ov2640__enable_auto_gain_control" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__select_sensor_bank" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:502:7" }
+node: { title: "ov2640__get_pid" label: "GET_PID\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:487:4\n16 bytes (static)" }
+edge: { sourcename: "ov2640__get_pid" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__read" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:490:7" }
+edge: { sourcename: "ov2640__get_pid" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__select_sensor_bank" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:489:7" }
+node: { title: "ov2640__set_frame_rate" label: "SET_FRAME_RATE\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:475:4\n16 bytes (static)" }
+node: { title: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B154b___finalizer.5944" label: "B154B\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:433:14\n16 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B154b___finalizer.5944" targetname: "system__secondary_stack__ss_release" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:433:14" }
+node: { title: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B140b___finalizer.5902" label: "B140B\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:432:14\n16 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B140b___finalizer.5902" targetname: "system__secondary_stack__ss_release" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:432:14" }
+node: { title: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B65b___finalizer.5753" label: "B65B\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:420:17\n16 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B65b___finalizer.5753" targetname: "system__secondary_stack__ss_release" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:420:17" }
+node: { title: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B51b___finalizer.5714" label: "B51B\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:419:17\n16 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B51b___finalizer.5714" targetname: "system__secondary_stack__ss_release" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:419:17" }
+node: { title: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B37b___finalizer.5675" label: "B37B\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:417:17\n16 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B37b___finalizer.5675" targetname: "system__secondary_stack__ss_release" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:417:17" }
+node: { title: "ov2640__set_frame_size" label: "SET_FRAME_SIZE\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:360:4\n488 bytes (static)" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:468:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__enable_dsp" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:467:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:465:10" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:463:10" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:460:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:459:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:449:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_uint8" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:450:14" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:440:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_uint8" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:441:14" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:438:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_uint8" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:438:35" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:437:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_uint8" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:437:35" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:436:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:435:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B154b___finalizer.5944" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:433:0" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:433:17" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_bit_field__2" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:433:17" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_uint16" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:433:31" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "system__secondary_stack__ss_mark" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:433:14" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B140b___finalizer.5902" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:432:0" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:432:17" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_bit_field__2" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:432:17" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_uint16" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:432:31" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "system__secondary_stack__ss_mark" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:432:14" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:429:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_uint8" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:430:14" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:426:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_uint8" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:426:36" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:424:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_uint8" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:424:36" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B65b___finalizer.5753" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:420:0" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:420:20" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_bit_field__2" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:420:20" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "system__secondary_stack__ss_mark" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:420:17" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B51b___finalizer.5714" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:419:0" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:419:20" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_bit_field__2" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:419:20" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "system__secondary_stack__ss_mark" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:419:17" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B37b___finalizer.5675" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:417:0" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:417:20" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_bit_field__2" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:417:20" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "system__secondary_stack__ss_mark" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:417:17" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B23b___finalizer.5604" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:416:0" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:416:20" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "bit_fields__to_bit_field__2" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:416:20" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "system__secondary_stack__ss_mark" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:416:17" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:410:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__enable_dsp" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:407:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:405:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:404:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:403:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:402:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:401:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:400:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:399:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:398:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:397:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:394:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:393:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:392:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:391:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:390:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:389:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:388:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__select_sensor_bank" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:387:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:382:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__select_sensor_bank" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:381:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:376:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:379:45" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:377:45" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:375:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:375:54" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:374:7" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:374:53" }
+edge: { sourcename: "ov2640__set_frame_size" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__enable_dsp" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:371:7" }
+node: { title: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B23b___finalizer.5604" label: "B23B\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:416:17\n16 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__set_frame_size__B23b___finalizer.5604" targetname: "system__secondary_stack__ss_release" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:416:17" }
+node: { title: "ov2640__set_pixel_format" label: "SET_PIXEL_FORMAT\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:335:4\n16 bytes (static)" }
+edge: { sourcename: "ov2640__set_pixel_format" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:353:7" }
+edge: { sourcename: "ov2640__set_pixel_format" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:349:13" }
+edge: { sourcename: "ov2640__set_pixel_format" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:348:13" }
+edge: { sourcename: "ov2640__set_pixel_format" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:346:13" }
+edge: { sourcename: "ov2640__set_pixel_format" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:344:13" }
+edge: { sourcename: "ov2640__set_pixel_format" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:342:12" }
+edge: { sourcename: "ov2640__set_pixel_format" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:341:7" }
+edge: { sourcename: "ov2640__set_pixel_format" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__select_dsp_bank" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:340:7" }
+node: { title: "ov2640__initialize" label: "INITIALIZE\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:319:4\n32 bytes (static)" }
+edge: { sourcename: "ov2640__initialize" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:327:10" }
+node: { title: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__enable_dsp" label: "ENABLE_DSP\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:309:4\n16 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__enable_dsp" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:312:7" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__enable_dsp" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__select_dsp_bank" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:311:7" }
+node: { title: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__select_dsp_bank" label: "SELECT_DSP_BANK\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:300:4\n16 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__select_dsp_bank" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:302:7" }
+node: { title: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__select_sensor_bank" label: "SELECT_SENSOR_BANK\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:291:4\n16 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__select_sensor_bank" targetname: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:293:7" }
+node: { title: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__read" label: "READ\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:272:4\n64 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:282:10" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__read" targetname: "__indirect_call" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:276:15" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+node: { title: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" label: "WRITE\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:255:4\n64 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:264:10" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:ov2640__write" targetname: "__indirect_call" label: "/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:258:15" }
+node: { title: "ov2640__command_arrayIP" label: "COMMAND_ARRAYIP\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:50:9\n16 bytes (static)" }
+node: { title: "ov2640__addr_and_dataIP" label: "ADDR_AND_DATAIP\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.adb:46:9\n24 bytes (static)" }
+node: { title: "ov2640__ov2640_cameraIP" label: "OV2640_CAMERAIP\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.ads:90:9\n16 bytes (static)" }
+node: { title: "ov2640__resolutionIP" label: "RESOLUTIONIP\n/home/gps/ada/adl/components/src/camera/OV2640/ov2640.ads:46:9\n24 bytes (static)" }
+}

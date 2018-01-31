@@ -1,0 +1,14 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-cec.ads"
+node: { title: "stm32_svd__cec__cec_peripheralIP" label: "CEC_PERIPHERALIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-cec.ads:221:9\n16 bytes (static)" }
+edge: { sourcename: "stm32_svd__cec__cec_peripheralIP" targetname: "stm32_svd__cec__ier_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-cec.ads:233:7" }
+edge: { sourcename: "stm32_svd__cec__cec_peripheralIP" targetname: "stm32_svd__cec__isr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-cec.ads:231:7" }
+edge: { sourcename: "stm32_svd__cec__cec_peripheralIP" targetname: "stm32_svd__cec__txdr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-cec.ads:227:7" }
+edge: { sourcename: "stm32_svd__cec__cec_peripheralIP" targetname: "stm32_svd__cec__cfgr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-cec.ads:225:7" }
+edge: { sourcename: "stm32_svd__cec__cec_peripheralIP" targetname: "stm32_svd__cec__cr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-cec.ads:223:7" }
+node: { title: "stm32_svd__cec__ier_registerIP" label: "IER_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-cec.ads:166:9\n16 bytes (static)" }
+node: { title: "stm32_svd__cec__isr_registerIP" label: "ISR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-cec.ads:115:9\n16 bytes (static)" }
+node: { title: "stm32_svd__cec__rxdr_registerIP" label: "RXDR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-cec.ads:100:9\n16 bytes (static)" }
+node: { title: "stm32_svd__cec__txdr_registerIP" label: "TXDR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-cec.ads:83:9\n16 bytes (static)" }
+node: { title: "stm32_svd__cec__cfgr_registerIP" label: "CFGR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-cec.ads:42:9\n16 bytes (static)" }
+node: { title: "stm32_svd__cec__cr_registerIP" label: "CR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-cec.ads:18:9\n16 bytes (static)" }
+}

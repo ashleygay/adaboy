@@ -1,0 +1,11 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-hash.ads"
+node: { title: "stm32_svd__hash__hash_peripheralIP" label: "HASH_PERIPHERALIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-hash.ads:141:9\n16 bytes (static)" }
+edge: { sourcename: "stm32_svd__hash__hash_peripheralIP" targetname: "stm32_svd__hash__sr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-hash.ads:161:7" }
+edge: { sourcename: "stm32_svd__hash__hash_peripheralIP" targetname: "stm32_svd__hash__imr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-hash.ads:159:7" }
+edge: { sourcename: "stm32_svd__hash__hash_peripheralIP" targetname: "stm32_svd__hash__str_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-hash.ads:147:7" }
+edge: { sourcename: "stm32_svd__hash__hash_peripheralIP" targetname: "stm32_svd__hash__cr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-hash.ads:143:7" }
+node: { title: "stm32_svd__hash__sr_registerIP" label: "SR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-hash.ads:113:9\n16 bytes (static)" }
+node: { title: "stm32_svd__hash__imr_registerIP" label: "IMR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-hash.ads:95:9\n16 bytes (static)" }
+node: { title: "stm32_svd__hash__str_registerIP" label: "STR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-hash.ads:74:9\n16 bytes (static)" }
+node: { title: "stm32_svd__hash__cr_registerIP" label: "CR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-hash.ads:21:9\n16 bytes (static)" }
+}

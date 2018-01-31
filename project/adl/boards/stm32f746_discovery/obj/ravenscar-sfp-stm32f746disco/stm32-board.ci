@@ -1,0 +1,59 @@
+graph: { title: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb"
+node: { title: "memcpy" label: "builtin_memcpy\n<built-in>" shape : ellipse }
+node: { title: "sdcard__sdcard_controllerIP" label: "Sdcard_Controllerip\n/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.ads:88:9" shape : ellipse }
+node: { title: "audio__wm8994_audio_deviceIP" label: "Wm8994_Audio_Deviceip\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.ads:76:9" shape : ellipse }
+node: { title: "touch_panel_ft5336__Ttouch_panelBIP" label: "Ttouch_Panelbip\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.ads:66:4" shape : ellipse }
+node: { title: "framebuffer_rk043fn48h__frame_bufferIP" label: "Frame_Bufferip\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/framebuffer_rk043fn48h.ads:50:9" shape : ellipse }
+node: { title: "stm32__gpio___assign" label: "GPIO\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:138:9" shape : ellipse }
+node: { title: "stm32__gpio__gpio_pointsIP" label: "GPIO_POINTSIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:225:9" shape : ellipse }
+node: { title: "stm32__gpio__configure_io" label: "CONFIGURE_IO\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:200:14" shape : ellipse }
+node: { title: "stm32__device__enable_clock__2" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:83:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnat/a-except.adb:41:17" shape : ellipse }
+node: { title: "stm32__gpio__lock__2" label: "LOCK\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:256:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "system__assertions__raise_assert_failure" label: "Raise_Assert_Failure\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnat/s-assert.ads:46:14" shape : ellipse }
+node: { title: "stm32__device__as_port_id" label: "AS_PORT_ID\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:469:13" shape : ellipse }
+node: { title: "stm32__gpio__configure_io__2" label: "CONFIGURE_IO\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:260:14" shape : ellipse }
+node: { title: "stm32__device__enable_clock__3" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:85:14" shape : ellipse }
+node: { title: "stm32__gpio__set__4" label: "SET\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:241:14" shape : ellipse }
+node: { title: "stm32__gpio__clear__2" label: "CLEAR\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:246:14" shape : ellipse }
+node: { title: "stm32__board___elabs" label: "BOARD\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:52:1\n16 bytes (static)" }
+edge: { sourcename: "stm32__board___elabs" targetname: "sdcard__sdcard_controllerIP" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:182:4" }
+edge: { sourcename: "stm32__board___elabs" targetname: "audio__wm8994_audio_deviceIP" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:158:4" }
+edge: { sourcename: "stm32__board___elabs" targetname: "touch_panel_ft5336__Ttouch_panelBIP" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:139:4" }
+edge: { sourcename: "stm32__board___elabs" targetname: "framebuffer_rk043fn48h__frame_bufferIP" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:138:4" }
+edge: { sourcename: "stm32__board___elabs" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:98:31" }
+edge: { sourcename: "stm32__board___elabs" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:98:31" }
+edge: { sourcename: "stm32__board___elabs" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:98:31" }
+edge: { sourcename: "stm32__board___elabs" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:98:31" }
+edge: { sourcename: "stm32__board___elabs" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:98:31" }
+edge: { sourcename: "stm32__board___elabs" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:98:31" }
+edge: { sourcename: "stm32__board___elabs" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:98:31" }
+edge: { sourcename: "stm32__board___elabs" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:98:31" }
+edge: { sourcename: "stm32__board___elabs" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:98:31" }
+edge: { sourcename: "stm32__board___elabs" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:98:31" }
+edge: { sourcename: "stm32__board___elabs" targetname: "memcpy" }
+edge: { sourcename: "stm32__board___elabs" targetname: "memcpy" }
+edge: { sourcename: "stm32__board___elabs" targetname: "stm32__gpio__gpio_pointsIP" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:98:31" }
+node: { title: "stm32__board__configure_user_button_gpio" label: "CONFIGURE_USER_BUTTON_GPIO\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:100:4\n8 bytes (static)" }
+edge: { sourcename: "stm32__board__configure_user_button_gpio" targetname: "stm32__gpio__configure_io" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:103:7" }
+edge: { sourcename: "stm32__board__configure_user_button_gpio" targetname: "stm32__device__enable_clock__2" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:102:7" }
+node: { title: "stm32__board__initialize_i2c_gpio" label: "INITIALIZE_I2C_GPIO\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:71:4\n168 bytes (static)" }
+edge: { sourcename: "stm32__board__initialize_i2c_gpio" targetname: "stm32__gpio__lock__2" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:93:7" }
+edge: { sourcename: "stm32__board__initialize_i2c_gpio" targetname: "stm32__gpio__configure_io__2" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:87:7" }
+edge: { sourcename: "stm32__board__initialize_i2c_gpio" targetname: "stm32__device__enable_clock__3" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:85:7" }
+edge: { sourcename: "stm32__board__initialize_i2c_gpio" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:81:10" }
+edge: { sourcename: "stm32__board__initialize_i2c_gpio" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:75:23" }
+edge: { sourcename: "stm32__board__initialize_i2c_gpio" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:76:23" }
+edge: { sourcename: "stm32__board__initialize_i2c_gpio" targetname: "stm32__device__as_port_id" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:73:7" }
+edge: { sourcename: "stm32__board__initialize_i2c_gpio" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:127:13" }
+edge: { sourcename: "stm32__board__initialize_i2c_gpio" targetname: "stm32__device__as_port_id" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:129:13" }
+edge: { sourcename: "stm32__board__initialize_i2c_gpio" targetname: "stm32__device__as_port_id" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:127:13" }
+node: { title: "stm32__board__initialize_leds" label: "INITIALIZE_LEDS\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:56:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__board__initialize_leds" targetname: "stm32__gpio__configure_io__2" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:60:7" }
+edge: { sourcename: "stm32__board__initialize_leds" targetname: "stm32__device__enable_clock__3" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:58:7" }
+node: { title: "stm32__board__all_leds_on" label: "ALL_LEDS_ON\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:47:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__board__all_leds_on" targetname: "stm32__gpio__set__4" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:49:7" }
+node: { title: "stm32__board__all_leds_off" label: "ALL_LEDS_OFF\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:38:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__board__all_leds_off" targetname: "stm32__gpio__clear__2" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.adb:40:7" }
+}

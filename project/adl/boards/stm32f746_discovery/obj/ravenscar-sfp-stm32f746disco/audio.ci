@@ -1,0 +1,122 @@
+class {
+  classname: "audio__wm8994_audio_device"
+  label: "audio__wm8994_audio_device\audio.ads:43:9"
+  parent: "audio__wm8994_audio_device"
+  virtuals: "1:audio__initialize_audio_out\n
+             2:audio__set_volume\n
+             3:audio__set_frequency\n
+             4:audio__play\n
+             5:audio__pause\n
+             6:audio__resume\n
+             7:audio__stop\n
+             -1:audio___size"
+}
+graph: { title: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb"
+node: { title: "ravenscar_time__delays" label: "Delays\n/home/gps/ada/adl/middleware/src/ravenscar-common/ravenscar_time.ads:36:13" shape : ellipse }
+node: { title: "wm8994__set_volume" label: "SET_VOLUME\n/home/gps/ada/adl/components/src/audio/W8994/wm8994.ads:106:14" shape : ellipse }
+node: { title: "stm32__sai__dma_stop" label: "DMA_STOP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.ads:293:14" shape : ellipse }
+node: { title: "wm8994__stop" label: "STOP\n/home/gps/ada/adl/components/src/audio/W8994/wm8994.ads:105:14" shape : ellipse }
+node: { title: "stm32__sai__dma_resume" label: "DMA_RESUME\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.ads:288:14" shape : ellipse }
+node: { title: "wm8994__resume" label: "RESUME\n/home/gps/ada/adl/components/src/audio/W8994/wm8994.ads:104:14" shape : ellipse }
+node: { title: "stm32__sai__dma_pause" label: "DMA_PAUSE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.ads:283:14" shape : ellipse }
+node: { title: "wm8994__pause" label: "PAUSE\n/home/gps/ada/adl/components/src/audio/W8994/wm8994.ads:103:14" shape : ellipse }
+node: { title: "stm32__sai__enabled" label: "ENABLED\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.ads:263:13" shape : ellipse }
+node: { title: "stm32__sai__enable_dma" label: "ENABLE_DMA\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.ads:278:14" shape : ellipse }
+node: { title: "stm32__dma__start_transfer_with_interrupts" label: "START_TRANSFER_WITH_INTERRUPTS\n/home/gps/ada/adl/arch/ARM/STM32/drivers/dma/stm32-dma.ads:223:14" shape : ellipse }
+node: { title: "wm8994__play" label: "PLAY\n/home/gps/ada/adl/components/src/audio/W8994/wm8994.ads:102:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnat/a-except.adb:41:17" shape : ellipse }
+node: { title: "wm8994__init" label: "INIT\n/home/gps/ada/adl/components/src/audio/W8994/wm8994.ads:95:14" shape : ellipse }
+node: { title: "wm8994__audio_frequencyRP" label: "AUDIO_FREQUENCYRP\n/home/gps/ada/adl/components/src/audio/W8994/wm8994.ads:53:9" shape : ellipse }
+node: { title: "wm8994__reset" label: "RESET\n/home/gps/ada/adl/components/src/audio/W8994/wm8994.ads:112:14" shape : ellipse }
+node: { title: "wm8994__read_id" label: "READ_ID\n/home/gps/ada/adl/components/src/audio/W8994/wm8994.ads:101:13" shape : ellipse }
+node: { title: "stm32__sai__deinitialize" label: "DEINITIALIZE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.ads:259:14" shape : ellipse }
+node: { title: "stm32__setup__setup_i2c_master" label: "SETUP_I2C_MASTER\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.ads:46:14" shape : ellipse }
+node: { title: "stm32__sai__enable" label: "ENABLE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.ads:268:14" shape : ellipse }
+node: { title: "stm32__sai__configure_block_slot" label: "CONFIGURE_BLOCK_SLOT\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.ads:324:14" shape : ellipse }
+node: { title: "stm32__sai__configure_block_frame" label: "CONFIGURE_BLOCK_FRAME\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.ads:315:14" shape : ellipse }
+node: { title: "stm32__sai__configure_audio_block" label: "CONFIGURE_AUDIO_BLOCK\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.ads:298:14" shape : ellipse }
+node: { title: "stm32__sai__disable" label: "DISABLE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.ads:273:14" shape : ellipse }
+node: { title: "stm32__dma__clear_all_status" label: "CLEAR_ALL_STATUS\n/home/gps/ada/adl/arch/ARM/STM32/drivers/dma/stm32-dma.ads:348:14" shape : ellipse }
+node: { title: "stm32__dma__configure" label: "CONFIGURE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/dma/stm32-dma.ads:576:14" shape : ellipse }
+node: { title: "stm32__dma__disable" label: "DISABLE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/dma/stm32-dma.ads:114:14" shape : ellipse }
+node: { title: "stm32__device__enable_clock__6" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:412:14" shape : ellipse }
+node: { title: "stm32__gpio__configure_io__2" label: "CONFIGURE_IO\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:260:14" shape : ellipse }
+node: { title: "stm32__device__enable_clock__3" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:85:14" shape : ellipse }
+node: { title: "stm32__device__enable_clock__12" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:579:14" shape : ellipse }
+node: { title: "stm32__device__configure_sai_i2s_clock" label: "CONFIGURE_SAI_I2S_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:641:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "hal__audio__audio_frequencyRP" label: "AUDIO_FREQUENCYRP\n/home/gps/ada/adl/hal/src/hal-audio.ads:41:9" shape : ellipse }
+node: { title: "wm8994__wm8994_deviceIP" label: "WM8994_DEVICEIP\n/home/gps/ada/adl/components/src/audio/W8994/wm8994.ads:115:9" shape : ellipse }
+node: { title: "audio___elabs" label: "Audio\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.ads:41:1\n8 bytes (static)" }
+edge: { sourcename: "audio___elabs" targetname: "ravenscar_time__delays" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.ads:78:74" }
+node: { title: "audio___elabb" label: "Audio\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:44:1\n4 bytes (static)" }
+node: { title: "audio__set_frequency" label: "Set_Frequency\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:308:4\n16 bytes (static)" }
+edge: { sourcename: "audio__set_frequency" targetname: "stm32__sai__enable" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:317:16" }
+edge: { sourcename: "audio__set_frequency" targetname: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_sai_out" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:316:7" }
+edge: { sourcename: "audio__set_frequency" targetname: "stm32__sai__disable" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:315:16" }
+edge: { sourcename: "audio__set_frequency" targetname: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__set_audio_clock" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:314:7" }
+edge: { sourcename: "audio__set_frequency" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:308:4" }
+node: { title: "audio__set_volume" label: "Set_Volume\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:296:4\n16 bytes (static)" }
+edge: { sourcename: "audio__set_volume" targetname: "wm8994__set_volume" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:301:18" }
+edge: { sourcename: "audio__set_volume" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:296:4" }
+node: { title: "audio__stop" label: "Stop\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:282:4\n16 bytes (static)" }
+edge: { sourcename: "audio__stop" targetname: "stm32__dma__clear_all_status" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:289:16" }
+edge: { sourcename: "audio__stop" targetname: "stm32__dma__disable" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:288:16" }
+edge: { sourcename: "audio__stop" targetname: "stm32__sai__dma_stop" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:286:7" }
+edge: { sourcename: "audio__stop" targetname: "wm8994__stop" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:285:18" }
+edge: { sourcename: "audio__stop" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:282:4" }
+node: { title: "audio__resume" label: "Resume\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:271:4\n16 bytes (static)" }
+edge: { sourcename: "audio__resume" targetname: "stm32__sai__dma_resume" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:275:7" }
+edge: { sourcename: "audio__resume" targetname: "wm8994__resume" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:274:18" }
+edge: { sourcename: "audio__resume" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:271:4" }
+node: { title: "audio__pause" label: "Pause\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:261:4\n16 bytes (static)" }
+edge: { sourcename: "audio__pause" targetname: "stm32__sai__dma_pause" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:264:7" }
+edge: { sourcename: "audio__pause" targetname: "wm8994__pause" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:263:18" }
+edge: { sourcename: "audio__pause" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:261:4" }
+node: { title: "audio__play" label: "Play\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:233:4\n56 bytes (static)" }
+edge: { sourcename: "audio__play" targetname: "stm32__sai__enable" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:253:10" }
+edge: { sourcename: "audio__play" targetname: "stm32__sai__enabled" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:252:14" }
+edge: { sourcename: "audio__play" targetname: "stm32__sai__enable_dma" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:250:7" }
+edge: { sourcename: "audio__play" targetname: "stm32__dma__start_transfer_with_interrupts" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:240:7" }
+edge: { sourcename: "audio__play" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:245:38" }
+edge: { sourcename: "audio__play" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:243:32" }
+edge: { sourcename: "audio__play" targetname: "wm8994__play" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:238:18" }
+edge: { sourcename: "audio__play" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:233:4" }
+node: { title: "audio__initialize_audio_out" label: "Initialize_Audio_Out\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:198:4\n48 bytes (static)" }
+edge: { sourcename: "audio__initialize_audio_out" targetname: "wm8994__init" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:220:18" }
+edge: { sourcename: "audio__initialize_audio_out" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:225:34" }
+edge: { sourcename: "audio__initialize_audio_out" targetname: "wm8994__audio_frequencyRP" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:225:34" }
+edge: { sourcename: "audio__initialize_audio_out" targetname: "wm8994__reset" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:219:18" }
+edge: { sourcename: "audio__initialize_audio_out" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:216:10" }
+edge: { sourcename: "audio__initialize_audio_out" targetname: "wm8994__read_id" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:215:21" }
+edge: { sourcename: "audio__initialize_audio_out" targetname: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_audio_i2c" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:213:7" }
+edge: { sourcename: "audio__initialize_audio_out" targetname: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_sai_out" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:210:7" }
+edge: { sourcename: "audio__initialize_audio_out" targetname: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_audio_out_pins" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:209:7" }
+edge: { sourcename: "audio__initialize_audio_out" targetname: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__set_audio_clock" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:206:7" }
+edge: { sourcename: "audio__initialize_audio_out" targetname: "stm32__sai__deinitialize" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:204:16" }
+edge: { sourcename: "audio__initialize_audio_out" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:198:4" }
+node: { title: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_audio_i2c" label: "Initialize_Audio_I2c\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:183:4\n16 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_audio_i2c" targetname: "stm32__setup__setup_i2c_master" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:186:18" }
+node: { title: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_sai_out" label: "Initialize_Sai_Out\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:143:4\n64 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_sai_out" targetname: "stm32__sai__enable" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:176:16" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_sai_out" targetname: "stm32__sai__configure_block_slot" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:169:16" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_sai_out" targetname: "stm32__sai__configure_block_frame" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:161:16" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_sai_out" targetname: "stm32__sai__configure_audio_block" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:147:16" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_sai_out" targetname: "stm32__sai__disable" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:146:16" }
+node: { title: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_audio_out_pins" label: "Initialize_Audio_Out_Pins\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:103:4\n24 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_audio_out_pins" targetname: "stm32__dma__clear_all_status" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:136:7" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_audio_out_pins" targetname: "stm32__dma__configure" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:121:7" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_audio_out_pins" targetname: "stm32__dma__disable" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:120:7" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_audio_out_pins" targetname: "stm32__device__enable_clock__6" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:117:7" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_audio_out_pins" targetname: "stm32__gpio__configure_io__2" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:109:7" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_audio_out_pins" targetname: "stm32__device__enable_clock__3" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:107:7" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__initialize_audio_out_pins" targetname: "stm32__device__enable_clock__12" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:106:7" }
+node: { title: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__set_audio_clock" label: "Set_Audio_Clock\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:70:4\n16 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__set_audio_clock" targetname: "stm32__device__configure_sai_i2s_clock" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:91:13" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__set_audio_clock" targetname: "stm32__device__configure_sai_i2s_clock" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:83:13" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__set_audio_clock" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:79:12" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:audio__set_audio_clock" targetname: "hal__audio__audio_frequencyRP" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.adb:79:12" }
+node: { title: "audio___size" label: "Audio\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.ads:76:9\n16 bytes (static)" }
+node: { title: "audio__wm8994_audio_deviceIP" label: "Wm8994_Audio_Deviceip\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.ads:76:9\n32 bytes (static)" }
+edge: { sourcename: "audio__wm8994_audio_deviceIP" targetname: "wm8994__wm8994_deviceIP" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/audio.ads:78:7" }
+}

@@ -1,0 +1,37 @@
+[LIBRARY PATH]
+/home/gps/ada/adl/arch/ARM/cortex_m/lib/cortex-m4f/libcortex-m4f.a
+[OBJECT FILES]
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/cortex_m-nvic.o
+20180124180442
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/cortex_m-cache.o
+20180124180442
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/cortex_m-fpu.o
+20180124180442
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/cortex_m_svd-fpu.o
+20180124180443
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/cortex_m_svd-debug.o
+20180124180443
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/cortex_m_svd-dwt.o
+20180124180443
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/cortex_m_svd-mpu.o
+20180124180443
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/cortex_m_svd-nvic.o
+20180124180443
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/cortex_m_svd.o
+20180124180443
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/cortex_m_svd-scb.o
+20180124180443
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/cortex_m_svd-systick.o
+20180124180443
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/cortex_m-debug.o
+20180124180443
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/cortex_m.o
+20180124180443
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/semihosting-filesystem.o
+20180124180443
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/memory_barriers.o
+20180124180443
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/cortex_m-dwt.o
+20180124180443
+/home/gps/ada/adl/arch/ARM/cortex_m/obj/cortex-m4f/semihosting.o
+20180124180443

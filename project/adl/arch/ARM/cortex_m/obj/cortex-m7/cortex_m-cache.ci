@@ -1,0 +1,12 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/cortex_m/src/cache/cortex_m-cache.adb"
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "cortex_m__cache___elabb" label: "Cache\n/home/gps/ada/adl/arch/ARM/cortex_m/src/cache/cortex_m-cache.adb:43:1\n4 bytes (static)" }
+node: { title: "cortex_m__cache__disable_d_cache" label: "Disable_D_Cache\n/home/gps/ada/adl/arch/ARM/cortex_m/src/cache/cortex_m-cache.adb:182:4\n32 bytes (static)" }
+edge: { sourcename: "cortex_m__cache__disable_d_cache" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/cache/cortex_m-cache.adb:196:48" }
+edge: { sourcename: "cortex_m__cache__disable_d_cache" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/cache/cortex_m-cache.adb:195:48" }
+node: { title: "cortex_m__cache__enable_d_cache" label: "Enable_D_Cache\n/home/gps/ada/adl/arch/ARM/cortex_m/src/cache/cortex_m-cache.adb:149:4\n32 bytes (static)" }
+edge: { sourcename: "cortex_m__cache__enable_d_cache" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/cache/cortex_m-cache.adb:165:30" }
+edge: { sourcename: "cortex_m__cache__enable_d_cache" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/cache/cortex_m-cache.adb:164:30" }
+node: { title: "cortex_m__cache__disable_i_cache" label: "Disable_I_Cache\n/home/gps/ada/adl/arch/ARM/cortex_m/src/cache/cortex_m-cache.adb:132:4\n4 bytes (static)" }
+node: { title: "cortex_m__cache__enable_i_cache" label: "Enable_I_Cache\n/home/gps/ada/adl/arch/ARM/cortex_m/src/cache/cortex_m-cache.adb:117:4\n4 bytes (static)" }
+}

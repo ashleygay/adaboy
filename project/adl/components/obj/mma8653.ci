@@ -1,0 +1,39 @@
+class {
+  classname: "mma8653__mma8653_accelerometer"
+  label: "mma8653__mma8653_accelerometer\mma8653.ads:37:9"
+  parent: "mma8653__mma8653_accelerometer"
+  virtuals: "1:mma8653__check_device_id\n
+             2:mma8653__read_data\n
+             -1:mma8653___size"
+}
+edge: { sourcename: "mma8653__read_register"
+  targetname: "4:hal__i2c__i2c_port,hal__i2c__i2c_port"
+  label: "mma8653.adb:52:16"
+}
+edge: { sourcename: "mma8653__read_data"
+  targetname: "4:hal__i2c__i2c_port,hal__i2c__i2c_port"
+  label: "mma8653.adb:92:16"
+}
+graph: { title: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb"
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "mma8653___elabb" label: "MMA8653\n/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:35:1\n4 bytes (static)" }
+node: { title: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:mma8653__read_data__convIP.5645" label: "CONVIP\n/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:79:12\n24 bytes (static)" }
+node: { title: "mma8653__read_data" label: "READ_DATA\n/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:78:4\n88 bytes (static)" }
+edge: { sourcename: "mma8653__read_data" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:105:42" }
+edge: { sourcename: "mma8653__read_data" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:104:42" }
+edge: { sourcename: "mma8653__read_data" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:103:42" }
+edge: { sourcename: "mma8653__read_data" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:100:10" }
+edge: { sourcename: "mma8653__read_data" targetname: "__indirect_call" label: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:92:16" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "mma8653__read_data" targetname: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:mma8653__read_data__convIP.5645" label: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:89:7" }
+edge: { sourcename: "mma8653__read_data" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:78:4" }
+node: { title: "mma8653__check_device_id" label: "CHECK_DEVICE_ID\n/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:69:4\n16 bytes (static)" }
+edge: { sourcename: "mma8653__check_device_id" targetname: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:mma8653__read_register" label: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:71:14" }
+edge: { sourcename: "mma8653__check_device_id" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:69:4" }
+node: { title: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:mma8653__read_register" label: "READ_REGISTER\n/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:46:4\n64 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:mma8653__read_register" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:60:10" }
+edge: { sourcename: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:mma8653__read_register" targetname: "__indirect_call" label: "/home/gps/ada/adl/components/src/motion/mma8653/mma8653.adb:52:16" }
+node: { title: "mma8653__all_axes_dataIP" label: "ALL_AXES_DATAIP\n/home/gps/ada/adl/components/src/motion/mma8653/mma8653.ads:45:9\n16 bytes (static)" }
+node: { title: "mma8653___size" label: "MMA8653\n/home/gps/ada/adl/components/src/motion/mma8653/mma8653.ads:52:9\n16 bytes (static)" }
+node: { title: "mma8653__mma8653_accelerometerIP" label: "MMA8653_ACCELEROMETERIP\n/home/gps/ada/adl/components/src/motion/mma8653/mma8653.ads:52:9\n24 bytes (static)" }
+}

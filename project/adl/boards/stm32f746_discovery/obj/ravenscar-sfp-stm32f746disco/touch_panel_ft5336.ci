@@ -1,0 +1,45 @@
+class {
+  classname: "touch_panel_ft5336__Ttouch_panelB"
+  label: "touch_panel_ft5336__Ttouch_panelB\touch_panel_ft5336.ads:66:4"
+  parent: "ft5336__ft5336_device"
+  virtuals: "-1:touch_panel_ft5336___size__2,-1:ft5336__ft5336_device\n
+             9:touch_panel_ft5336__initialize\n
+             10:touch_panel_ft5336__initialize__2\n
+             11:touch_panel_ft5336__set_orientation"
+}
+graph: { title: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb"
+node: { title: "ft5336__set_bounds" label: "SET_BOUNDS\n/home/gps/ada/adl/components/src/touch_panel/ft5336/ft5336.ads:54:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnat/a-except.adb:41:17" shape : ellipse }
+node: { title: "ft5336__check_id" label: "CHECK_ID\n/home/gps/ada/adl/components/src/touch_panel/ft5336/ft5336.ads:44:13" shape : ellipse }
+node: { title: "ft5336__tp_set_use_interrupts" label: "TP_SET_USE_INTERRUPTS\n/home/gps/ada/adl/components/src/touch_panel/ft5336/ft5336.ads:48:14" shape : ellipse }
+node: { title: "stm32__setup__setup_i2c_master" label: "SETUP_I2C_MASTER\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.ads:46:14" shape : ellipse }
+node: { title: "ada__real_time__delays__delay_until" label: "Delay_Until\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-retide.ads:42:14" shape : ellipse }
+node: { title: "ada__real_time__Oadd" label: "+\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:74:13" shape : ellipse }
+node: { title: "ada__real_time__milliseconds" label: "Milliseconds\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:106:13" shape : ellipse }
+node: { title: "ada__real_time__clock" label: "Clock\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:70:13" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "ft5336__ft5336_deviceIP" label: "FT5336_DEVICEIP\n/home/gps/ada/adl/components/src/touch_panel/ft5336/ft5336.ads:81:9" shape : ellipse }
+node: { title: "touch_panel_ft5336___elabb" label: "Touch_Panel_Ft5336\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:44:1\n4 bytes (static)" }
+node: { title: "touch_panel_ft5336__set_orientation" label: "Set_Orientation\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:90:4\n16 bytes (static)" }
+edge: { sourcename: "touch_panel_ft5336__set_orientation" targetname: "ft5336__set_bounds" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:101:17" }
+edge: { sourcename: "touch_panel_ft5336__set_orientation" targetname: "ft5336__set_bounds" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:97:17" }
+edge: { sourcename: "touch_panel_ft5336__set_orientation" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:95:12" }
+edge: { sourcename: "touch_panel_ft5336__set_orientation" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:90:4" }
+node: { title: "touch_panel_ft5336__initialize__2" label: "Initialize\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:77:4\n32 bytes (static)" }
+edge: { sourcename: "touch_panel_ft5336__initialize__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:82:10" }
+edge: { sourcename: "touch_panel_ft5336__initialize__2" targetname: "touch_panel_ft5336__initialize" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:81:18" }
+edge: { sourcename: "touch_panel_ft5336__initialize__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:77:4" }
+node: { title: "touch_panel_ft5336__initialize" label: "Initialize\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:50:4\n32 bytes (static)" }
+edge: { sourcename: "touch_panel_ft5336__initialize" targetname: "ft5336__check_id" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:70:7" }
+edge: { sourcename: "touch_panel_ft5336__initialize" targetname: "touch_panel_ft5336__set_orientation" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:68:11" }
+edge: { sourcename: "touch_panel_ft5336__initialize" targetname: "ft5336__tp_set_use_interrupts" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:67:11" }
+edge: { sourcename: "touch_panel_ft5336__initialize" targetname: "stm32__setup__setup_i2c_master" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:60:18" }
+edge: { sourcename: "touch_panel_ft5336__initialize" targetname: "ada__real_time__delays__delay_until" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:58:7" }
+edge: { sourcename: "touch_panel_ft5336__initialize" targetname: "ada__real_time__Oadd" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:58:25" }
+edge: { sourcename: "touch_panel_ft5336__initialize" targetname: "ada__real_time__milliseconds" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:58:27" }
+edge: { sourcename: "touch_panel_ft5336__initialize" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:58:19" }
+edge: { sourcename: "touch_panel_ft5336__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.adb:50:4" }
+node: { title: "touch_panel_ft5336___size__2" label: "Touch_Panel_Ft5336\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.ads:66:4\n16 bytes (static)" }
+node: { title: "touch_panel_ft5336__Ttouch_panelBIP" label: "Ttouch_Panelbip\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.ads:66:4\n24 bytes (static)" }
+edge: { sourcename: "touch_panel_ft5336__Ttouch_panelBIP" targetname: "ft5336__ft5336_deviceIP" label: "/home/gps/ada/adl/boards/stm32_common/stm32f746disco/touch_panel_ft5336.ads:66:4" }
+}

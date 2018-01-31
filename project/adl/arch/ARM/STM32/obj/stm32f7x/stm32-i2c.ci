@@ -1,0 +1,203 @@
+class {
+  classname: "stm32__i2c__i2c_port"
+  label: "stm32__i2c__i2c_port\stm32-i2c.ads:70:9"
+  parent: "hal__i2c__i2c_port"
+  virtuals: "1:stm32__i2c__master_transmit,1:hal__i2c__i2c_port\n
+             2:stm32__i2c__master_receive,2:hal__i2c__i2c_port\n
+             3:stm32__i2c__mem_write,3:hal__i2c__i2c_port\n
+             4:stm32__i2c__mem_read,4:hal__i2c__i2c_port\n
+             -1:stm32__i2c___size__2,-1:hal__i2c__i2c_port\n
+             5:stm32__i2c__port_enabled\n
+             6:stm32__i2c__configure\n
+             7:stm32__i2c__is_configured\n
+             -6:stm32__i2c__Oeq\n
+             -7:stm32__i2c___assign"
+}
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb"
+node: { title: "ada__real_time__Osubtract__2" label: "-\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:76:13" shape : ellipse }
+node: { title: "ada__real_time__Oadd" label: "+\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:74:13" shape : ellipse }
+node: { title: "ada__real_time__milliseconds" label: "Milliseconds\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:106:13" shape : ellipse }
+node: { title: "ada__real_time__clock" label: "Clock\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:70:13" shape : ellipse }
+node: { title: "system__assertions__raise_assert_failure" label: "Raise_Assert_Failure\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnat/s-assert.ads:46:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "stm32__i2c___elabb" label: "I2C\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:39:1\n4 bytes (static)" }
+node: { title: "stm32__i2c__mem_read" label: "MEM_READ\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:683:4\n80 bytes (static)" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__reset_config" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:810:7" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_stop_flag" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:804:7" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:799:41" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:799:41" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:799:33" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:794:16" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:796:38" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:796:38" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:796:30" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:790:16" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:789:42" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:789:20" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:782:39" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:779:35" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:778:37" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:777:10" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:777:27" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:772:31" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:768:27" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:766:10" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:767:29" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:762:10" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_tx_interrupt_status" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:745:16" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:741:56" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:740:47" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:736:47" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:734:12" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_tx_interrupt_status" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:728:7" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:719:7" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:722:16" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "ada__real_time__milliseconds" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:700:29" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "ada__real_time__Osubtract__2" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:700:19" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:700:13" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:697:13" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:122:18" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "stm32__i2c__is_configured" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:122:18" }
+edge: { sourcename: "stm32__i2c__mem_read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:683:4" }
+node: { title: "stm32__i2c__mem_write" label: "MEM_WRITE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:542:4\n104 bytes (static)" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__reset_config" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:673:7" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_stop_flag" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:667:7" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:662:41" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:662:41" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:662:33" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:657:16" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:659:38" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:659:38" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:659:30" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:653:16" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:652:42" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:652:20" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_transfer_complete_reset_flag" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:646:13" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:643:39" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:640:37" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:639:37" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:639:54" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_tx_interrupt_status" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:633:10" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:632:31" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:628:27" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:626:10" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:627:29" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:622:10" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_transfer_complete_reset_flag" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:614:7" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_tx_interrupt_status" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:605:16" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:601:56" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:600:47" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:596:47" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:594:12" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_tx_interrupt_status" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:586:7" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:577:7" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:580:16" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "ada__real_time__milliseconds" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:558:29" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "ada__real_time__Osubtract__2" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:558:19" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:558:13" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:556:13" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:111:18" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "stm32__i2c__is_configured" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:111:18" }
+edge: { sourcename: "stm32__i2c__mem_write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:542:4" }
+node: { title: "stm32__i2c__master_receive" label: "MASTER_RECEIVE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:457:4\n56 bytes (static)" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__reset_config" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:532:7" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_stop_flag" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:526:7" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:521:41" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:521:41" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:521:33" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:518:16" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:519:50" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:519:50" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:519:42" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:514:16" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:513:42" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:513:20" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:506:39" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:503:35" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:502:37" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:501:10" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:501:27" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:496:31" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:492:27" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:490:10" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:491:29" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:486:10" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:100:18" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "stm32__i2c__is_configured" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:100:18" }
+edge: { sourcename: "stm32__i2c__master_receive" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:457:4" }
+node: { title: "stm32__i2c__master_transmit" label: "MASTER_TRANSMIT\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:369:4\n80 bytes (static)" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__reset_config" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:447:7" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_stop_flag" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:441:7" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:436:41" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:436:41" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:436:33" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:433:16" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:434:50" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:434:50" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:434:42" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:429:16" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:428:42" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:428:20" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_transfer_complete_reset_flag" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:423:13" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:420:39" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:417:37" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:416:37" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:416:54" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_tx_interrupt_status" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:410:10" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:409:31" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:405:27" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:403:10" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:404:29" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:399:10" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:91:18" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "stm32__i2c__is_configured" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:91:18" }
+edge: { sourcename: "stm32__i2c__master_transmit" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:369:4" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_stop_flag" label: "WAIT_STOP_FLAG\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:330:4\n48 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_stop_flag" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__reset_config" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:350:13" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_stop_flag" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:348:54" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_stop_flag" targetname: "ada__real_time__Oadd" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:348:27" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_stop_flag" targetname: "ada__real_time__milliseconds" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:348:29" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_stop_flag" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__check_nack" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:338:10" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_stop_flag" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:335:7" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_transfer_complete_reset_flag" label: "WAIT_TRANSFER_COMPLETE_RESET_FLAG\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:304:4\n48 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_transfer_complete_reset_flag" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__reset_config" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:315:13" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_transfer_complete_reset_flag" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:313:54" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_transfer_complete_reset_flag" targetname: "ada__real_time__Oadd" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:313:27" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_transfer_complete_reset_flag" targetname: "ada__real_time__milliseconds" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:313:29" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_transfer_complete_reset_flag" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:309:7" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_tx_interrupt_status" label: "WAIT_TX_INTERRUPT_STATUS\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:269:4\n48 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_tx_interrupt_status" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__reset_config" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:289:13" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_tx_interrupt_status" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:287:54" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_tx_interrupt_status" targetname: "ada__real_time__Oadd" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:287:27" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_tx_interrupt_status" targetname: "ada__real_time__milliseconds" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:287:29" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_tx_interrupt_status" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__check_nack" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:277:10" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__wait_tx_interrupt_status" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:274:7" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__check_nack" label: "CHECK_NACK\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:222:4\n48 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__check_nack" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__reset_config" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:255:10" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__check_nack" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:242:57" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__check_nack" targetname: "ada__real_time__Oadd" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:242:30" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__check_nack" targetname: "ada__real_time__milliseconds" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:242:32" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__check_nack" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:227:7" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__reset_config" label: "RESET_CONFIG\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:206:4\n24 bytes (static)" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" label: "CONFIG_TRANSFER\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:166:4\n32 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__config_transfer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:184:12" }
+node: { title: "stm32__i2c__is_configured" label: "IS_CONFIGURED\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:156:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__i2c__is_configured" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:156:4" }
+node: { title: "stm32__i2c__configure" label: "CONFIGURE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:95:4\n48 bytes (static)" }
+edge: { sourcename: "stm32__i2c__configure" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__configure___postconditions.5892" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:150:8" }
+edge: { sourcename: "stm32__i2c__configure" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__configure___postconditions.5892" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:101:10" }
+edge: { sourcename: "stm32__i2c__configure" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:79:19" }
+edge: { sourcename: "stm32__i2c__configure" targetname: "stm32__i2c__is_configured" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:79:23" }
+edge: { sourcename: "stm32__i2c__configure" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:95:4" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__configure___postconditions.5892" label: "CONFIGURE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:95:4\n24 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__configure___postconditions.5892" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:80:19" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:stm32__i2c__configure___postconditions.5892" targetname: "stm32__i2c__is_configured" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:80:19" }
+node: { title: "stm32__i2c__port_enabled" label: "PORT_ENABLED\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.adb:85:4\n16 bytes (static)" }
+node: { title: "stm32__i2c___assign" label: "I2C\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:136:9\n32 bytes (static)" }
+edge: { sourcename: "stm32__i2c___assign" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:136:9" }
+node: { title: "stm32__i2c__Oeq" label: "=\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:136:4\n16 bytes (static)" }
+node: { title: "stm32__i2c___size__2" label: "I2C\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:136:9\n16 bytes (static)" }
+node: { title: "stm32__i2c__i2c_portIP" label: "I2C_PORTIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:136:9\n24 bytes (static)" }
+edge: { sourcename: "stm32__i2c__i2c_portIP" targetname: "stm32__i2c__i2c_configurationIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:138:10" }
+node: { title: "stm32__i2c__i2c_configurationIP" label: "I2C_CONFIGURATIONIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:46:9\n16 bytes (static)" }
+}

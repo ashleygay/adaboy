@@ -1,0 +1,118 @@
+class {
+  classname: "semihosting__filesystem__shfs"
+  label: "semihosting__filesystem__shfs\semihosting-filesystem.ads:42:9"
+  parent: "hal__filesystem__filesystem_driver"
+  virtuals: "1:semihosting__filesystem__open__2,1:hal__filesystem__filesystem_driver\n
+             2:semihosting__filesystem__create_file,2:hal__filesystem__filesystem_driver\n
+             3:semihosting__filesystem__unlink,3:hal__filesystem__filesystem_driver\n
+             4:semihosting__filesystem__remove_directory,4:hal__filesystem__filesystem_driver\n
+             5:semihosting__filesystem__root_node,5:hal__filesystem__filesystem_driver\n
+             6:semihosting__filesystem__open,6:hal__filesystem__filesystem_driver\n
+             7:semihosting__filesystem__close,7:hal__filesystem__filesystem_driver\n
+             -1:semihosting__filesystem___size__4,-1:hal__filesystem__filesystem_driver\n
+             8:semihosting__filesystem__create_node\n
+             9:semihosting__filesystem__create_directory\n
+             10:semihosting__filesystem__rename\n
+             11:semihosting__filesystem__truncate_file\n
+             12:semihosting__filesystem__get_file_handle\n
+             -6:semihosting__filesystem__Oeq\n
+             -7:semihosting__filesystem___assign"
+}
+class {
+  classname: "semihosting__filesystem__shfs_file_handle"
+  label: "semihosting__filesystem__shfs_file_handle\semihosting-filesystem.ads:114:9"
+  parent: "hal__filesystem__file_handle"
+  virtuals: "1:semihosting__filesystem__get_fs__2,1:hal__filesystem__file_handle\n
+             2:semihosting__filesystem__size__2,2:hal__filesystem__file_handle\n
+             3:semihosting__filesystem__mode__2,3:hal__filesystem__file_handle\n
+             4:semihosting__filesystem__read__2,4:hal__filesystem__file_handle\n
+             5:semihosting__filesystem__write__2,5:hal__filesystem__file_handle\n
+             6:semihosting__filesystem__offset__2,6:hal__filesystem__file_handle\n
+             7:semihosting__filesystem__flush__2,7:hal__filesystem__file_handle\n
+             8:semihosting__filesystem__seek__2,8:hal__filesystem__file_handle\n
+             9:semihosting__filesystem__close__3,9:hal__filesystem__file_handle\n
+             -1:semihosting__filesystem___size__5,-1:hal__filesystem__file_handle\n
+             -6:semihosting__filesystem__Oeq__2\n
+             -7:semihosting__filesystem___assign__2"
+}
+graph: { title: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb"
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnat/a-except.adb:41:17" shape : ellipse }
+node: { title: "semihosting__close" label: "Close\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting.ads:56:13" shape : ellipse }
+node: { title: "semihosting__seek" label: "Seek\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting.ads:65:13" shape : ellipse }
+node: { title: "semihosting__read" label: "Read\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting.ads:58:13" shape : ellipse }
+node: { title: "system__assertions__raise_assert_failure" label: "Raise_Assert_Failure\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnat/s-assert.ads:46:14" shape : ellipse }
+node: { title: "__gnat_malloc" label: "gnat_malloc\n<built-in>" shape : ellipse }
+node: { title: "semihosting__open" label: "Open\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting.ads:57:13" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "semihosting__filesystem___elabb" label: "Filesystem\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:37:1\n4 bytes (static)" }
+node: { title: "semihosting__filesystem__flush__2" label: "Flush\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:378:4\n16 bytes (static)" }
+node: { title: "semihosting__filesystem__offset__2" label: "Offset\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:364:4\n32 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__offset__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:369:7" }
+edge: { sourcename: "semihosting__filesystem__offset__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:364:4" }
+node: { title: "semihosting__filesystem__mode__2" label: "Mode\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:355:4\n16 bytes (static)" }
+node: { title: "semihosting__filesystem__size__2" label: "Size\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:342:4\n32 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__size__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:346:7" }
+edge: { sourcename: "semihosting__filesystem__size__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:342:4" }
+node: { title: "semihosting__filesystem__get_fs__2" label: "Get_Fs\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:332:4\n16 bytes (static)" }
+node: { title: "semihosting__filesystem__close__3" label: "Close\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:314:15\n16 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__close__3" targetname: "semihosting__close" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:322:21" }
+edge: { sourcename: "semihosting__filesystem__close__3" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:314:15" }
+node: { title: "semihosting__filesystem__seek__2" label: "Seek\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:279:4\n40 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__seek__2" targetname: "semihosting__seek" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:301:21" }
+edge: { sourcename: "semihosting__filesystem__seek__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:301:46" }
+edge: { sourcename: "semihosting__filesystem__seek__2" targetname: "semihosting__filesystem__size__2" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:298:27" }
+edge: { sourcename: "semihosting__filesystem__seek__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:290:12" }
+edge: { sourcename: "semihosting__filesystem__seek__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:279:4" }
+node: { title: "semihosting__filesystem__write__2" label: "Write\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:259:15\n32 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__write__2" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/hal/src/hal-filesystem.ads:203:21" }
+edge: { sourcename: "semihosting__filesystem__write__2" targetname: "semihosting__filesystem__mode__2" label: "/home/gps/ada/adl/hal/src/hal-filesystem.ads:203:21" }
+edge: { sourcename: "semihosting__filesystem__write__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:259:15" }
+node: { title: "semihosting__filesystem__read__2" label: "Read\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:233:15\n32 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__read__2" targetname: "semihosting__read" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:244:21" }
+edge: { sourcename: "semihosting__filesystem__read__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:246:55" }
+edge: { sourcename: "semihosting__filesystem__read__2" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/hal/src/hal-filesystem.ads:195:24" }
+edge: { sourcename: "semihosting__filesystem__read__2" targetname: "semihosting__filesystem__mode__2" label: "/home/gps/ada/adl/hal/src/hal-filesystem.ads:195:24" }
+edge: { sourcename: "semihosting__filesystem__read__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:233:15" }
+node: { title: "semihosting__filesystem__close" label: "Close\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:224:4\n16 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__close" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:224:4" }
+node: { title: "semihosting__filesystem__get_file_handle" label: "Get_File_Handle\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:197:4\n32 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__get_file_handle" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:216:7" }
+edge: { sourcename: "semihosting__filesystem__get_file_handle" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:212:13" }
+edge: { sourcename: "semihosting__filesystem__get_file_handle" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:211:13" }
+edge: { sourcename: "semihosting__filesystem__get_file_handle" targetname: "semihosting__filesystem__shfs_file_handleIP" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:210:17" }
+edge: { sourcename: "semihosting__filesystem__get_file_handle" targetname: "__gnat_malloc" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:210:17" }
+edge: { sourcename: "semihosting__filesystem__get_file_handle" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:197:4" }
+node: { title: "semihosting__filesystem__open__2" label: "Open\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:182:15\n24 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__open__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:182:15" }
+node: { title: "semihosting__filesystem__open" label: "Open\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:144:15\n40 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__open" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:172:12" }
+edge: { sourcename: "semihosting__filesystem__open" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:171:12" }
+edge: { sourcename: "semihosting__filesystem__open" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:170:12" }
+edge: { sourcename: "semihosting__filesystem__open" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:169:12" }
+edge: { sourcename: "semihosting__filesystem__open" targetname: "semihosting__filesystem__get_file_handle" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:168:13" }
+edge: { sourcename: "semihosting__filesystem__open" targetname: "semihosting__open" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:162:10" }
+edge: { sourcename: "semihosting__filesystem__open" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:144:15" }
+node: { title: "semihosting__filesystem__truncate_file" label: "Truncate_File\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:129:4\n24 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__truncate_file" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:129:4" }
+node: { title: "semihosting__filesystem__rename" label: "Rename\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:114:4\n32 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__rename" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:114:4" }
+node: { title: "semihosting__filesystem__remove_directory" label: "Remove_Directory\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:100:15\n24 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__remove_directory" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:100:15" }
+node: { title: "semihosting__filesystem__unlink" label: "Unlink\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:86:15\n24 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__unlink" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:86:15" }
+node: { title: "semihosting__filesystem__create_directory" label: "Create_Directory\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:72:4\n24 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__create_directory" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:72:4" }
+node: { title: "semihosting__filesystem__create_node" label: "Create_Node\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:57:4\n24 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__create_node" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:57:4" }
+node: { title: "semihosting__filesystem__create_file" label: "Create_File\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:43:15\n24 bytes (static)" }
+edge: { sourcename: "semihosting__filesystem__create_file" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.adb:43:15" }
+node: { title: "semihosting__filesystem__root_node" label: "Root_Node\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.ads:99:4\n24 bytes (static)" }
+node: { title: "semihosting__filesystem___assign__2" label: "Filesystem\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.ads:114:9\n24 bytes (static)" }
+node: { title: "semihosting__filesystem__Oeq__2" label: "=\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.ads:114:4\n16 bytes (static)" }
+node: { title: "semihosting__filesystem___size__5" label: "Filesystem\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.ads:114:9\n16 bytes (static)" }
+node: { title: "semihosting__filesystem__shfs_file_handleIP" label: "Shfs_File_Handleip\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.ads:114:9\n16 bytes (static)" }
+node: { title: "semihosting__filesystem___assign" label: "Filesystem\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.ads:166:9\n16 bytes (static)" }
+node: { title: "semihosting__filesystem__Oeq" label: "=\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.ads:166:4\n16 bytes (static)" }
+node: { title: "semihosting__filesystem___size__4" label: "Filesystem\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.ads:166:9\n16 bytes (static)" }
+node: { title: "semihosting__filesystem__shfsIP" label: "Shfsip\n/home/gps/ada/adl/arch/ARM/cortex_m/src/semihosting-filesystem.ads:166:9\n16 bytes (static)" }
+}

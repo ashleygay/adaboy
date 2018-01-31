@@ -1,0 +1,17 @@
+graph: { title: "/home/gps/ada/adl/examples/shared/common/lch_sfp/led/last_chance_handler.adb"
+node: { title: "ada__real_time__delays__delay_until" label: "Delay_Until\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-retide.ads:42:14" shape : ellipse }
+node: { title: "ada__real_time__Oadd" label: "+\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:74:13" shape : ellipse }
+node: { title: "ada__real_time__milliseconds" label: "Milliseconds\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:106:13" shape : ellipse }
+node: { title: "ada__real_time__clock" label: "Clock\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:70:13" shape : ellipse }
+node: { title: "stm32__gpio__toggle" label: "TOGGLE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:181:14" shape : ellipse }
+node: { title: "stm32__board__all_leds_off" label: "ALL_LEDS_OFF\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:70:14" shape : ellipse }
+node: { title: "stm32__board__initialize_leds" label: "INITIALIZE_LEDS\n/home/gps/ada/adl/boards/stm32_common/stm32f746disco/stm32-board.ads:63:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/home/gps/ada/adl/examples/shared/common/lch_sfp/led/last_chance_handler.adb:45:4\n24 bytes (static)" }
+edge: { sourcename: "__gnat_last_chance_handler" targetname: "ada__real_time__delays__delay_until" label: "/home/gps/ada/adl/examples/shared/common/lch_sfp/led/last_chance_handler.adb:55:10" }
+edge: { sourcename: "__gnat_last_chance_handler" targetname: "ada__real_time__Oadd" label: "/home/gps/ada/adl/examples/shared/common/lch_sfp/led/last_chance_handler.adb:55:28" }
+edge: { sourcename: "__gnat_last_chance_handler" targetname: "ada__real_time__milliseconds" label: "/home/gps/ada/adl/examples/shared/common/lch_sfp/led/last_chance_handler.adb:55:30" }
+edge: { sourcename: "__gnat_last_chance_handler" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/examples/shared/common/lch_sfp/led/last_chance_handler.adb:55:22" }
+edge: { sourcename: "__gnat_last_chance_handler" targetname: "stm32__gpio__toggle" label: "/home/gps/ada/adl/examples/shared/common/lch_sfp/led/last_chance_handler.adb:54:10" }
+edge: { sourcename: "__gnat_last_chance_handler" targetname: "stm32__board__all_leds_off" label: "/home/gps/ada/adl/examples/shared/common/lch_sfp/led/last_chance_handler.adb:50:7" }
+edge: { sourcename: "__gnat_last_chance_handler" targetname: "stm32__board__initialize_leds" label: "/home/gps/ada/adl/examples/shared/common/lch_sfp/led/last_chance_handler.adb:48:7" }
+}

@@ -1,0 +1,89 @@
+class {
+  classname: "stm32__rtc__rtc_device"
+  label: "stm32__rtc__rtc_device\stm32-rtc.ads:36:9"
+  parent: "hal__real_time_clock__rtc_device"
+  virtuals: "1:stm32__rtc__set,1:hal__real_time_clock__rtc_device\n
+             2:stm32__rtc__get,2:hal__real_time_clock__rtc_device\n
+             3:stm32__rtc__get_time,3:hal__real_time_clock__rtc_device\n
+             4:stm32__rtc__get_date,4:hal__real_time_clock__rtc_device\n
+             -1:stm32__rtc___size__2,-1:hal__real_time_clock__rtc_device\n
+             5:stm32__rtc__enable\n
+             6:stm32__rtc__disable\n
+             -6:stm32__rtc__Oeq\n
+             -7:stm32__rtc___assign"
+}
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb"
+node: { title: "__aeabi_ldivmod" label: "aeabi_ldivmod\n<built-in>" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnat/a-except.adb:41:17" shape : ellipse }
+node: { title: "stm32__power_control__enable" label: "ENABLE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/power_control_stm32f7/stm32-power_control.ads:34:14" shape : ellipse }
+node: { title: "hal__real_time_clock__rtc_monthRP" label: "RTC_MONTHRP\n/home/gps/ada/adl/hal/src/hal-real_time_clock.ads:44:9" shape : ellipse }
+node: { title: "hal__real_time_clock__rtc_day_of_weekRP" label: "RTC_DAY_OF_WEEKRP\n/home/gps/ada/adl/hal/src/hal-real_time_clock.ads:46:9" shape : ellipse }
+node: { title: "stm32_svd__rtc__tr_registerIP" label: "TR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:25:9" shape : ellipse }
+node: { title: "stm32_svd__rtc__dr_registerIP" label: "DR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:71:9" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "stm32__power_control__enable_backup_domain_protection" label: "ENABLE_BACKUP_DOMAIN_PROTECTION\n/home/gps/ada/adl/arch/ARM/STM32/drivers/power_control_stm32f7/stm32-power_control.ads:38:14" shape : ellipse }
+node: { title: "stm32__power_control__disable_backup_domain_protection" label: "DISABLE_BACKUP_DOMAIN_PROTECTION\n/home/gps/ada/adl/arch/ARM/STM32/drivers/power_control_stm32f7/stm32-power_control.ads:37:14" shape : ellipse }
+node: { title: "stm32__rtc___elabb" label: "RTC\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:39:1\n4 bytes (static)" }
+node: { title: "stm32__rtc__disable" label: "DISABLE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:229:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__rtc__disable" targetname: "stm32__power_control__enable_backup_domain_protection" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:234:20" }
+edge: { sourcename: "stm32__rtc__disable" targetname: "stm32__power_control__disable_backup_domain_protection" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:232:20" }
+edge: { sourcename: "stm32__rtc__disable" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:229:4" }
+node: { title: "stm32__rtc__enable" label: "ENABLE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:195:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__rtc__enable" targetname: "stm32__power_control__enable_backup_domain_protection" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:222:20" }
+edge: { sourcename: "stm32__rtc__enable" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:213:10" }
+edge: { sourcename: "stm32__rtc__enable" targetname: "stm32__power_control__disable_backup_domain_protection" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:201:20" }
+edge: { sourcename: "stm32__rtc__enable" targetname: "stm32__power_control__enable" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:199:20" }
+edge: { sourcename: "stm32__rtc__enable" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:195:4" }
+node: { title: "stm32__rtc__get_date" label: "GET_DATE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:178:4\n40 bytes (static)" }
+edge: { sourcename: "stm32__rtc__get_date" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:187:29" }
+edge: { sourcename: "stm32__rtc__get_date" targetname: "hal__real_time_clock__rtc_monthRP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:187:29" }
+edge: { sourcename: "stm32__rtc__get_date" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:186:41" }
+edge: { sourcename: "stm32__rtc__get_date" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:186:41" }
+edge: { sourcename: "stm32__rtc__get_date" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:186:36" }
+edge: { sourcename: "stm32__rtc__get_date" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:185:48" }
+edge: { sourcename: "stm32__rtc__get_date" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:185:48" }
+edge: { sourcename: "stm32__rtc__get_date" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:184:41" }
+edge: { sourcename: "stm32__rtc__get_date" targetname: "hal__real_time_clock__rtc_day_of_weekRP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:184:41" }
+edge: { sourcename: "stm32__rtc__get_date" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:178:4" }
+node: { title: "stm32__rtc__get_time" label: "GET_TIME\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:158:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__rtc__get_time" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:158:4" }
+node: { title: "stm32__rtc__get" label: "GET\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:138:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__rtc__get" targetname: "stm32__rtc__get_time" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:149:24" }
+edge: { sourcename: "stm32__rtc__get" targetname: "stm32__rtc__get_date" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:145:15" }
+edge: { sourcename: "stm32__rtc__get" targetname: "stm32__rtc__get_time" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:144:15" }
+edge: { sourcename: "stm32__rtc__get" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:138:4" }
+node: { title: "stm32__rtc__set" label: "SET\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:71:4\n40 bytes (static)" }
+edge: { sourcename: "stm32__rtc__set" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:stm32__rtc__enable_write_protection" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:126:7" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:117:16" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:117:16" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:116:16" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:116:16" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:114:16" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__aeabi_ldivmod" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:114:16" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__aeabi_ldivmod" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:111:17" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:111:17" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:109:16" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:109:16" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:108:16" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:108:16" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:106:16" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:105:16" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:103:17" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:102:17" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:100:16" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:99:16" }
+edge: { sourcename: "stm32__rtc__set" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:stm32__rtc__disable_write_protection" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:80:7" }
+edge: { sourcename: "stm32__rtc__set" targetname: "stm32_svd__rtc__tr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:78:7" }
+edge: { sourcename: "stm32__rtc__set" targetname: "stm32_svd__rtc__dr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:77:7" }
+edge: { sourcename: "stm32__rtc__set" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:71:4" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:stm32__rtc__enable_write_protection" label: "ENABLE_WRITE_PROTECTION\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:59:4\n8 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:stm32__rtc__enable_write_protection" targetname: "stm32__power_control__enable_backup_domain_protection" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:63:20" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:stm32__rtc__disable_write_protection" label: "DISABLE_WRITE_PROTECTION\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:48:4\n8 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:stm32__rtc__disable_write_protection" targetname: "stm32__power_control__disable_backup_domain_protection" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.adb:50:20" }
+node: { title: "stm32__rtc___assign" label: "RTC\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.ads:59:9\n16 bytes (static)" }
+node: { title: "stm32__rtc__Oeq" label: "=\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.ads:59:4\n16 bytes (static)" }
+node: { title: "stm32__rtc___size__2" label: "RTC\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.ads:59:9\n16 bytes (static)" }
+node: { title: "stm32__rtc__rtc_deviceIP" label: "RTC_DEVICEIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rtc.ads:59:9\n16 bytes (static)" }
+}

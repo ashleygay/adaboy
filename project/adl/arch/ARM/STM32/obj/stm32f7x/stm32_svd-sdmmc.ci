@@ -1,0 +1,23 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads"
+node: { title: "stm32_svd__sdmmc__sdmmc_peripheralIP" label: "SDMMC_PERIPHERALIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:569:9\n16 bytes (static)" }
+edge: { sourcename: "stm32_svd__sdmmc__sdmmc_peripheralIP" targetname: "stm32_svd__sdmmc__mask_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:601:7" }
+edge: { sourcename: "stm32_svd__sdmmc__sdmmc_peripheralIP" targetname: "stm32_svd__sdmmc__icr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:599:7" }
+edge: { sourcename: "stm32_svd__sdmmc__sdmmc_peripheralIP" targetname: "stm32_svd__sdmmc__dctrl_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:593:7" }
+edge: { sourcename: "stm32_svd__sdmmc__sdmmc_peripheralIP" targetname: "stm32_svd__sdmmc__dlen_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:591:7" }
+edge: { sourcename: "stm32_svd__sdmmc__sdmmc_peripheralIP" targetname: "stm32_svd__sdmmc__cmd_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:577:7" }
+edge: { sourcename: "stm32_svd__sdmmc__sdmmc_peripheralIP" targetname: "stm32_svd__sdmmc__clkcr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:573:7" }
+edge: { sourcename: "stm32_svd__sdmmc__sdmmc_peripheralIP" targetname: "stm32_svd__sdmmc__power_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:571:7" }
+node: { title: "stm32_svd__sdmmc__fifocnt_registerIP" label: "FIFOCNT_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:549:9\n16 bytes (static)" }
+node: { title: "stm32_svd__sdmmc__mask_registerIP" label: "MASK_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:463:9\n16 bytes (static)" }
+node: { title: "stm32_svd__sdmmc__icr_registerIP" label: "ICR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:409:9\n16 bytes (static)" }
+node: { title: "stm32_svd__sdmmc__sta_registerIP" label: "STA_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:322:9\n16 bytes (static)" }
+node: { title: "stm32_svd__sdmmc__dcount_registerIP" label: "DCOUNT_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:307:9\n16 bytes (static)" }
+node: { title: "stm32_svd__sdmmc__dctrl_registerIP" label: "DCTRL_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:264:9\n16 bytes (static)" }
+node: { title: "stm32_svd__sdmmc__dlen_registerIP" label: "DLEN_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:174:9\n16 bytes (static)" }
+node: { title: "stm32_svd__sdmmc__respcmd_registerIP" label: "RESPCMD_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:157:9\n16 bytes (static)" }
+node: { title: "stm32_svd__sdmmc__cmd_registerIP" label: "CMD_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:125:9\n16 bytes (static)" }
+node: { title: "stm32_svd__sdmmc__clkcr_registerIP" label: "CLKCR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:75:9\n16 bytes (static)" }
+node: { title: "stm32_svd__sdmmc__power_registerIP" label: "POWER_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:30:9\n16 bytes (static)" }
+node: { title: "stm32_svd__sdmmc__cmd_waitresp_fieldRP" label: "CMD_WAITRESP_FIELDRP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:110:9\n16 bytes (static)" }
+node: { title: "stm32_svd__sdmmc__power_pwrctrl_fieldRP" label: "POWER_PWRCTRL_FIELDRP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sdmmc.ads:18:9\n16 bytes (static)" }
+}

@@ -1,0 +1,17 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads"
+node: { title: "stm32_svd__lptim__lptim1_peripheralIP" label: "LPTIM1_PERIPHERALIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:263:9\n16 bytes (static)" }
+edge: { sourcename: "stm32_svd__lptim__lptim1_peripheralIP" targetname: "stm32_svd__lptim__arr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:277:7" }
+edge: { sourcename: "stm32_svd__lptim__lptim1_peripheralIP" targetname: "stm32_svd__lptim__cmp_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:275:7" }
+edge: { sourcename: "stm32_svd__lptim__lptim1_peripheralIP" targetname: "stm32_svd__lptim__cr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:273:7" }
+edge: { sourcename: "stm32_svd__lptim__lptim1_peripheralIP" targetname: "stm32_svd__lptim__cfgr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:271:7" }
+edge: { sourcename: "stm32_svd__lptim__lptim1_peripheralIP" targetname: "stm32_svd__lptim__ier_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:269:7" }
+edge: { sourcename: "stm32_svd__lptim__lptim1_peripheralIP" targetname: "stm32_svd__lptim__icr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:267:7" }
+node: { title: "stm32_svd__lptim__cnt_registerIP" label: "CNT_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:244:9\n16 bytes (static)" }
+node: { title: "stm32_svd__lptim__arr_registerIP" label: "ARR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:227:9\n16 bytes (static)" }
+node: { title: "stm32_svd__lptim__cmp_registerIP" label: "CMP_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:210:9\n16 bytes (static)" }
+node: { title: "stm32_svd__lptim__cr_registerIP" label: "CR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:187:9\n16 bytes (static)" }
+node: { title: "stm32_svd__lptim__cfgr_registerIP" label: "CFGR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:124:9\n16 bytes (static)" }
+node: { title: "stm32_svd__lptim__ier_registerIP" label: "IER_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:84:9\n16 bytes (static)" }
+node: { title: "stm32_svd__lptim__icr_registerIP" label: "ICR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:51:9\n16 bytes (static)" }
+node: { title: "stm32_svd__lptim__isr_registerIP" label: "ISR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-lptim.ads:18:9\n16 bytes (static)" }
+}

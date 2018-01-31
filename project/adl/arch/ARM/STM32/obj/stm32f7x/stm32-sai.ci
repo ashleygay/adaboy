@@ -1,0 +1,74 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb"
+node: { title: "stm32__device__get_input_clock" label: "GET_INPUT_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:581:13" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnat/a-except.adb:41:17" shape : ellipse }
+node: { title: "ada__real_time__Oadd" label: "+\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:74:13" shape : ellipse }
+node: { title: "ada__real_time__seconds" label: "Seconds\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:108:13" shape : ellipse }
+node: { title: "ada__real_time__clock" label: "Clock\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:70:13" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "stm32_svd__sai__aclrfr_registerIP" label: "ACLRFR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sai.ads:284:9" shape : ellipse }
+node: { title: "stm32_svd__sai__asr_registerIP" label: "ASR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sai.ads:245:9" shape : ellipse }
+node: { title: "stm32_svd__sai__aim_registerIP" label: "AIM_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sai.ads:210:9" shape : ellipse }
+node: { title: "stm32_svd__sai__aslotr_registerIP" label: "ASLOTR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sai.ads:183:9" shape : ellipse }
+node: { title: "stm32_svd__sai__afrcr_registerIP" label: "AFRCR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sai.ads:148:9" shape : ellipse }
+node: { title: "stm32_svd__sai__acr2_registerIP" label: "ACR2_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sai.ads:109:9" shape : ellipse }
+node: { title: "stm32_svd__sai__acr1_registerIP" label: "ACR1_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-sai.ads:48:9" shape : ellipse }
+node: { title: "stm32__sai__configure_block_slot" label: "CONFIGURE_BLOCK_SLOT\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:338:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__sai__configure_block_slot" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:351:20" }
+edge: { sourcename: "stm32__sai__configure_block_slot" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:351:20" }
+edge: { sourcename: "stm32__sai__configure_block_slot" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:348:16" }
+edge: { sourcename: "stm32__sai__configure_block_slot" targetname: "stm32__sai__get_block" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:346:7" }
+node: { title: "stm32__sai__configure_block_frame" label: "CONFIGURE_BLOCK_FRAME\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:314:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__sai__configure_block_frame" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:325:16" }
+edge: { sourcename: "stm32__sai__configure_block_frame" targetname: "stm32__sai__get_block" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:323:7" }
+node: { title: "stm32__sai__configure_audio_block" label: "CONFIGURE_AUDIO_BLOCK\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:251:4\n48 bytes (static)" }
+edge: { sourcename: "stm32__sai__configure_audio_block" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:302:29" }
+edge: { sourcename: "stm32__sai__configure_audio_block" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:290:16" }
+edge: { sourcename: "stm32__sai__configure_audio_block" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:282:30" }
+edge: { sourcename: "stm32__sai__configure_audio_block" targetname: "stm32__device__get_input_clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:279:12" }
+edge: { sourcename: "stm32__sai__configure_audio_block" targetname: "stm32__sai__deinitialize" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:273:7" }
+edge: { sourcename: "stm32__sai__configure_audio_block" targetname: "stm32__sai__get_block" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:268:7" }
+node: { title: "stm32__sai__dma_stop" label: "DMA_STOP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:236:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__sai__dma_stop" targetname: "stm32__sai__disable" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:244:7" }
+edge: { sourcename: "stm32__sai__dma_stop" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:243:17" }
+edge: { sourcename: "stm32__sai__dma_stop" targetname: "stm32__sai__get_block" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:240:7" }
+node: { title: "stm32__sai__dma_resume" label: "DMA_RESUME\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:218:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__sai__dma_resume" targetname: "stm32__sai__enable" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:228:10" }
+edge: { sourcename: "stm32__sai__dma_resume" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:225:17" }
+edge: { sourcename: "stm32__sai__dma_resume" targetname: "stm32__sai__get_block" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:222:7" }
+node: { title: "stm32__sai__dma_pause" label: "DMA_PAUSE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:204:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__sai__dma_pause" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:211:17" }
+edge: { sourcename: "stm32__sai__dma_pause" targetname: "stm32__sai__get_block" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:208:7" }
+node: { title: "stm32__sai__enable_dma" label: "ENABLE_DMA\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:190:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__sai__enable_dma" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:197:17" }
+edge: { sourcename: "stm32__sai__enable_dma" targetname: "stm32__sai__get_block" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:194:7" }
+node: { title: "stm32__sai__disable" label: "DISABLE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:176:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__sai__disable" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:183:17" }
+edge: { sourcename: "stm32__sai__disable" targetname: "stm32__sai__get_block" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:180:7" }
+node: { title: "stm32__sai__enable" label: "ENABLE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:162:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__sai__enable" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:169:17" }
+edge: { sourcename: "stm32__sai__enable" targetname: "stm32__sai__get_block" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:166:7" }
+node: { title: "stm32__sai__enabled" label: "ENABLED\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:149:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__sai__enabled" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:155:24" }
+edge: { sourcename: "stm32__sai__enabled" targetname: "stm32__sai__get_block" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:152:7" }
+node: { title: "stm32__sai__deinitialize" label: "DEINITIALIZE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:117:4\n64 bytes (static)" }
+edge: { sourcename: "stm32__sai__deinitialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:131:13" }
+edge: { sourcename: "stm32__sai__deinitialize" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:130:35" }
+edge: { sourcename: "stm32__sai__deinitialize" targetname: "ada__real_time__Oadd" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:130:19" }
+edge: { sourcename: "stm32__sai__deinitialize" targetname: "ada__real_time__seconds" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:130:21" }
+edge: { sourcename: "stm32__sai__deinitialize" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:128:13" }
+edge: { sourcename: "stm32__sai__deinitialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:126:17" }
+edge: { sourcename: "stm32__sai__deinitialize" targetname: "stm32__sai__get_block" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:121:7" }
+node: { title: "stm32__sai__get_block" label: "GET_BLOCK\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:96:4\n32 bytes (static)" }
+edge: { sourcename: "stm32__sai__get_block" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:105:12" }
+edge: { sourcename: "stm32__sai__get_block" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:103:32" }
+edge: { sourcename: "stm32__sai__get_block" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:101:32" }
+node: { title: "stm32__sai__block_registersIP" label: "BLOCK_REGISTERSIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:58:9\n16 bytes (static)" }
+edge: { sourcename: "stm32__sai__block_registersIP" targetname: "stm32_svd__sai__aclrfr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:72:7" }
+edge: { sourcename: "stm32__sai__block_registersIP" targetname: "stm32_svd__sai__asr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:70:7" }
+edge: { sourcename: "stm32__sai__block_registersIP" targetname: "stm32_svd__sai__aim_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:68:7" }
+edge: { sourcename: "stm32__sai__block_registersIP" targetname: "stm32_svd__sai__aslotr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:66:7" }
+edge: { sourcename: "stm32__sai__block_registersIP" targetname: "stm32_svd__sai__afrcr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:64:7" }
+edge: { sourcename: "stm32__sai__block_registersIP" targetname: "stm32_svd__sai__acr2_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:62:7" }
+edge: { sourcename: "stm32__sai__block_registersIP" targetname: "stm32_svd__sai__acr1_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.adb:60:7" }
+node: { title: "stm32__sai__sai_data_sizeRP" label: "SAI_DATA_SIZERP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sai/stm32-sai.ads:87:9\n16 bytes (static)" }
+}

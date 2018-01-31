@@ -1,0 +1,49 @@
+[GENERATED OBJECT FILE]
+b__draw.o
+[PROJECT FILES]
+/home/gps/ada/adl/examples/STM32F746_Discovery/draw_stm32f746disco.gpr
+20180120224721
+/home/gps/ada/adl/middleware/ravenscar_support.gpr
+20180120224721
+/home/gps/ada/adl/middleware/middleware.gpr
+20180120224721
+/home/gps/ada/adl/components/components.gpr
+20180120224721
+/home/gps/ada/adl/arch/ARM/cortex_m/cortex_m7.gpr
+20180120224721
+/home/gps/ada/adl/middleware/sdmmc.gpr
+20180120224721
+/home/gps/ada/adl/hal/HAL.gpr
+20180120224721
+/home/gps/ada/adl/arch/ARM/STM32/stm32f7x.gpr
+20180120224721
+/home/gps/ada/adl/boards/stm32f746_discovery/stm32f746_discovery.gpr
+20180120224721
+/home/gps/ada/adl/boards/config.gpr
+20180120224721
+[BOUND OBJECT FILES]
+/home/gps/ada/adl/examples/shared/draw/obj/stm32f746disco/bmp_fonts.o
+/home/gps/ada/adl/examples/shared/draw/obj/stm32f746disco/hershey_fonts.o
+/home/gps/ada/adl/examples/shared/draw/obj/stm32f746disco/bitmapped_drawing.o
+/home/gps/ada/adl/examples/shared/draw/obj/stm32f746disco/last_chance_handler.o
+/home/gps/ada/adl/examples/shared/draw/obj/stm32f746disco/lcd_std_out.o
+/home/gps/ada/adl/examples/shared/draw/obj/stm32f746disco/draw.o
+[GENERATED SOURCE FILES]
+b__draw.ads
+b__draw.adb
+b__draw.ali
+[RESULTING OPTIONS]
+-L/home/gps/ada/adl/examples/shared/draw/obj/stm32f746disco/
+-L/home/gps/ada/adl/examples/shared/draw/obj/stm32f746disco/
+-L/home/gps/ada/adl/examples/shared/common/
+-L/home/gps/ada/adl/boards/stm32f746_discovery/lib/ravenscar-sfp-stm32f746disco/
+-L/home/gps/ada/adl/arch/ARM/STM32/lib/stm32f7x/
+-L/home/gps/ada/adl/hal/lib/
+-L/home/gps/ada/adl/middleware/lib/
+-L/home/gps/ada/adl/arch/ARM/cortex_m/lib/cortex-m7/
+-L/home/gps/ada/adl/components/lib/
+-L/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/adalib/
+-static
+-static-libgcc
+/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/adalib/libgnarl.a
+/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/adalib/libgnat.a

@@ -1,0 +1,80 @@
+class {
+  classname: "stm32__spi__dma__spi_port_dma"
+  label: "stm32__spi__dma__spi_port_dma\stm32-spi-dma.ads:37:9"
+  parent: "stm32__spi__spi_port"
+  virtuals: "2:stm32__spi__dma__transmit__2,2:stm32__spi__spi_port\n
+             3:stm32__spi__dma__transmit__3,3:stm32__spi__spi_port\n
+             4:stm32__spi__dma__receive__2,4:stm32__spi__spi_port\n
+             5:stm32__spi__dma__receive__3,5:stm32__spi__spi_port\n
+             -1:stm32__spi__dma___size__2,-1:stm32__spi__spi_port\n
+             6:stm32__spi__dma__configure,6:stm32__spi__spi_port\n
+             41:stm32__spi__dma__set_tx_dma_handler\n
+             42:stm32__spi__dma__set_polling_threshold"
+}
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb"
+node: { title: "stm32__spi__receive__2" label: "RECEIVE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi.ads:186:14" shape : ellipse }
+node: { title: "stm32__spi__receive" label: "RECEIVE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi.ads:179:14" shape : ellipse }
+node: { title: "stm32__spi__transmit__2" label: "TRANSMIT\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi.ads:168:14" shape : ellipse }
+node: { title: "stm32__spi__transmit" label: "TRANSMIT\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi.ads:161:14" shape : ellipse }
+node: { title: "system__assertions__raise_assert_failure" label: "Raise_Assert_Failure\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnat/s-assert.ads:46:14" shape : ellipse }
+node: { title: "stm32__spi__data_size" label: "DATA_SIZE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi.ads:158:13" shape : ellipse }
+node: { title: "stm32__spi__configure" label: "CONFIGURE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi.ads:87:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnat/a-except.adb:41:17" shape : ellipse }
+node: { title: "system__tasking__protected_objects__single_entry__protected_single_entry_call" label: "Protected_Single_Entry_Call\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnarl/s-tposen.ads:212:14" shape : ellipse }
+node: { title: "stm32__dma__interrupts__dma_interrupt_controller__start_transferP" label: "START_TRANSFERP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/dma_interrupts/stm32-dma-interrupts.ads:42:7" shape : ellipse }
+node: { title: "stm32__dma__compatible_alignments" label: "COMPATIBLE_ALIGNMENTS\n/home/gps/ada/adl/arch/ARM/STM32/drivers/dma/stm32-dma.ads:602:13" shape : ellipse }
+node: { title: "stm32__spi__data_register_address" label: "DATA_REGISTER_ADDRESS\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi.ads:209:13" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "stm32__spi__spi_portIP" label: "SPI_PORTIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi.ads:218:9" shape : ellipse }
+node: { title: "stm32__spi__dma___elabb" label: "DMA\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:35:1\n4 bytes (static)" }
+node: { title: "stm32__spi__dma__receive__3" label: "RECEIVE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:184:15\n40 bytes (static)" }
+edge: { sourcename: "stm32__spi__dma__receive__3" targetname: "stm32__spi__receive__2" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:192:7" }
+edge: { sourcename: "stm32__spi__dma__receive__3" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/hal/src/hal-spi.ads:84:21" }
+edge: { sourcename: "stm32__spi__dma__receive__3" targetname: "stm32__spi__data_size" label: "/home/gps/ada/adl/hal/src/hal-spi.ads:84:21" }
+edge: { sourcename: "stm32__spi__dma__receive__3" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:184:15" }
+node: { title: "stm32__spi__dma__receive__2" label: "RECEIVE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:169:15\n40 bytes (static)" }
+edge: { sourcename: "stm32__spi__dma__receive__2" targetname: "stm32__spi__receive" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:177:7" }
+edge: { sourcename: "stm32__spi__dma__receive__2" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/hal/src/hal-spi.ads:76:21" }
+edge: { sourcename: "stm32__spi__dma__receive__2" targetname: "stm32__spi__data_size" label: "/home/gps/ada/adl/hal/src/hal-spi.ads:76:21" }
+edge: { sourcename: "stm32__spi__dma__receive__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:169:15" }
+node: { title: "stm32__spi__dma__transmit__3" label: "TRANSMIT\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:146:15\n64 bytes (static)" }
+edge: { sourcename: "stm32__spi__dma__transmit__3" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:stm32__spi__dma__transmit_common" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:157:10" }
+edge: { sourcename: "stm32__spi__dma__transmit__3" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:159:31" }
+edge: { sourcename: "stm32__spi__dma__transmit__3" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:158:27" }
+edge: { sourcename: "stm32__spi__dma__transmit__3" targetname: "stm32__spi__transmit__2" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:155:10" }
+edge: { sourcename: "stm32__spi__dma__transmit__3" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:153:41" }
+edge: { sourcename: "stm32__spi__dma__transmit__3" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/hal/src/hal-spi.ads:68:21" }
+edge: { sourcename: "stm32__spi__dma__transmit__3" targetname: "stm32__spi__data_size" label: "/home/gps/ada/adl/hal/src/hal-spi.ads:68:21" }
+edge: { sourcename: "stm32__spi__dma__transmit__3" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:146:15" }
+node: { title: "stm32__spi__dma__transmit__2" label: "TRANSMIT\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:123:15\n64 bytes (static)" }
+edge: { sourcename: "stm32__spi__dma__transmit__2" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:stm32__spi__dma__transmit_common" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:134:10" }
+edge: { sourcename: "stm32__spi__dma__transmit__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:136:31" }
+edge: { sourcename: "stm32__spi__dma__transmit__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:135:27" }
+edge: { sourcename: "stm32__spi__dma__transmit__2" targetname: "stm32__spi__transmit" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:132:10" }
+edge: { sourcename: "stm32__spi__dma__transmit__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:130:41" }
+edge: { sourcename: "stm32__spi__dma__transmit__2" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/hal/src/hal-spi.ads:60:21" }
+edge: { sourcename: "stm32__spi__dma__transmit__2" targetname: "stm32__spi__data_size" label: "/home/gps/ada/adl/hal/src/hal-spi.ads:60:21" }
+edge: { sourcename: "stm32__spi__dma__transmit__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:123:15" }
+node: { title: "stm32__spi__dma__configure" label: "CONFIGURE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:111:15\n16 bytes (static)" }
+edge: { sourcename: "stm32__spi__dma__configure" targetname: "stm32__spi__configure" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:116:7" }
+edge: { sourcename: "stm32__spi__dma__configure" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:111:15" }
+node: { title: "stm32__spi__dma__set_polling_threshold" label: "SET_POLLING_THRESHOLD\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:99:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__spi__dma__set_polling_threshold" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:99:4" }
+node: { title: "stm32__spi__dma__set_tx_dma_handler" label: "SET_TX_DMA_HANDLER\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:87:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__spi__dma__set_tx_dma_handler" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:87:4" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:stm32__spi__dma__transmit_common" label: "TRANSMIT_COMMON\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:48:4\n64 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:stm32__spi__dma__transmit_common" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:73:18" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:stm32__spi__dma__transmit_common" targetname: "system__tasking__protected_objects__single_entry__protected_single_entry_call" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:73:18" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:stm32__spi__dma__transmit_common" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:73:18" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:stm32__spi__dma__transmit_common" targetname: "stm32__dma__interrupts__dma_interrupt_controller__start_transferP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:69:18" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:stm32__spi__dma__transmit_common" targetname: "stm32__spi__data_register_address" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:70:54" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:stm32__spi__dma__transmit_common" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:69:18" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:stm32__spi__dma__transmit_common" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:63:10" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:stm32__spi__dma__transmit_common" targetname: "stm32__dma__compatible_alignments" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:58:14" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:stm32__spi__dma__transmit_common" targetname: "stm32__spi__data_register_address" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:61:41" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:stm32__spi__dma__transmit_common" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:59:48" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:stm32__spi__dma__transmit_common" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.adb:58:48" }
+node: { title: "stm32__spi__dma___size__2" label: "DMA\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.ads:79:9\n16 bytes (static)" }
+node: { title: "stm32__spi__dma__spi_port_dmaIP" label: "SPI_PORT_DMAIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.ads:79:9\n24 bytes (static)" }
+edge: { sourcename: "stm32__spi__dma__spi_port_dmaIP" targetname: "stm32__spi__spi_portIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-spi-dma.ads:79:33" }
+}

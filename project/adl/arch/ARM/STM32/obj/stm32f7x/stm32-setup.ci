@@ -1,0 +1,38 @@
+edge: { sourcename: "stm32__setup__setup_i2c_master"
+  targetname: "6:stm32__i2c__i2c_port,stm32__i2c__i2c_port"
+  label: "stm32-setup.adb:79:11"
+}
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb"
+node: { title: "stm32__device__reset__6" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:474:14" shape : ellipse }
+node: { title: "ada__real_time__delays__delay_until" label: "Delay_Until\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-retide.ads:42:14" shape : ellipse }
+node: { title: "ada__real_time__Oadd" label: "+\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:74:13" shape : ellipse }
+node: { title: "ada__real_time__milliseconds" label: "Milliseconds\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:106:13" shape : ellipse }
+node: { title: "ada__real_time__clock" label: "Clock\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:70:13" shape : ellipse }
+node: { title: "stm32__device__enable_clock__7" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:471:14" shape : ellipse }
+node: { title: "stm32__gpio__lock__2" label: "LOCK\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:256:14" shape : ellipse }
+node: { title: "stm32__gpio__configure_io" label: "CONFIGURE_IO\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:200:14" shape : ellipse }
+node: { title: "stm32__device__enable_clock__3" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:85:14" shape : ellipse }
+node: { title: "stm32__gpio___assign" label: "GPIO\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:138:9" shape : ellipse }
+node: { title: "stm32__gpio__gpio_pointsIP" label: "GPIO_POINTSIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:225:9" shape : ellipse }
+node: { title: "stm32__i2c__i2c_configurationIP" label: "I2C_CONFIGURATIONIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f7/stm32-i2c.ads:46:9" shape : ellipse }
+node: { title: "stm32__setup__setup_i2c_master" label: "SETUP_I2C_MASTER\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:41:4\n136 bytes (static)" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "__indirect_call" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:79:11" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__device__reset__6" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:69:7" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "ada__real_time__delays__delay_until" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:68:7" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "ada__real_time__Oadd" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:68:25" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "ada__real_time__milliseconds" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:68:27" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:68:19" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__device__enable_clock__7" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:67:7" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio__lock__2" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:63:7" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:63:17" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:63:17" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio__gpio_pointsIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:63:17" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio__configure_io" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:57:7" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio__configure_io" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:51:7" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__device__enable_clock__3" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:49:7" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:49:25" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:49:25" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio__gpio_pointsIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:49:25" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__i2c__i2c_configurationIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.adb:46:7" }
+}

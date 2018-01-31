@@ -1,0 +1,97 @@
+class {
+  classname: "sdcard__sdcard_controller"
+  label: "sdcard__sdcard_controller\sdcard.ads:43:9"
+  parent: "hal__block_drivers__block_driver"
+  virtuals: "1:sdcard__read,1:hal__block_drivers__block_driver\n
+             2:sdcard__write,2:hal__block_drivers__block_driver\n
+             -1:sdcard___size__2,-1:hal__block_drivers__block_driver\n
+             3:sdcard__initialize\n
+             4:sdcard__card_present\n
+             5:sdcard__get_card_information\n
+             6:sdcard__block_size"
+}
+graph: { title: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb"
+node: { title: "memcpy" label: "builtin_memcpy\n<built-in>" shape : ellipse }
+node: { title: "stm32__sdmmc_interrupt__sdmmc_interrupt_handlerVIP" label: "SDMMC_INTERRUPT_HANDLERVIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sd/stm32-sdmmc_interrupt.ads:46:4" shape : ellipse }
+node: { title: "stm32__sdmmc__read" label: "READ\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sd/stm32-sdmmc.ads:68:24" shape : ellipse }
+node: { title: "stm32__sdmmc__write" label: "WRITE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sd/stm32-sdmmc.ads:77:24" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnat/a-except.adb:41:17" shape : ellipse }
+node: { title: "stm32__sdmmc__card_information" label: "CARD_INFORMATION\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sd/stm32-sdmmc.ads:178:13" shape : ellipse }
+node: { title: "stm32__sdmmc__has_card_information" label: "HAS_CARD_INFORMATION\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sd/stm32-sdmmc.ads:174:13" shape : ellipse }
+node: { title: "stm32__sdmmc__ensure_card_informations" label: "ENSURE_CARD_INFORMATIONS\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sd/stm32-sdmmc.ads:57:14" shape : ellipse }
+node: { title: "system__assertions__raise_assert_failure" label: "Raise_Assert_Failure\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnat/s-assert.ads:46:14" shape : ellipse }
+node: { title: "ada__real_time__delays__delay_until" label: "Delay_Until\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-retide.ads:42:14" shape : ellipse }
+node: { title: "ada__real_time__Oadd" label: "+\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:74:13" shape : ellipse }
+node: { title: "ada__real_time__milliseconds" label: "Milliseconds\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:106:13" shape : ellipse }
+node: { title: "ada__real_time__clock" label: "Clock\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/a-reatim.ads:70:13" shape : ellipse }
+node: { title: "stm32__sdmmc__clear_card_information" label: "CLEAR_CARD_INFORMATION\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sd/stm32-sdmmc.ads:183:14" shape : ellipse }
+node: { title: "stm32__gpio__set" label: "SET\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:162:13" shape : ellipse }
+node: { title: "stm32__sdmmc__enable_dma_transfers" label: "ENABLE_DMA_TRANSFERS\n/home/gps/ada/adl/arch/ARM/STM32/drivers/sd/stm32-sdmmc.ads:165:14" shape : ellipse }
+node: { title: "stm32__dma__clear_all_status" label: "CLEAR_ALL_STATUS\n/home/gps/ada/adl/arch/ARM/STM32/drivers/dma/stm32-dma.ads:348:14" shape : ellipse }
+node: { title: "stm32__dma__configure" label: "CONFIGURE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/dma/stm32-dma.ads:576:14" shape : ellipse }
+node: { title: "stm32__dma__disable" label: "DISABLE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/dma/stm32-dma.ads:114:14" shape : ellipse }
+node: { title: "stm32__device__enable_clock__6" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:412:14" shape : ellipse }
+node: { title: "stm32__device__reset__12" label: "RESET\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:592:14" shape : ellipse }
+node: { title: "stm32__device__enable_clock__13" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:591:14" shape : ellipse }
+node: { title: "stm32__gpio__configure_io" label: "CONFIGURE_IO\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:200:14" shape : ellipse }
+node: { title: "stm32__gpio__configure_io__2" label: "CONFIGURE_IO\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:260:14" shape : ellipse }
+node: { title: "stm32__device__enable_clock__3" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:85:14" shape : ellipse }
+node: { title: "stm32__gpio___assign" label: "GPIO\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:138:9" shape : ellipse }
+node: { title: "stm32__gpio__gpio_pointsIP" label: "GPIO_POINTSIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:225:9" shape : ellipse }
+node: { title: "stm32__device__set_clock_source" label: "SET_CLOCK_SOURCE\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:593:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "sdcard___elabb" label: "Sdcard\n/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:43:1\n8 bytes (static)" }
+edge: { sourcename: "sdcard___elabb" targetname: "stm32__sdmmc_interrupt__sdmmc_interrupt_handlerVIP" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:45:4" }
+node: { title: "sdcard__read" label: "Read\n/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:205:15\n64 bytes (static)" }
+edge: { sourcename: "sdcard__read" targetname: "stm32__sdmmc__read" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:211:7" }
+edge: { sourcename: "sdcard__read" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.ads:72:18" }
+edge: { sourcename: "sdcard__read" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/hal/src/hal-block_drivers.ads:47:24" }
+edge: { sourcename: "sdcard__read" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:205:15" }
+node: { title: "sdcard__write" label: "Write\n/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:192:15\n64 bytes (static)" }
+edge: { sourcename: "sdcard__write" targetname: "stm32__sdmmc__write" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:198:7" }
+edge: { sourcename: "sdcard__write" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.ads:81:18" }
+edge: { sourcename: "sdcard__write" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/hal/src/hal-block_drivers.ads:54:24" }
+edge: { sourcename: "sdcard__write" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:192:15" }
+node: { title: "sdcard__block_size" label: "Block_Size\n/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:180:4\n104 bytes (static)" }
+edge: { sourcename: "sdcard__block_size" targetname: "sdcard__get_card_information" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:185:18" }
+edge: { sourcename: "sdcard__block_size" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:180:4" }
+node: { title: "sdcard__get_card_information" label: "Get_Card_Information\n/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:162:4\n40 bytes (static)" }
+edge: { sourcename: "sdcard__get_card_information" targetname: "stm32__sdmmc__card_information" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:173:7" }
+edge: { sourcename: "sdcard__get_card_information" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:170:10" }
+edge: { sourcename: "sdcard__get_card_information" targetname: "stm32__sdmmc__has_card_information" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:169:25" }
+edge: { sourcename: "sdcard__get_card_information" targetname: "stm32__sdmmc__ensure_card_informations" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:167:18" }
+edge: { sourcename: "sdcard__get_card_information" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.ads:60:18" }
+edge: { sourcename: "sdcard__get_card_information" targetname: "sdcard__card_present" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.ads:60:22" }
+edge: { sourcename: "sdcard__get_card_information" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:162:4" }
+node: { title: "sdcard__card_present" label: "Card_Present\n/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:137:4\n24 bytes (static)" }
+edge: { sourcename: "sdcard__card_present" targetname: "stm32__gpio__set" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:152:46" }
+edge: { sourcename: "sdcard__card_present" targetname: "ada__real_time__delays__delay_until" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:149:13" }
+edge: { sourcename: "sdcard__card_present" targetname: "ada__real_time__Oadd" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:149:31" }
+edge: { sourcename: "sdcard__card_present" targetname: "ada__real_time__milliseconds" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:149:33" }
+edge: { sourcename: "sdcard__card_present" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:149:25" }
+edge: { sourcename: "sdcard__card_present" targetname: "stm32__sdmmc__clear_card_information" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:143:21" }
+edge: { sourcename: "sdcard__card_present" targetname: "stm32__gpio__set" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:141:20" }
+edge: { sourcename: "sdcard__card_present" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:137:4" }
+node: { title: "sdcard__initialize" label: "Initialize\n/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:51:4\n136 bytes (static)" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__sdmmc__enable_dma_transfers" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:128:18" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__dma__clear_all_status" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:126:7" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__dma__configure" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:111:7" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__dma__disable" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:110:7" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__dma__clear_all_status" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:108:7" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__dma__configure" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:93:7" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__dma__disable" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:92:7" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__device__enable_clock__6" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:90:7" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__device__reset__12" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:87:19" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__device__enable_clock__13" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:86:19" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__gpio__configure_io" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:78:7" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__gpio__configure_io__2" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:69:7" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__gpio__configure_io__2" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:61:7" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__device__enable_clock__3" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:58:7" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__gpio___assign" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:58:41" }
+edge: { sourcename: "sdcard__initialize" targetname: "memcpy" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__gpio__gpio_pointsIP" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:58:41" }
+edge: { sourcename: "sdcard__initialize" targetname: "stm32__device__set_clock_source" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:55:7" }
+edge: { sourcename: "sdcard__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.adb:51:4" }
+node: { title: "sdcard___size__2" label: "Sdcard\n/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.ads:88:9\n16 bytes (static)" }
+node: { title: "sdcard__sdcard_controllerIP" label: "Sdcard_Controllerip\n/home/gps/ada/adl/boards/stm32_common/sdcard/sdcard.ads:88:9\n24 bytes (static)" }
+}

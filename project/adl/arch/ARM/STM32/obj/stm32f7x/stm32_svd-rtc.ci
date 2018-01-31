@@ -1,0 +1,37 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads"
+node: { title: "stm32_svd__rtc__rtc_peripheralIP" label: "RTC_PERIPHERALIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:742:9\n16 bytes (static)" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__or_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:780:7" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__alrmbssr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:778:7" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__alrmassr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:776:7" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__tampcr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:774:7" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__calr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:772:7" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__shiftr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:764:7" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__wpr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:760:7" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__alrmbr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:758:7" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__alrmar_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:756:7" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__wutr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:754:7" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__prer_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:752:7" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__isr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:750:7" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__cr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:748:7" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__dr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:746:7" }
+edge: { sourcename: "stm32_svd__rtc__rtc_peripheralIP" targetname: "stm32_svd__rtc__tr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:744:7" }
+node: { title: "stm32_svd__rtc__or_registerIP" label: "OR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:720:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__alrmbssr_registerIP" label: "ALRMBSSR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:699:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__alrmassr_registerIP" label: "ALRMASSR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:675:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__tampcr_registerIP" label: "TAMPCR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:597:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__calr_registerIP" label: "CALR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:566:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__tsssr_registerIP" label: "TSSSR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:549:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__tsdr_registerIP" label: "TSDR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:517:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__tstr_registerIP" label: "TSTR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:473:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__shiftr_registerIP" label: "SHIFTR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:448:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__ssr_registerIP" label: "SSR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:431:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__wpr_registerIP" label: "WPR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:414:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__alrmbr_registerIP" label: "ALRMBR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:361:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__alrmar_registerIP" label: "ALRMAR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:301:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__wutr_registerIP" label: "WUTR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:277:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__prer_registerIP" label: "PRER_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:254:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__isr_registerIP" label: "ISR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:188:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__cr_registerIP" label: "CR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:110:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__dr_registerIP" label: "DR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:71:9\n16 bytes (static)" }
+node: { title: "stm32_svd__rtc__tr_registerIP" label: "TR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-rtc.ads:25:9\n16 bytes (static)" }
+}

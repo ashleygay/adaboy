@@ -1,0 +1,122 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb"
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnat/a-except.adb:41:17" shape : ellipse }
+node: { title: "stm32__device__enable_pllsai" label: "ENABLE_PLLSAI\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:635:14" shape : ellipse }
+node: { title: "stm32__device__set_pllsai_factors" label: "SET_PLLSAI_FACTORS\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:630:14" shape : ellipse }
+node: { title: "stm32__device__disable_pllsai" label: "DISABLE_PLLSAI\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-device.ads:636:14" shape : ellipse }
+node: { title: "system__tasking__protected_objects__single_entry__protected_single_entry_call" label: "Protected_Single_Entry_Call\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/s-tposen.ads:212:14" shape : ellipse }
+node: { title: "system__tasking__protected_objects__single_entry__service_entry" label: "Service_Entry\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/s-tposen.ads:203:14" shape : ellipse }
+node: { title: "system__tasking__protected_objects__single_entry__lock_entry" label: "Lock_Entry\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/s-tposen.ads:192:14" shape : ellipse }
+node: { title: "system__interrupts__install_restricted_handlers" label: "Install_Restricted_Handlers\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/s-interr.ads:92:14" shape : ellipse }
+node: { title: "system__tasking__protected_objects__single_entry__initialize_protection_entry" label: "Initialize_Protection_Entry\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f746disco/gnarl/s-tposen.ads:184:14" shape : ellipse }
+node: { title: "stm32_svd__ltdc__l1clutwr_registerIP" label: "L1CLUTWR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-ltdc.ads:562:9" shape : ellipse }
+node: { title: "stm32_svd__ltdc__l1cfblnr_registerIP" label: "L1CFBLNR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-ltdc.ads:542:9" shape : ellipse }
+node: { title: "stm32_svd__ltdc__l1cfblr_registerIP" label: "L1CFBLR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-ltdc.ads:519:9" shape : ellipse }
+node: { title: "stm32_svd__ltdc__l1bfcr_registerIP" label: "L1BFCR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-ltdc.ads:495:9" shape : ellipse }
+node: { title: "stm32_svd__ltdc__l1dccr_registerIP" label: "L1DCCR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-ltdc.ads:471:9" shape : ellipse }
+node: { title: "stm32_svd__ltdc__l1cacr_registerIP" label: "L1CACR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-ltdc.ads:451:9" shape : ellipse }
+node: { title: "stm32_svd__ltdc__l1pfcr_registerIP" label: "L1PFCR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-ltdc.ads:434:9" shape : ellipse }
+node: { title: "stm32_svd__ltdc__l1ckcr_registerIP" label: "L1CKCR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-ltdc.ads:411:9" shape : ellipse }
+node: { title: "stm32_svd__ltdc__l1wvpcr_registerIP" label: "L1WVPCR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-ltdc.ads:386:9" shape : ellipse }
+node: { title: "stm32_svd__ltdc__l1whpcr_registerIP" label: "L1WHPCR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-ltdc.ads:362:9" shape : ellipse }
+node: { title: "stm32_svd__ltdc__l1cr_registerIP" label: "L1CR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-ltdc.ads:335:9" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "stm32__ltdc___elabb" label: "LTDC\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:51:1\n16 bytes (static)" }
+edge: { sourcename: "stm32__ltdc___elabb" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:140:19" }
+edge: { sourcename: "stm32__ltdc___elabb" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:138:19" }
+edge: { sourcename: "stm32__ltdc___elabb" targetname: "stm32__ltdc__syncTVIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:145:4" }
+node: { title: "stm32__ltdc__set_background" label: "SET_BACKGROUND\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:494:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__ltdc__set_background" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:499:36" }
+edge: { sourcename: "stm32__ltdc__set_background" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:499:17" }
+node: { title: "stm32__ltdc__get_frame_buffer" label: "GET_FRAME_BUFFER\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:479:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__ltdc__get_frame_buffer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:487:23" }
+edge: { sourcename: "stm32__ltdc__get_frame_buffer" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__get_layer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:483:7" }
+node: { title: "stm32__ltdc__set_frame_buffer" label: "SET_FRAME_BUFFER\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:462:4\n16 bytes (static)" }
+node: { title: "stm32__ltdc__layer_init" label: "LAYER_INIT\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:405:4\n72 bytes (static)" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "stm32__ltdc__reload_config" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:455:7" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "stm32__ltdc__set_frame_buffer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:452:7" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:450:36" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:447:30" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:447:30" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "stm32__ltdc__bytes_per_pixel" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:447:32" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:446:30" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:446:30" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "stm32__ltdc__bytes_per_pixel" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:446:32" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:436:12" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:427:45" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:427:55" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:427:55" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:426:57" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:421:14" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:421:39" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:421:39" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:419:37" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:417:8" }
+edge: { sourcename: "stm32__ltdc__layer_init" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__get_layer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:414:7" }
+node: { title: "stm32__ltdc__initialized" label: "INITIALIZED\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:396:4\n4 bytes (static)" }
+node: { title: "stm32__ltdc__stop" label: "STOP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:387:4\n4 bytes (static)" }
+node: { title: "stm32__ltdc__start" label: "START\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:378:4\n4 bytes (static)" }
+node: { title: "stm32__ltdc__initialize" label: "INITIALIZE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:280:4\n64 bytes (static)" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:364:39" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:365:39" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:362:38" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:361:38" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:356:36" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:357:36" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:354:38" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:353:38" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:348:37" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:349:37" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:346:38" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:345:38" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:340:36" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:341:36" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:338:34" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:337:34" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "stm32__device__enable_pllsai" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:334:7" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "stm32__device__set_pllsai_factors" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:330:7" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "stm32__device__disable_pllsai" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:314:7" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:311:10" }
+edge: { sourcename: "stm32__ltdc__initialize" targetname: "stm32__ltdc__initialized" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:298:10" }
+node: { title: "stm32__ltdc__set_layer_state" label: "SET_LAYER_STATE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:264:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__ltdc__set_layer_state" targetname: "stm32__ltdc__reload_config" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:272:10" }
+edge: { sourcename: "stm32__ltdc__set_layer_state" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:271:11" }
+edge: { sourcename: "stm32__ltdc__set_layer_state" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:270:11" }
+edge: { sourcename: "stm32__ltdc__set_layer_state" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__get_layer" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:268:7" }
+node: { title: "stm32__ltdc__to_ltdc_mode" label: "TO_LTDC_MODE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:242:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__ltdc__to_ltdc_mode" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:256:13" }
+edge: { sourcename: "stm32__ltdc__to_ltdc_mode" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:246:12" }
+node: { title: "stm32__ltdc__reload_config" label: "RELOAD_CONFIG\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:222:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__ltdc__reload_config" targetname: "system__tasking__protected_objects__single_entry__protected_single_entry_call" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:234:14" }
+edge: { sourcename: "stm32__ltdc__reload_config" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__apply_on_vsyncP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:233:14" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__get_layer" label: "GET_LAYER\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:209:4\n16 bytes (static)" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__interruptP" label: "INTERRUPTP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:193:7\n16 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__interruptP" targetname: "system__tasking__protected_objects__single_entry__service_entry" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:193:7" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__interruptP" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__interruptN" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:193:7" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__interruptP" targetname: "system__tasking__protected_objects__single_entry__lock_entry" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:193:7" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__interruptN" label: "INTERRUPTN\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:193:7\n24 bytes (static)" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__apply_on_vsyncP" label: "APPLY_ON_VSYNCP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:180:7\n16 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__apply_on_vsyncP" targetname: "system__tasking__protected_objects__single_entry__service_entry" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:180:7" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__apply_on_vsyncP" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__apply_on_vsyncN" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:180:7" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__apply_on_vsyncP" targetname: "system__tasking__protected_objects__single_entry__lock_entry" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:180:7" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__apply_on_vsyncN" label: "APPLY_ON_VSYNCN\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:180:7\n24 bytes (static)" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__wait_E3b" label: "WAIT_E3B\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:171:7\n40 bytes (static)" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:stm32__ltdc__sync__wait_B4b" label: "WAIT_B4B\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:171:23\n16 bytes (static)" }
+node: { title: "stm32__ltdc__syncTVIP" label: "SYNCTVIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:145:4\n40 bytes (static)" }
+edge: { sourcename: "stm32__ltdc__syncTVIP" targetname: "system__interrupts__install_restricted_handlers" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:145:4" }
+edge: { sourcename: "stm32__ltdc__syncTVIP" targetname: "system__tasking__protected_objects__single_entry__initialize_protection_entry" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:145:4" }
+node: { title: "stm32__ltdc__layer_typeIP" label: "LAYER_TYPEIP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:66:9\n16 bytes (static)" }
+edge: { sourcename: "stm32__ltdc__layer_typeIP" targetname: "stm32_svd__ltdc__l1clutwr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:107:7" }
+edge: { sourcename: "stm32__ltdc__layer_typeIP" targetname: "stm32_svd__ltdc__l1cfblnr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:100:7" }
+edge: { sourcename: "stm32__ltdc__layer_typeIP" targetname: "stm32_svd__ltdc__l1cfblr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:97:7" }
+edge: { sourcename: "stm32__ltdc__layer_typeIP" targetname: "stm32_svd__ltdc__l1bfcr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:88:7" }
+edge: { sourcename: "stm32__ltdc__layer_typeIP" targetname: "stm32_svd__ltdc__l1dccr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:85:7" }
+edge: { sourcename: "stm32__ltdc__layer_typeIP" targetname: "stm32_svd__ltdc__l1cacr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:82:7" }
+edge: { sourcename: "stm32__ltdc__layer_typeIP" targetname: "stm32_svd__ltdc__l1pfcr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:79:7" }
+edge: { sourcename: "stm32__ltdc__layer_typeIP" targetname: "stm32_svd__ltdc__l1ckcr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:76:7" }
+edge: { sourcename: "stm32__ltdc__layer_typeIP" targetname: "stm32_svd__ltdc__l1wvpcr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:73:7" }
+edge: { sourcename: "stm32__ltdc__layer_typeIP" targetname: "stm32_svd__ltdc__l1whpcr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:70:7" }
+edge: { sourcename: "stm32__ltdc__layer_typeIP" targetname: "stm32_svd__ltdc__l1cr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.adb:67:7" }
+node: { title: "stm32__ltdc__bytes_per_pixel" label: "BYTES_PER_PIXEL\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.ads:119:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__ltdc__bytes_per_pixel" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.ads:120:13" }
+edge: { sourcename: "stm32__ltdc__bytes_per_pixel" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.ads:120:13" }
+}

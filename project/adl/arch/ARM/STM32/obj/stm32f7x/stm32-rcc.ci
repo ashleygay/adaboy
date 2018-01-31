@@ -1,0 +1,3 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-rcc.adb"
+node: { title: "stm32__rcc__syscfg_clock_enable" label: "SYSCFG_CLOCK_ENABLE\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f7x/stm32-rcc.adb:40:4\n4 bytes (static)" }
+}

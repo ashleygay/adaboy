@@ -1,0 +1,13 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-spdif_rx.ads"
+node: { title: "stm32_svd__spdif_rx__spdif_rx_peripheralIP" label: "SPDIF_RX_PERIPHERALIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-spdif_rx.ads:269:9\n16 bytes (static)" }
+edge: { sourcename: "stm32_svd__spdif_rx__spdif_rx_peripheralIP" targetname: "stm32_svd__spdif_rx__ifcr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-spdif_rx.ads:277:7" }
+edge: { sourcename: "stm32_svd__spdif_rx__spdif_rx_peripheralIP" targetname: "stm32_svd__spdif_rx__imr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-spdif_rx.ads:273:7" }
+edge: { sourcename: "stm32_svd__spdif_rx__spdif_rx_peripheralIP" targetname: "stm32_svd__spdif_rx__cr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-spdif_rx.ads:271:7" }
+node: { title: "stm32_svd__spdif_rx__dir_registerIP" label: "DIR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-spdif_rx.ads:244:9\n16 bytes (static)" }
+node: { title: "stm32_svd__spdif_rx__csr_registerIP" label: "CSR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-spdif_rx.ads:220:9\n16 bytes (static)" }
+node: { title: "stm32_svd__spdif_rx__dr_registerIP" label: "DR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-spdif_rx.ads:187:9\n16 bytes (static)" }
+node: { title: "stm32_svd__spdif_rx__ifcr_registerIP" label: "IFCR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-spdif_rx.ads:157:9\n16 bytes (static)" }
+node: { title: "stm32_svd__spdif_rx__sr_registerIP" label: "SR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-spdif_rx.ads:112:9\n16 bytes (static)" }
+node: { title: "stm32_svd__spdif_rx__imr_registerIP" label: "IMR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-spdif_rx.ads:77:9\n16 bytes (static)" }
+node: { title: "stm32_svd__spdif_rx__cr_registerIP" label: "CR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-spdif_rx.ads:23:9\n16 bytes (static)" }
+}

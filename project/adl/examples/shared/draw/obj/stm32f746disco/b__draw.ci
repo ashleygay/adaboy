@@ -1,0 +1,75 @@
+graph: { title: "b__draw.adb"
+node: { title: "_ada_draw" label: "ada_main_program\nb__draw.adb:152:14" shape : ellipse }
+node: { title: "__gnat_start_slave_cpus" label: "start_slave_cpus\nb__draw.adb:62:17" shape : ellipse }
+node: { title: "stm32__user_button___elabb" label: "e116b\nb__draw.adb:147:24" shape : ellipse }
+node: { title: "lcd_std_out___elabb" label: "e114b\nb__draw.adb:145:18" shape : ellipse }
+node: { title: "touch_panel_ft5336___elabb" label: "e112b\nb__draw.adb:142:25" shape : ellipse }
+node: { title: "audio___elabb" label: "e110b\nb__draw.adb:140:12" shape : ellipse }
+node: { title: "framebuffer_ltdc___elabb" label: "e108b\nb__draw.adb:138:23" shape : ellipse }
+node: { title: "sdcard___elabb" label: "e106b\nb__draw.adb:135:13" shape : ellipse }
+node: { title: "stm32__board___elabs" label: "e104b\nb__draw.adb:133:18" shape : ellipse }
+node: { title: "framebuffer_rk043fn48h___elabb" label: "e102b\nb__draw.adb:131:29" shape : ellipse }
+node: { title: "audio___elabs" label: "e100b\nb__draw.adb:130:12" shape : ellipse }
+node: { title: "wm8994___elabb" label: "e98b\nb__draw.adb:128:13" shape : ellipse }
+node: { title: "stm32__ltdc___elabb" label: "e96b\nb__draw.adb:124:17" shape : ellipse }
+node: { title: "stm32__i2s___elabb" label: "e94b\nb__draw.adb:121:16" shape : ellipse }
+node: { title: "stm32__sdmmc___elabb" label: "e92b\nb__draw.adb:119:18" shape : ellipse }
+node: { title: "stm32__device___elabs" label: "e90b\nb__draw.adb:117:19" shape : ellipse }
+node: { title: "stm32__gpio___elabb" label: "e88b\nb__draw.adb:114:17" shape : ellipse }
+node: { title: "stm32__spi__dma___elabb" label: "e86b\nb__draw.adb:112:20" shape : ellipse }
+node: { title: "stm32__spi___elabb" label: "e84b\nb__draw.adb:110:16" shape : ellipse }
+node: { title: "stm32__rtc___elabb" label: "e82b\nb__draw.adb:108:16" shape : ellipse }
+node: { title: "stm32__i2c___elabb" label: "e80b\nb__draw.adb:104:16" shape : ellipse }
+node: { title: "stm32__dma2d_bitmap___elabb" label: "e78b\nb__draw.adb:100:25" shape : ellipse }
+node: { title: "stm32__dma2d_bitmap___elabs" label: "e76b\nb__draw.adb:99:25" shape : ellipse }
+node: { title: "stm32__dma2d__interrupt___elabb" label: "e74b\nb__draw.adb:96:28" shape : ellipse }
+node: { title: "stm32__adc___elabs" label: "e72b\nb__draw.adb:91:16" shape : ellipse }
+node: { title: "memory_mapped_bitmap___elabb" label: "e70b\nb__draw.adb:89:27" shape : ellipse }
+node: { title: "soft_drawing_bitmap___elabb" label: "e68b\nb__draw.adb:87:26" shape : ellipse }
+node: { title: "ravenscar_time___elabb" label: "e66b\nb__draw.adb:84:21" shape : ellipse }
+node: { title: "ft5336___elabb" label: "e64b\nb__draw.adb:80:13" shape : ellipse }
+node: { title: "hal__sdmmc___elabs" label: "e62b\nb__draw.adb:78:16" shape : ellipse }
+node: { title: "cortex_m__cache___elabb" label: "e60b\nb__draw.adb:75:21" shape : ellipse }
+node: { title: "system__tasking__restricted__stages___elabb" label: "e58b\nb__draw.adb:72:39" shape : ellipse }
+node: { title: "system__tasking__protected_objects__multiprocessors___elabb" label: "e56b\nb__draw.adb:70:55" shape : ellipse }
+node: { title: "system__tasking__protected_objects___elabb" label: "e54b\nb__draw.adb:68:39" shape : ellipse }
+node: { title: "ada__real_time___elabb" label: "e52b\nb__draw.adb:66:20" shape : ellipse }
+node: { title: "main" label: "main\nb__draw.adb:155:4\n16 bytes (static)" }
+edge: { sourcename: "main" targetname: "_ada_draw" label: "b__draw.adb:161:7" }
+edge: { sourcename: "main" targetname: "adainit" label: "b__draw.adb:160:7" }
+node: { title: "adainit" label: "adainit\nb__draw.adb:61:4\n8 bytes (static)" }
+edge: { sourcename: "adainit" targetname: "__gnat_start_slave_cpus" label: "b__draw.adb:149:7" }
+edge: { sourcename: "adainit" targetname: "stm32__user_button___elabb" label: "b__draw.adb:147:24" }
+edge: { sourcename: "adainit" targetname: "lcd_std_out___elabb" label: "b__draw.adb:145:18" }
+edge: { sourcename: "adainit" targetname: "touch_panel_ft5336___elabb" label: "b__draw.adb:142:25" }
+edge: { sourcename: "adainit" targetname: "audio___elabb" label: "b__draw.adb:140:12" }
+edge: { sourcename: "adainit" targetname: "framebuffer_ltdc___elabb" label: "b__draw.adb:138:23" }
+edge: { sourcename: "adainit" targetname: "sdcard___elabb" label: "b__draw.adb:135:13" }
+edge: { sourcename: "adainit" targetname: "stm32__board___elabs" label: "b__draw.adb:133:18" }
+edge: { sourcename: "adainit" targetname: "framebuffer_rk043fn48h___elabb" label: "b__draw.adb:131:29" }
+edge: { sourcename: "adainit" targetname: "audio___elabs" label: "b__draw.adb:130:12" }
+edge: { sourcename: "adainit" targetname: "wm8994___elabb" label: "b__draw.adb:128:13" }
+edge: { sourcename: "adainit" targetname: "stm32__ltdc___elabb" label: "b__draw.adb:124:17" }
+edge: { sourcename: "adainit" targetname: "stm32__i2s___elabb" label: "b__draw.adb:121:16" }
+edge: { sourcename: "adainit" targetname: "stm32__sdmmc___elabb" label: "b__draw.adb:119:18" }
+edge: { sourcename: "adainit" targetname: "stm32__device___elabs" label: "b__draw.adb:117:19" }
+edge: { sourcename: "adainit" targetname: "stm32__gpio___elabb" label: "b__draw.adb:114:17" }
+edge: { sourcename: "adainit" targetname: "stm32__spi__dma___elabb" label: "b__draw.adb:112:20" }
+edge: { sourcename: "adainit" targetname: "stm32__spi___elabb" label: "b__draw.adb:110:16" }
+edge: { sourcename: "adainit" targetname: "stm32__rtc___elabb" label: "b__draw.adb:108:16" }
+edge: { sourcename: "adainit" targetname: "stm32__i2c___elabb" label: "b__draw.adb:104:16" }
+edge: { sourcename: "adainit" targetname: "stm32__dma2d_bitmap___elabb" label: "b__draw.adb:100:25" }
+edge: { sourcename: "adainit" targetname: "stm32__dma2d_bitmap___elabs" label: "b__draw.adb:99:25" }
+edge: { sourcename: "adainit" targetname: "stm32__dma2d__interrupt___elabb" label: "b__draw.adb:96:28" }
+edge: { sourcename: "adainit" targetname: "stm32__adc___elabs" label: "b__draw.adb:91:16" }
+edge: { sourcename: "adainit" targetname: "memory_mapped_bitmap___elabb" label: "b__draw.adb:89:27" }
+edge: { sourcename: "adainit" targetname: "soft_drawing_bitmap___elabb" label: "b__draw.adb:87:26" }
+edge: { sourcename: "adainit" targetname: "ravenscar_time___elabb" label: "b__draw.adb:84:21" }
+edge: { sourcename: "adainit" targetname: "ft5336___elabb" label: "b__draw.adb:80:13" }
+edge: { sourcename: "adainit" targetname: "hal__sdmmc___elabs" label: "b__draw.adb:78:16" }
+edge: { sourcename: "adainit" targetname: "cortex_m__cache___elabb" label: "b__draw.adb:75:21" }
+edge: { sourcename: "adainit" targetname: "system__tasking__restricted__stages___elabb" label: "b__draw.adb:72:39" }
+edge: { sourcename: "adainit" targetname: "system__tasking__protected_objects__multiprocessors___elabb" label: "b__draw.adb:70:55" }
+edge: { sourcename: "adainit" targetname: "system__tasking__protected_objects___elabb" label: "b__draw.adb:68:39" }
+edge: { sourcename: "adainit" targetname: "ada__real_time___elabb" label: "b__draw.adb:66:20" }
+}

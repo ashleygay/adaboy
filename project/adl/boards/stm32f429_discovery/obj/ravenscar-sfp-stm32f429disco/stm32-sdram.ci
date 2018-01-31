@@ -1,0 +1,43 @@
+graph: { title: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb"
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "stm32__fmc__fmc_sdram_init" label: "FMC_SDRAM_INIT\n/home/gps/ada/adl/arch/ARM/STM32/drivers/fmc/stm32-fmc.ads:179:14" shape : ellipse }
+node: { title: "stm32__fmc__fmc_set_refresh_count" label: "FMC_SET_REFRESH_COUNT\n/home/gps/ada/adl/arch/ARM/STM32/drivers/fmc/stm32-fmc.ads:246:14" shape : ellipse }
+node: { title: "ada__real_time__delays__delay_until" label: "Delay_Until\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnarl/a-retide.ads:42:14" shape : ellipse }
+node: { title: "ada__real_time__Oadd" label: "+\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnarl/a-reatim.ads:74:13" shape : ellipse }
+node: { title: "ada__real_time__milliseconds" label: "Milliseconds\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnarl/a-reatim.ads:106:13" shape : ellipse }
+node: { title: "ada__real_time__clock" label: "Clock\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnarl/a-reatim.ads:70:13" shape : ellipse }
+node: { title: "stm32__fmc__fmc_sdram_cmd" label: "FMC_SDRAM_CMD\n/home/gps/ada/adl/arch/ARM/STM32/drivers/fmc/stm32-fmc.ads:239:14" shape : ellipse }
+node: { title: "stm32__fmc__fmc_sdram_busy" label: "FMC_SDRAM_BUSY\n/home/gps/ada/adl/arch/ARM/STM32/drivers/fmc/stm32-fmc.ads:241:13" shape : ellipse }
+node: { title: "stm32__gpio__lock__2" label: "LOCK\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:256:14" shape : ellipse }
+node: { title: "stm32__gpio__configure_io__2" label: "CONFIGURE_IO\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-gpio.ads:260:14" shape : ellipse }
+node: { title: "stm32__device__enable_clock__3" label: "ENABLE_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:76:14" shape : ellipse }
+node: { title: "stm32__sdram__reserve" label: "RESERVE\n/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:236:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__sdram__reserve" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:248:37" }
+edge: { sourcename: "stm32__sdram__reserve" targetname: "stm32__sdram__initialize" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:245:7" }
+node: { title: "stm32__sdram__base_address" label: "BASE_ADDRESS\n/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:226:4\n4 bytes (static)" }
+node: { title: "stm32__sdram__initialize" label: "INITIALIZE\n/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:141:4\n40 bytes (static)" }
+edge: { sourcename: "stm32__sdram__initialize" targetname: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:219:7" }
+edge: { sourcename: "stm32__sdram__initialize" targetname: "stm32__fmc__fmc_sdram_init" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:216:10" }
+edge: { sourcename: "stm32__sdram__initialize" targetname: "stm32__fmc__fmc_sdram_init" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:212:7" }
+edge: { sourcename: "stm32__sdram__initialize" targetname: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_gpioconfig" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:164:7" }
+node: { title: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" label: "SDRAM_INITSEQUENCE\n/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:75:4\n24 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "stm32__fmc__fmc_sdram_busy" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:133:24" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "stm32__fmc__fmc_set_refresh_count" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:130:7" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "stm32__fmc__fmc_sdram_busy" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:127:24" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "stm32__fmc__fmc_sdram_cmd" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:117:7" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "stm32__fmc__fmc_sdram_busy" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:107:24" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "stm32__fmc__fmc_sdram_cmd" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:101:7" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "stm32__fmc__fmc_sdram_busy" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:98:24" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "stm32__fmc__fmc_sdram_cmd" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:93:7" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "ada__real_time__delays__delay_until" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:91:7" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "ada__real_time__Oadd" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:91:25" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "ada__real_time__milliseconds" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:91:27" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "ada__real_time__clock" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:91:19" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "stm32__fmc__fmc_sdram_busy" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:88:24" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "stm32__fmc__fmc_sdram_cmd" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:83:7" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_initsequence" targetname: "stm32__fmc__fmc_sdram_busy" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:80:24" }
+node: { title: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_gpioconfig" label: "SDRAM_GPIOCONFIG\n/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:56:4\n24 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_gpioconfig" targetname: "stm32__gpio__lock__2" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:68:7" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_gpioconfig" targetname: "stm32__gpio__configure_io__2" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:61:7" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:stm32__sdram__sdram_gpioconfig" targetname: "stm32__device__enable_clock__3" label: "/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.adb:59:7" }
+}

@@ -1,0 +1,33 @@
+class {
+  classname: "adafruit__trellis__trellis_device"
+  label: "adafruit__trellis__trellis_device\adafruit-trellis.ads:37:9"
+  parent: "ht16k33__ht16k33_device"
+  virtuals: "-1:adafruit__trellis___size__2,-1:ht16k33__ht16k33_device\n
+             -6:adafruit__trellis__Oeq__2,-6:ht16k33__ht16k33_device\n
+             -7:adafruit__trellis___assign__2,-7:ht16k33__ht16k33_device\n
+             10:adafruit__trellis__set_led__2\n
+             11:adafruit__trellis__key"
+}
+graph: { title: "/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.adb"
+node: { title: "ht16k33__get_key" label: "GET_KEY\n/home/gps/ada/adl/components/src/io_expander/ht16k33/ht16k33.ads:71:13" shape : ellipse }
+node: { title: "ht16k33__set_led" label: "SET_LED\n/home/gps/ada/adl/components/src/io_expander/ht16k33/ht16k33.ads:58:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "ht16k33__Oeq" label: "=\n/home/gps/ada/adl/components/src/io_expander/ht16k33/ht16k33.ads:92:9" shape : ellipse }
+node: { title: "ht16k33__ht16k33_deviceIP" label: "HT16K33_DEVICEIP\n/home/gps/ada/adl/components/src/io_expander/ht16k33/ht16k33.ads:92:9" shape : ellipse }
+node: { title: "adafruit__trellis___elabb" label: "Trellis\n/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.adb:32:1\n4 bytes (static)" }
+node: { title: "adafruit__trellis__key" label: "Key\n/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.adb:76:4\n16 bytes (static)" }
+edge: { sourcename: "adafruit__trellis__key" targetname: "ht16k33__get_key" label: "/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.adb:80:7" }
+edge: { sourcename: "adafruit__trellis__key" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.adb:76:4" }
+node: { title: "adafruit__trellis__set_led__2" label: "Set_Led\n/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.adb:62:4\n16 bytes (static)" }
+edge: { sourcename: "adafruit__trellis__set_led__2" targetname: "ht16k33__set_led" label: "/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.adb:67:11" }
+edge: { sourcename: "adafruit__trellis__set_led__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.adb:62:4" }
+node: { title: "adafruit__trellis__key_addressIP" label: "Key_Addressip\n/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.adb:47:9\n16 bytes (static)" }
+node: { title: "adafruit__trellis__led_addressIP" label: "Led_Addressip\n/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.adb:34:9\n24 bytes (static)" }
+node: { title: "adafruit__trellis___assign__2" label: "Trellis\n/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.ads:53:9\n32 bytes (static)" }
+edge: { sourcename: "adafruit__trellis___assign__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.ads:53:9" }
+node: { title: "adafruit__trellis__Oeq__2" label: "=\n/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.ads:53:4\n16 bytes (static)" }
+edge: { sourcename: "adafruit__trellis__Oeq__2" targetname: "ht16k33__Oeq" label: "/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.ads:53:4" }
+node: { title: "adafruit__trellis___size__2" label: "Trellis\n/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.ads:53:9\n16 bytes (static)" }
+node: { title: "adafruit__trellis__trellis_deviceIP" label: "Trellis_Deviceip\n/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.ads:53:9\n24 bytes (static)" }
+edge: { sourcename: "adafruit__trellis__trellis_deviceIP" targetname: "ht16k33__ht16k33_deviceIP" label: "/home/gps/ada/adl/components/src/io_expander/AdaFruit_Trellis/adafruit-trellis.ads:53:27" }
+}

@@ -1,0 +1,19 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.adb"
+node: { title: "stm32__rng__rng_data" label: "RNG_DATA\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng.ads:66:13" shape : ellipse }
+node: { title: "stm32__rng__rng_data_ready" label: "RNG_DATA_READY\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng.ads:68:13" shape : ellipse }
+node: { title: "system__assertions__raise_assert_failure" label: "Raise_Assert_Failure\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnat/s-assert.ads:46:14" shape : ellipse }
+node: { title: "stm32__rng__rng_interrupt_enabled" label: "RNG_INTERRUPT_ENABLED\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng.ads:64:13" shape : ellipse }
+node: { title: "stm32__rng__enable_rng" label: "ENABLE_RNG\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng.ads:50:14" shape : ellipse }
+node: { title: "stm32__rng__enable_rng_clock" label: "ENABLE_RNG_CLOCK\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng.ads:56:14" shape : ellipse }
+node: { title: "stm32__rng__polling__random" label: "RANDOM\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.adb:63:4\n8 bytes (static)" }
+edge: { sourcename: "stm32__rng__polling__random" targetname: "stm32__rng__rng_data" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.adb:68:7" }
+edge: { sourcename: "stm32__rng__polling__random" targetname: "stm32__rng__rng_data_ready" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.adb:65:17" }
+node: { title: "stm32__rng__polling__initialize_rng" label: "INITIALIZE_RNG\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.adb:48:4\n16 bytes (static)" }
+edge: { sourcename: "stm32__rng__polling__initialize_rng" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.adb:stm32__rng__polling__initialize_rng___postconditions.5208" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.adb:57:8" }
+edge: { sourcename: "stm32__rng__polling__initialize_rng" targetname: "stm32__rng__polling__random" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.adb:56:15" }
+edge: { sourcename: "stm32__rng__polling__initialize_rng" targetname: "stm32__rng__enable_rng" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.adb:52:7" }
+edge: { sourcename: "stm32__rng__polling__initialize_rng" targetname: "stm32__rng__enable_rng_clock" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.adb:51:7" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.adb:stm32__rng__polling__initialize_rng___postconditions.5208" label: "INITIALIZE_RNG\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.adb:48:4\n24 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.adb:stm32__rng__polling__initialize_rng___postconditions.5208" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.ads:50:14" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.adb:stm32__rng__polling__initialize_rng___postconditions.5208" targetname: "stm32__rng__rng_interrupt_enabled" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-rng-polling.ads:50:18" }
+}

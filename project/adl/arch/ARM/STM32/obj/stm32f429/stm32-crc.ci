@@ -1,0 +1,18 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb"
+node: { title: "system__assertions__raise_assert_failure" label: "Raise_Assert_Failure\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnat/s-assert.ads:46:14" shape : ellipse }
+node: { title: "stm32__crc__independent_data" label: "INDEPENDENT_DATA\n/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb:132:4\n16 bytes (static)" }
+node: { title: "stm32__crc__set_independent_data" label: "SET_INDEPENDENT_DATA\n/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb:120:4\n16 bytes (static)" }
+node: { title: "stm32__crc__update_crc__4" label: "UPDATE_CRC\n/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb:104:4\n40 bytes (static)" }
+node: { title: "stm32__crc__update_crc__3" label: "UPDATE_CRC\n/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb:88:4\n40 bytes (static)" }
+node: { title: "stm32__crc__update_crc__2" label: "UPDATE_CRC\n/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb:72:4\n40 bytes (static)" }
+node: { title: "stm32__crc__update_crc" label: "UPDATE_CRC\n/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb:54:4\n24 bytes (static)" }
+node: { title: "stm32__crc__value" label: "VALUE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb:47:4\n16 bytes (static)" }
+node: { title: "stm32__crc__reset_calculator" label: "RESET_CALCULATOR\n/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb:38:4\n24 bytes (static)" }
+edge: { sourcename: "stm32__crc__reset_calculator" targetname: "/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb:stm32__crc__reset_calculator___postconditions.5346" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb:41:8" }
+node: { title: "/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb:stm32__crc__reset_calculator___postconditions.5346" label: "RESET_CALCULATOR\n/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb:38:4\n24 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb:stm32__crc__reset_calculator___postconditions.5346" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.ads:46:14" }
+edge: { sourcename: "/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.adb:stm32__crc__reset_calculator___postconditions.5346" targetname: "stm32__crc__value" label: "/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.ads:46:14" }
+node: { title: "stm32__crc__block_8IP" label: "BLOCK_8IP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.ads:89:9\n16 bytes (static)" }
+node: { title: "stm32__crc__block_16IP" label: "BLOCK_16IP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.ads:79:9\n16 bytes (static)" }
+node: { title: "stm32__crc__block_32IP" label: "BLOCK_32IP\n/home/gps/ada/adl/arch/ARM/STM32/drivers/crc_stm32f4/stm32-crc.ads:68:9\n16 bytes (static)" }
+}

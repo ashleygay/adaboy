@@ -1,0 +1,219 @@
+class {
+  classname: "framebuffer_ltdc__frame_buffer"
+  label: "framebuffer_ltdc__frame_buffer\framebuffer_ltdc.ads:41:9"
+  parent: "hal__framebuffer__frame_buffer_display"
+  virtuals: "1:framebuffer_ltdc__max_layers,1:hal__framebuffer__frame_buffer_display\n
+             2:framebuffer_ltdc__supported,2:hal__framebuffer__frame_buffer_display\n
+             3:framebuffer_ltdc__set_orientation,3:hal__framebuffer__frame_buffer_display\n
+             4:framebuffer_ltdc__set_mode,4:hal__framebuffer__frame_buffer_display\n
+             5:framebuffer_ltdc__initialized,5:hal__framebuffer__frame_buffer_display\n
+             6:framebuffer_ltdc__width,6:hal__framebuffer__frame_buffer_display\n
+             7:framebuffer_ltdc__height,7:hal__framebuffer__frame_buffer_display\n
+             8:framebuffer_ltdc__swapped,8:hal__framebuffer__frame_buffer_display\n
+             9:framebuffer_ltdc__set_background,9:hal__framebuffer__frame_buffer_display\n
+             10:framebuffer_ltdc__initialize_layer,10:hal__framebuffer__frame_buffer_display\n
+             11:framebuffer_ltdc__initialized__2,11:hal__framebuffer__frame_buffer_display\n
+             12:framebuffer_ltdc__update_layer,12:hal__framebuffer__frame_buffer_display\n
+             13:framebuffer_ltdc__update_layers,13:hal__framebuffer__frame_buffer_display\n
+             14:framebuffer_ltdc__color_mode,14:hal__framebuffer__frame_buffer_display\n
+             15:framebuffer_ltdc__hidden_buffer,15:hal__framebuffer__frame_buffer_display\n
+             16:framebuffer_ltdc__pixel_size,16:hal__framebuffer__frame_buffer_display\n
+             -1:framebuffer_ltdc___size__2,-1:hal__framebuffer__frame_buffer_display\n
+             17:framebuffer_ltdc__initialize\n
+             18:framebuffer_ltdc__update_layers__2"
+}
+graph: { title: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb"
+node: { title: "memory_mapped_bitmap__color_mode" label: "Color_Mode\n/home/gps/ada/adl/middleware/src/bitmap/memory_mapped_bitmap.ads:90:13" shape : ellipse }
+node: { title: "stm32__dma2d_bitmap__copy_rect__2" label: "COPY_RECT\n/home/gps/ada/adl/boards/stm32_common/dma2d/stm32-dma2d_bitmap.ads:79:25" shape : ellipse }
+node: { title: "memory_mapped_bitmap__width" label: "Width\n/home/gps/ada/adl/middleware/src/bitmap/memory_mapped_bitmap.ads:78:13" shape : ellipse }
+node: { title: "stm32__ltdc__reload_config" label: "RELOAD_CONFIG\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.ads:111:14" shape : ellipse }
+node: { title: "stm32__ltdc__set_frame_buffer" label: "SET_FRAME_BUFFER\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.ads:104:14" shape : ellipse }
+node: { title: "stm32__dma2d_bitmap__wait_transfer" label: "WAIT_TRANSFER\n/home/gps/ada/adl/boards/stm32_common/dma2d/stm32-dma2d_bitmap.ads:90:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnat/a-except.adb:41:17" shape : ellipse }
+node: { title: "stm32__ltdc__layer_init" label: "LAYER_INIT\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.ads:91:14" shape : ellipse }
+node: { title: "stm32__ltdc__to_ltdc_mode" label: "TO_LTDC_MODE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.ads:113:13" shape : ellipse }
+node: { title: "stm32__dma2d_bitmap___assign" label: "DMA2D_BITMAP\n/home/gps/ada/adl/boards/stm32_common/dma2d/stm32-dma2d_bitmap.ads:43:9" shape : ellipse }
+node: { title: "stm32__sdram__reserve" label: "RESERVE\n/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.ads:40:13" shape : ellipse }
+node: { title: "hal__bitmap__bits_per_pixel" label: "BITS_PER_PIXEL\n/home/gps/ada/adl/hal/src/hal-bitmap.ads:58:13" shape : ellipse }
+node: { title: "stm32__ltdc__set_background" label: "SET_BACKGROUND\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.ads:89:14" shape : ellipse }
+node: { title: "system__assertions__raise_assert_failure" label: "Raise_Assert_Failure\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnat/s-assert.ads:46:14" shape : ellipse }
+node: { title: "stm32__ltdc__initialized" label: "INITIALIZED\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.ads:85:13" shape : ellipse }
+node: { title: "stm32__dma2d_bitmap__fill" label: "FILL\n/home/gps/ada/adl/boards/stm32_common/dma2d/stm32-dma2d_bitmap.ads:59:25" shape : ellipse }
+node: { title: "memory_mapped_bitmap__set_source" label: "Set_Source\n/home/gps/ada/adl/middleware/src/bitmap/memory_mapped_bitmap.ads:102:14" shape : ellipse }
+node: { title: "memory_mapped_bitmap__height" label: "Height\n/home/gps/ada/adl/middleware/src/bitmap/memory_mapped_bitmap.ads:82:13" shape : ellipse }
+node: { title: "stm32__dma2d_bitmap__Oeq" label: "=\n/home/gps/ada/adl/boards/stm32_common/dma2d/stm32-dma2d_bitmap.ads:43:9" shape : ellipse }
+node: { title: "stm32__dma2d__interrupt__initialize" label: "INITIALIZE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/dma2d/stm32-dma2d-interrupt.ads:36:14" shape : ellipse }
+node: { title: "stm32__dma2d__polling__initialize" label: "INITIALIZE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/dma2d/stm32-dma2d-polling.ads:36:14" shape : ellipse }
+node: { title: "stm32__sdram__initialize" label: "INITIALIZE\n/home/gps/ada/adl/boards/stm32_common/sdram/stm32-sdram.ads:36:14" shape : ellipse }
+node: { title: "stm32__ltdc__initialize" label: "INITIALIZE\n/home/gps/ada/adl/arch/ARM/STM32/drivers/ltdc/stm32-ltdc.ads:73:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "stm32__dma2d_bitmap__dma2d_bitmap_bufferIP" label: "DMA2D_BITMAP_BUFFERIP\n/home/gps/ada/adl/boards/stm32_common/dma2d/stm32-dma2d_bitmap.ads:43:9" shape : ellipse }
+node: { title: "framebuffer_ltdc___elabb" label: "Framebuffer_Ltdc\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:39:1\n4 bytes (static)" }
+node: { title: "framebuffer_ltdc__pixel_size" label: "Pixel_Size\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:528:15\n32 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__pixel_size" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:539:55" }
+edge: { sourcename: "framebuffer_ltdc__pixel_size" targetname: "hal__bitmap__bits_per_pixel" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:538:19" }
+edge: { sourcename: "framebuffer_ltdc__pixel_size" targetname: "memory_mapped_bitmap__color_mode" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:539:42" }
+edge: { sourcename: "framebuffer_ltdc__pixel_size" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:155:18" }
+edge: { sourcename: "framebuffer_ltdc__pixel_size" targetname: "framebuffer_ltdc__initialized__2" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:155:18" }
+edge: { sourcename: "framebuffer_ltdc__pixel_size" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:528:15" }
+node: { title: "framebuffer_ltdc__hidden_buffer" label: "Hidden_Buffer\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:506:15\n32 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__hidden_buffer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:516:19" }
+edge: { sourcename: "framebuffer_ltdc__hidden_buffer" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:149:18" }
+edge: { sourcename: "framebuffer_ltdc__hidden_buffer" targetname: "framebuffer_ltdc__initialized__2" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:149:18" }
+edge: { sourcename: "framebuffer_ltdc__hidden_buffer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:506:15" }
+node: { title: "framebuffer_ltdc__color_mode" label: "Color_Mode\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:489:15\n32 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__color_mode" targetname: "memory_mapped_bitmap__color_mode" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:499:7" }
+edge: { sourcename: "framebuffer_ltdc__color_mode" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:144:18" }
+edge: { sourcename: "framebuffer_ltdc__color_mode" targetname: "framebuffer_ltdc__initialized__2" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:144:18" }
+edge: { sourcename: "framebuffer_ltdc__color_mode" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:489:15" }
+node: { title: "framebuffer_ltdc__update_layers__2" label: "Update_Layers\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:450:4\n96 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "stm32__dma2d_bitmap__copy_rect__2" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:478:31" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "memory_mapped_bitmap__height" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:479:71" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "memory_mapped_bitmap__width" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:479:56" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "stm32__dma2d_bitmap___assign" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:475:24" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "stm32__dma2d_bitmap___assign" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:474:24" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "stm32__dma2d_bitmap___assign" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:472:24" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "stm32__dma2d_bitmap___assign" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:471:24" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "stm32__ltdc__reload_config" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:464:17" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:framebuffer_ltdc__internal_update_layer" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:460:13" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "framebuffer_ltdc__initialized__2" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:459:20" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "stm32__dma2d_bitmap__dma2d_bitmap_bufferIP" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:456:7" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "stm32__dma2d_bitmap__dma2d_bitmap_bufferIP" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:456:7" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:137:18" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "framebuffer_ltdc__initialized" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:137:18" }
+edge: { sourcename: "framebuffer_ltdc__update_layers__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:450:4" }
+node: { title: "framebuffer_ltdc__update_layers" label: "Update_Layers\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:433:15\n32 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__update_layers" targetname: "stm32__ltdc__reload_config" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:443:17" }
+edge: { sourcename: "framebuffer_ltdc__update_layers" targetname: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:framebuffer_ltdc__internal_update_layer" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:439:13" }
+edge: { sourcename: "framebuffer_ltdc__update_layers" targetname: "framebuffer_ltdc__initialized__2" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:438:20" }
+edge: { sourcename: "framebuffer_ltdc__update_layers" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:129:18" }
+edge: { sourcename: "framebuffer_ltdc__update_layers" targetname: "framebuffer_ltdc__initialized" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:129:18" }
+edge: { sourcename: "framebuffer_ltdc__update_layers" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:433:15" }
+node: { title: "framebuffer_ltdc__update_layer" label: "Update_Layer\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:400:15\n104 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__update_layer" targetname: "stm32__dma2d_bitmap__copy_rect__2" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:423:28" }
+edge: { sourcename: "framebuffer_ltdc__update_layer" targetname: "memory_mapped_bitmap__height" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:424:68" }
+edge: { sourcename: "framebuffer_ltdc__update_layer" targetname: "memory_mapped_bitmap__width" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:424:53" }
+edge: { sourcename: "framebuffer_ltdc__update_layer" targetname: "stm32__dma2d_bitmap___assign" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:420:21" }
+edge: { sourcename: "framebuffer_ltdc__update_layer" targetname: "stm32__dma2d_bitmap___assign" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:419:21" }
+edge: { sourcename: "framebuffer_ltdc__update_layer" targetname: "stm32__dma2d_bitmap___assign" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:417:21" }
+edge: { sourcename: "framebuffer_ltdc__update_layer" targetname: "stm32__dma2d_bitmap___assign" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:416:21" }
+edge: { sourcename: "framebuffer_ltdc__update_layer" targetname: "stm32__ltdc__reload_config" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:412:17" }
+edge: { sourcename: "framebuffer_ltdc__update_layer" targetname: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:framebuffer_ltdc__internal_update_layer" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:411:7" }
+edge: { sourcename: "framebuffer_ltdc__update_layer" targetname: "stm32__dma2d_bitmap__dma2d_bitmap_bufferIP" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:405:7" }
+edge: { sourcename: "framebuffer_ltdc__update_layer" targetname: "stm32__dma2d_bitmap__dma2d_bitmap_bufferIP" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:405:7" }
+edge: { sourcename: "framebuffer_ltdc__update_layer" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:122:18" }
+edge: { sourcename: "framebuffer_ltdc__update_layer" targetname: "framebuffer_ltdc__initialized__2" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:122:18" }
+edge: { sourcename: "framebuffer_ltdc__update_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:400:15" }
+node: { title: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:framebuffer_ltdc__internal_update_layer" label: "Internal_Update_Layer\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:369:4\n24 bytes (static)" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:framebuffer_ltdc__internal_update_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:392:30" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:framebuffer_ltdc__internal_update_layer" targetname: "stm32__ltdc__set_frame_buffer" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:389:23" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:framebuffer_ltdc__internal_update_layer" targetname: "stm32__dma2d_bitmap__wait_transfer" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:388:43" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:framebuffer_ltdc__internal_update_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:386:30" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:framebuffer_ltdc__internal_update_layer" targetname: "stm32__ltdc__set_frame_buffer" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:383:23" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:framebuffer_ltdc__internal_update_layer" targetname: "stm32__dma2d_bitmap__wait_transfer" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:382:43" }
+edge: { sourcename: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:framebuffer_ltdc__internal_update_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:378:19" }
+node: { title: "framebuffer_ltdc__initialized__2" label: "Initialized\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:351:15\n40 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__initialized__2" targetname: "stm32__dma2d_bitmap__Oeq" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:362:40" }
+edge: { sourcename: "framebuffer_ltdc__initialized__2" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:116:8" }
+edge: { sourcename: "framebuffer_ltdc__initialized__2" targetname: "framebuffer_ltdc__max_layers" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:116:17" }
+edge: { sourcename: "framebuffer_ltdc__initialized__2" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:115:8" }
+edge: { sourcename: "framebuffer_ltdc__initialized__2" targetname: "framebuffer_ltdc__initialized" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:115:8" }
+edge: { sourcename: "framebuffer_ltdc__initialized__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:351:15" }
+node: { title: "framebuffer_ltdc__initialize_layer" label: "Initialize_Layer\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:255:15\n240 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "stm32__ltdc__layer_init" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:335:17" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "stm32__ltdc__to_ltdc_mode" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:337:38" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:342:28" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:341:28" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:333:24" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "stm32__dma2d_bitmap__fill" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:329:45" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:329:30" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "memory_mapped_bitmap__set_source" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:328:45" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:328:30" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "stm32__dma2d_bitmap___assign" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:320:46" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:320:30" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "stm32__sdram__reserve" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:322:18" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:322:18" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:322:76" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:322:68" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "hal__bitmap__bits_per_pixel" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:322:45" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "stm32__dma2d_bitmap__fill" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:316:45" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:316:30" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "memory_mapped_bitmap__set_source" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:315:45" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:315:30" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "stm32__dma2d_bitmap___assign" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:307:46" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:307:30" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "stm32__sdram__reserve" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:309:18" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:309:18" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:309:76" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:309:68" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "hal__bitmap__bits_per_pixel" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:309:45" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:302:30" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:302:30" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:301:39" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:298:29" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:298:29" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:297:39" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:294:10" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:292:10" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:288:35" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:288:35" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:288:31" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:105:8" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "framebuffer_ltdc__max_layers" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:105:17" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:104:8" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "framebuffer_ltdc__initialized__2" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:104:12" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:103:8" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "framebuffer_ltdc__supported" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:103:8" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:102:8" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "framebuffer_ltdc__initialized" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:102:8" }
+edge: { sourcename: "framebuffer_ltdc__initialize_layer" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:255:15" }
+node: { title: "framebuffer_ltdc__set_background" label: "Set_Background\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:243:15\n24 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__set_background" targetname: "stm32__ltdc__set_background" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:248:17" }
+edge: { sourcename: "framebuffer_ltdc__set_background" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:91:18" }
+edge: { sourcename: "framebuffer_ltdc__set_background" targetname: "framebuffer_ltdc__initialized" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:91:25" }
+edge: { sourcename: "framebuffer_ltdc__set_background" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:243:15" }
+node: { title: "framebuffer_ltdc__swapped" label: "Swapped\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:232:15\n16 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__swapped" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:232:15" }
+node: { title: "framebuffer_ltdc__height" label: "Height\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:216:15\n24 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__height" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:224:24" }
+edge: { sourcename: "framebuffer_ltdc__height" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:222:24" }
+edge: { sourcename: "framebuffer_ltdc__height" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:84:18" }
+edge: { sourcename: "framebuffer_ltdc__height" targetname: "framebuffer_ltdc__initialized" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:84:25" }
+edge: { sourcename: "framebuffer_ltdc__height" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:216:15" }
+node: { title: "framebuffer_ltdc__width" label: "Width\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:200:15\n24 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__width" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:208:24" }
+edge: { sourcename: "framebuffer_ltdc__width" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:206:24" }
+edge: { sourcename: "framebuffer_ltdc__width" targetname: "system__assertions__raise_assert_failure" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:80:18" }
+edge: { sourcename: "framebuffer_ltdc__width" targetname: "framebuffer_ltdc__initialized" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:80:25" }
+edge: { sourcename: "framebuffer_ltdc__width" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:200:15" }
+node: { title: "framebuffer_ltdc__supported" label: "Supported\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:186:15\n16 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__supported" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:186:15" }
+node: { title: "framebuffer_ltdc__max_layers" label: "Max_Layers\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:173:15\n16 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__max_layers" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:173:15" }
+node: { title: "framebuffer_ltdc__initialized" label: "Initialized\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:161:15\n16 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__initialized" targetname: "stm32__ltdc__initialized" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:166:7" }
+edge: { sourcename: "framebuffer_ltdc__initialized" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:161:15" }
+node: { title: "framebuffer_ltdc__set_mode" label: "Set_Mode\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:143:15\n16 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__set_mode" targetname: "stm32__dma2d__interrupt__initialize" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:153:34" }
+edge: { sourcename: "framebuffer_ltdc__set_mode" targetname: "stm32__dma2d__polling__initialize" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:151:32" }
+edge: { sourcename: "framebuffer_ltdc__set_mode" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:149:12" }
+edge: { sourcename: "framebuffer_ltdc__set_mode" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:143:15" }
+node: { title: "framebuffer_ltdc__set_orientation" label: "Set_Orientation\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:103:15\n48 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__set_orientation" targetname: "stm32__dma2d_bitmap__fill" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:133:44" }
+edge: { sourcename: "framebuffer_ltdc__set_orientation" targetname: "memory_mapped_bitmap__set_source" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:132:44" }
+edge: { sourcename: "framebuffer_ltdc__set_orientation" targetname: "memory_mapped_bitmap__height" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:130:46" }
+edge: { sourcename: "framebuffer_ltdc__set_orientation" targetname: "stm32__dma2d_bitmap__Oeq" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:126:45" }
+edge: { sourcename: "framebuffer_ltdc__set_orientation" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:103:15" }
+node: { title: "framebuffer_ltdc__initialize" label: "Initialize\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:49:4\n56 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__initialize" targetname: "stm32__dma2d__interrupt__initialize" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:95:34" }
+edge: { sourcename: "framebuffer_ltdc__initialize" targetname: "stm32__dma2d__polling__initialize" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:93:32" }
+edge: { sourcename: "framebuffer_ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:91:12" }
+edge: { sourcename: "framebuffer_ltdc__initialize" targetname: "stm32__sdram__initialize" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:89:18" }
+edge: { sourcename: "framebuffer_ltdc__initialize" targetname: "stm32__ltdc__initialize" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:77:17" }
+edge: { sourcename: "framebuffer_ltdc__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.adb:49:4" }
+node: { title: "framebuffer_ltdc___size__2" label: "Framebuffer_Ltdc\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:164:9\n16 bytes (static)" }
+node: { title: "framebuffer_ltdc__frame_bufferIP" label: "Frame_Bufferip\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:164:9\n24 bytes (static)" }
+node: { title: "framebuffer_ltdc__Tfb_currentBIP" label: "Tfb_Currentbip\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:162:4\n16 bytes (static)" }
+node: { title: "framebuffer_ltdc__Tfb_arrayBIP" label: "Tfb_Arraybip\n/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:159:4\n56 bytes (static)" }
+edge: { sourcename: "framebuffer_ltdc__Tfb_arrayBIP" targetname: "stm32__dma2d_bitmap__dma2d_bitmap_bufferIP" label: "/home/gps/ada/adl/boards/stm32_common/ltdc/framebuffer_ltdc.ads:159:4" }
+}

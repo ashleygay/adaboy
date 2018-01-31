@@ -1,0 +1,40 @@
+class {
+  classname: "touch_panel_stmpe811__Ttouch_panelB"
+  label: "touch_panel_stmpe811__Ttouch_panelB\touch_panel_stmpe811.ads:63:4"
+  parent: "stmpe811__stmpe811_device"
+  virtuals: "-1:touch_panel_stmpe811___size__2,-1:stmpe811__stmpe811_device\n
+             13:touch_panel_stmpe811__initialize\n
+             14:touch_panel_stmpe811__initialize__2\n
+             15:touch_panel_stmpe811__set_orientation"
+}
+graph: { title: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb"
+node: { title: "ravenscar_time__delays" label: "Delays\n/home/gps/ada/adl/middleware/src/ravenscar-common/ravenscar_time.ads:36:13" shape : ellipse }
+node: { title: "stmpe811__set_bounds" label: "SET_BOUNDS\n/home/gps/ada/adl/components/src/touch_panel/stmpe811/stmpe811.ads:48:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/usr/gnat/arm-eabi/lib/gnat/ravenscar-sfp-stm32f429disco/gnat/a-except.adb:41:17" shape : ellipse }
+node: { title: "stmpe811__initialize" label: "INITIALIZE\n/home/gps/ada/adl/components/src/touch_panel/stmpe811/stmpe811.ads:44:13" shape : ellipse }
+node: { title: "stm32__setup__setup_i2c_master" label: "SETUP_I2C_MASTER\n/home/gps/ada/adl/arch/ARM/STM32/drivers/stm32-setup.ads:46:14" shape : ellipse }
+node: { title: "stm32__i2c__port_enabled" label: "PORT_ENABLED\n/home/gps/ada/adl/arch/ARM/STM32/drivers/i2c_stm32f4/stm32-i2c.ads:100:13" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "stmpe811__stmpe811_deviceIP" label: "STMPE811_DEVICEIP\n/home/gps/ada/adl/components/src/touch_panel/stmpe811/stmpe811.ads:74:9" shape : ellipse }
+node: { title: "touch_panel_stmpe811___elabs" label: "Touch_Panel_Stmpe811\n/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.ads:40:1\n8 bytes (static)" }
+edge: { sourcename: "touch_panel_stmpe811___elabs" targetname: "ravenscar_time__delays" label: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.ads:66:33" }
+node: { title: "touch_panel_stmpe811___elabb" label: "Touch_Panel_Stmpe811\n/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:56:1\n4 bytes (static)" }
+node: { title: "touch_panel_stmpe811__set_orientation" label: "Set_Orientation\n/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:107:4\n16 bytes (static)" }
+edge: { sourcename: "touch_panel_stmpe811__set_orientation" targetname: "stmpe811__set_bounds" label: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:118:17" }
+edge: { sourcename: "touch_panel_stmpe811__set_orientation" targetname: "stmpe811__set_bounds" label: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:114:17" }
+edge: { sourcename: "touch_panel_stmpe811__set_orientation" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:112:12" }
+edge: { sourcename: "touch_panel_stmpe811__set_orientation" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:107:4" }
+node: { title: "touch_panel_stmpe811__initialize__2" label: "Initialize\n/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:94:4\n32 bytes (static)" }
+edge: { sourcename: "touch_panel_stmpe811__initialize__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:99:10" }
+edge: { sourcename: "touch_panel_stmpe811__initialize__2" targetname: "touch_panel_stmpe811__initialize" label: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:98:18" }
+edge: { sourcename: "touch_panel_stmpe811__initialize__2" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:94:4" }
+node: { title: "touch_panel_stmpe811__initialize" label: "Initialize\n/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:68:4\n32 bytes (static)" }
+edge: { sourcename: "touch_panel_stmpe811__initialize" targetname: "touch_panel_stmpe811__set_orientation" label: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:85:11" }
+edge: { sourcename: "touch_panel_stmpe811__initialize" targetname: "stmpe811__initialize" label: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:84:14" }
+edge: { sourcename: "touch_panel_stmpe811__initialize" targetname: "stm32__setup__setup_i2c_master" label: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:76:21" }
+edge: { sourcename: "touch_panel_stmpe811__initialize" targetname: "stm32__i2c__port_enabled" label: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:75:20" }
+edge: { sourcename: "touch_panel_stmpe811__initialize" targetname: "__gnat_last_chance_handler" label: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.adb:68:4" }
+node: { title: "touch_panel_stmpe811___size__2" label: "Touch_Panel_Stmpe811\n/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.ads:63:4\n16 bytes (static)" }
+node: { title: "touch_panel_stmpe811__Ttouch_panelBIP" label: "Ttouch_Panelbip\n/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.ads:63:4\n32 bytes (static)" }
+edge: { sourcename: "touch_panel_stmpe811__Ttouch_panelBIP" targetname: "stmpe811__stmpe811_deviceIP" label: "/home/gps/ada/adl/boards/stm32_common/stm32f429disco/touch_panel_stmpe811.ads:63:4" }
+}

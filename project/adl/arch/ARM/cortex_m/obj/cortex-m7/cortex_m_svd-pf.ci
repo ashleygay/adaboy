@@ -1,0 +1,12 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/cortex_m/src/cm7/cortex_m_svd-pf.ads"
+node: { title: "cortex_m_svd__pf__pf_peripheralIP" label: "Pf_Peripheralip\n/home/gps/ada/adl/arch/ARM/cortex_m/src/cm7/cortex_m_svd-pf.ads:223:9\n16 bytes (static)" }
+edge: { sourcename: "cortex_m_svd__pf__pf_peripheralIP" targetname: "cortex_m_svd__pf__csselr_registerIP" label: "/home/gps/ada/adl/arch/ARM/cortex_m/src/cm7/cortex_m_svd-pf.ads:231:7" }
+node: { title: "cortex_m_svd__pf__csselr_registerIP" label: "Csselr_Registerip\n/home/gps/ada/adl/arch/ARM/cortex_m/src/cm7/cortex_m_svd-pf.ads:201:9\n16 bytes (static)" }
+node: { title: "cortex_m_svd__pf__ccsidr_registerIP" label: "Ccsidr_Registerip\n/home/gps/ada/adl/arch/ARM/cortex_m/src/cm7/cortex_m_svd-pf.ads:149:9\n16 bytes (static)" }
+node: { title: "cortex_m_svd__pf__ctr_registerIP" label: "Ctr_Registerip\n/home/gps/ada/adl/arch/ARM/cortex_m/src/cm7/cortex_m_svd-pf.ads:111:9\n16 bytes (static)" }
+node: { title: "cortex_m_svd__pf__ctr_format_fieldRP" label: "Ctr_Format_Fieldrp\n/home/gps/ada/adl/arch/ARM/cortex_m/src/cm7/cortex_m_svd-pf.ads:102:9\n16 bytes (static)" }
+node: { title: "cortex_m_svd__pf__ctr_cwg_fieldRP" label: "Ctr_Cwg_Fieldrp\n/home/gps/ada/adl/arch/ARM/cortex_m/src/cm7/cortex_m_svd-pf.ads:93:9\n16 bytes (static)" }
+node: { title: "cortex_m_svd__pf__ctr_dminline_fieldRP" label: "Ctr_Dminline_Fieldrp\n/home/gps/ada/adl/arch/ARM/cortex_m/src/cm7/cortex_m_svd-pf.ads:82:9\n16 bytes (static)" }
+node: { title: "cortex_m_svd__pf__ctr_iminline_fieldRP" label: "Ctr_Iminline_Fieldrp\n/home/gps/ada/adl/arch/ARM/cortex_m/src/cm7/cortex_m_svd-pf.ads:73:9\n16 bytes (static)" }
+node: { title: "cortex_m_svd__pf__clidr_registerIP" label: "Clidr_Registerip\n/home/gps/ada/adl/arch/ARM/cortex_m/src/cm7/cortex_m_svd-pf.ads:43:9\n16 bytes (static)" }
+}

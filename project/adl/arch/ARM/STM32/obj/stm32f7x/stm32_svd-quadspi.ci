@@ -1,0 +1,16 @@
+graph: { title: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads"
+node: { title: "stm32_svd__quadspi__quadspi_peripheralIP" label: "QUADSPI_PERIPHERALIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads:281:9\n16 bytes (static)" }
+edge: { sourcename: "stm32_svd__quadspi__quadspi_peripheralIP" targetname: "stm32_svd__quadspi__lptr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads:307:7" }
+edge: { sourcename: "stm32_svd__quadspi__quadspi_peripheralIP" targetname: "stm32_svd__quadspi__pir_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads:305:7" }
+edge: { sourcename: "stm32_svd__quadspi__quadspi_peripheralIP" targetname: "stm32_svd__quadspi__ccr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads:293:7" }
+edge: { sourcename: "stm32_svd__quadspi__quadspi_peripheralIP" targetname: "stm32_svd__quadspi__fcr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads:289:7" }
+edge: { sourcename: "stm32_svd__quadspi__quadspi_peripheralIP" targetname: "stm32_svd__quadspi__dcr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads:285:7" }
+edge: { sourcename: "stm32_svd__quadspi__quadspi_peripheralIP" targetname: "stm32_svd__quadspi__cr_registerIP" label: "/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads:283:7" }
+node: { title: "stm32_svd__quadspi__lptr_registerIP" label: "LPTR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads:262:9\n16 bytes (static)" }
+node: { title: "stm32_svd__quadspi__pir_registerIP" label: "PIR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads:245:9\n16 bytes (static)" }
+node: { title: "stm32_svd__quadspi__ccr_registerIP" label: "CCR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads:192:9\n16 bytes (static)" }
+node: { title: "stm32_svd__quadspi__fcr_registerIP" label: "FCR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads:155:9\n16 bytes (static)" }
+node: { title: "stm32_svd__quadspi__sr_registerIP" label: "SR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads:119:9\n16 bytes (static)" }
+node: { title: "stm32_svd__quadspi__dcr_registerIP" label: "DCR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads:90:9\n16 bytes (static)" }
+node: { title: "stm32_svd__quadspi__cr_registerIP" label: "CR_REGISTERIP\n/home/gps/ada/adl/arch/ARM/STM32/svd/stm32f7x/stm32_svd-quadspi.ads:21:9\n16 bytes (static)" }
+}

@@ -1,0 +1,15 @@
+class {
+  classname: "hal__gpio__gpio_point"
+  label: "hal__gpio__gpio_point\hal-gpio.ads:44:9"
+  virtuals: "1:hal__gpio__mode\n
+             2:hal__gpio__set_mode\n
+             3:hal__gpio__pull_resistor\n
+             4:hal__gpio__set_pull_resistor\n
+             5:hal__gpio__set\n
+             6:hal__gpio__set__2\n
+             7:hal__gpio__clear\n
+             8:hal__gpio__toggle\n
+             -1:hal__gpio___size"
+}
+graph: { title: "/home/gps/ada/adl/hal/src/hal-gpio.ads"
+}
