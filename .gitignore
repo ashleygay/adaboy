@@ -8,3 +8,5 @@
 obj/*
 src/gistreboy/obj/*
 docker.sh
+project/main
+project/obj
