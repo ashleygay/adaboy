@@ -29,9 +29,13 @@ abstract project Config is
          when "Production" =>
             for Default_Switches ("Ada") use
               ("-g", "-O3", "-gnatp", "-gnatn");
+            for Default_Switches ("C++") use
+              ("-g", "-O3", "-fno-threadsafe-statics", "-mfloat-abi=hard");
          when "Debug" =>
             for Default_Switches ("Ada") use
               ("-g", "-O0", "-gnata") & Callgraph_Switch;
+            for Default_Switches ("C++") use
+              ("-g", "-O0", "-fno-threadsafe-statics", "-mfloat-abi=hard");
       end case;
       for Default_Switches ("ada") use Compiler'Default_Switches ("Ada") &
         ("-gnatwa", "-gnatQ", "-gnatw.X", "-gnaty", "-gnatyO",
