@@ -2,7 +2,7 @@ with "adl/boards/stm32f746_discovery/stm32f746_discovery.gpr";
 
 project Prj extends "adl/examples/shared/common/common.gpr" is
 
-   for Languages use ("Ada");
+   for Languages use ("Ada", "C++");
    for Runtime ("Ada") use STM32F746_Discovery'Runtime("Ada");
 
    for Object_Dir use "obj";
