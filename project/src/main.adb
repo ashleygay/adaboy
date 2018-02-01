@@ -16,7 +16,7 @@ is
    GB : aliased gameboy_hpp.Class_Gameboy.Gameboy := gameboy_hpp.Class_Gameboy.New_Gameboy;
    type uchar_array is array (size_t range <>) of aliased unsigned_char;
    pixels_array : uchar_array (0 .. 23039);
-   ptr : access unsigned_char := pixels_array (pixels_array'First)'Access;
+   ptr : constant access unsigned_char := pixels_array (pixels_array'First)'Access;
 
    function Bitmap_Buffer return not null Any_Bitmap_Buffer;
 
