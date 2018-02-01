@@ -1,6 +1,7 @@
 #pragma once
 
-#include <processor.hpp>
+class Processor;
+
 #include <instructionargs.hpp>
 #include <registers.hpp>
 #include <word_operations.hpp>

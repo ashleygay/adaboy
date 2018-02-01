@@ -15,6 +15,9 @@ project Prj extends "adl/examples/shared/common/common.gpr" is
    package Linker is
       for Default_Switches ("ada") use
         ("-gc-section", "-Wl,--print-memory-usage");
+      for Default_Switches ("C++") use
+        ("-nolibstd");
+
    end Linker;
 
 end Prj;

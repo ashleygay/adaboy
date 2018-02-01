@@ -5,6 +5,8 @@ class Instruction;
 #include <word_operations.hpp>
 using OpCode = uint16_t;
 
+#include <instruction.hpp>
+
 class InstructionSet
 {
 	public:

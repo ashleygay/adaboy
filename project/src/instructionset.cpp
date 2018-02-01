@@ -1,5 +1,4 @@
 #include <instructionset.hpp>
-#include <instruction.hpp>
 
 InstructionSet::InstructionSet()
 {
