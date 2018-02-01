@@ -24,7 +24,7 @@ bool Gameboy::readyToLaunch()
 	return false;
 }
 
-void Gameboy::step(Screen& s)
+void Gameboy::step(unsigned char * s)
 {
 	checkKeys(keys);
 	int cpu_cycles = p.step();

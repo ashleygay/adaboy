@@ -7,11 +7,17 @@ with HAL;                 use HAL;
 with HAL.Bitmap;          use HAL.Bitmap;
 
 --  We import the gameboy
---  with gameboy_hpp;
+with gameboy_hpp;
+
+with Interfaces.C;        use Interfaces.C;
 
 procedure Main
 is
---  GB : gameboy_hpp.Class_Gameboy.Gameboy := gameboy_hpp.Class_Gameboy.New_Gameboy;
+   GB : aliased gameboy_hpp.Class_Gameboy.Gameboy := gameboy_hpp.Class_Gameboy.New_Gameboy;
+   type uchar_array is array (size_t range <>) of aliased unsigned_char;
+   pixels_array : uchar_array (0 .. 23039);
+   ptr : access unsigned_char := pixels_array (pixels_array'First)'Access;
+
    function Bitmap_Buffer return not null Any_Bitmap_Buffer;
 
    function Bitmap_Buffer return not null Any_Bitmap_Buffer is
@@ -26,10 +32,12 @@ is
    X : Natural;
    Y : Natural;
 
+   pix : unsigned_char := 0;
+   pixx : size_t := 0;
+   pixy : size_t := 0;
+
    Width : Natural;
    Height : Natural;
-
-   Black : Natural;
 
 begin
    Display.Initialize;
@@ -42,24 +50,36 @@ begin
       Bitmap_Buffer.Set_Source (HAL.Bitmap.Dark_Green);
       Bitmap_Buffer.Fill;
 
-      Black := 0;
       X := 0;
       Y := 0;
+
+      pixx := 0;
+      pixy := 0;
+
       Bitmap_Buffer.Set_Pixel ((Width / 2, Height / 2), HAL.Bitmap.Red);
-      while X < 144 loop
-         while Y < 160 loop
-            if Black = 1 then
-               Bitmap_Buffer.Set_Pixel ((X, Y), HAL.Bitmap.Black);
-               Black := 0;
-            else
+      while X < 160 loop
+         while Y < 144 loop
+            pix := pixels_array (pixy * 144 + pixx);
+            if pix = 0 then
                Bitmap_Buffer.Set_Pixel ((X, Y), HAL.Bitmap.White);
-               Black := 1;
+            elsif pix = 1 then
+               Bitmap_Buffer.Set_Pixel ((X, Y), HAL.Bitmap.Light_Grey);
+            elsif pix = 2 then
+               Bitmap_Buffer.Set_Pixel ((X, Y), HAL.Bitmap.Dark_Grey);
+            else
+               Bitmap_Buffer.Set_Pixel ((X, Y), HAL.Bitmap.Black);
             end if;
             Y := Y + 1;
+            pixy := pixy + 1;
          end loop;
          Y := 0;
          X := X + 1;
+         pixy := 0;
+         pixx := pixx + 1;
       end loop;
       Display.Update_Layers;
+
+      gameboy_hpp.Class_Gameboy.step (GB'Access, ptr);
+
    end loop;
 end Main;

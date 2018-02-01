@@ -11,7 +11,6 @@
 #include <memory.hpp>
 #include <lcd.hpp>
 #include <timer_handler.hpp>
-#include <screen.hpp>
 
 class Gameboy
 {
@@ -19,7 +18,7 @@ class Gameboy
 		Gameboy();
 
 		// Execute a single step loop of the emulator
-		void step(Screen& s);
+		void step(unsigned char * s);
 
 		void changeGame(uint8_t *game);
 

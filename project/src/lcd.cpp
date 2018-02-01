@@ -14,7 +14,7 @@ LCD::LCD(Memory &mem) :
 }
 
 
-void LCD::step(int elapsed_time, Screen& s)
+void LCD::step(int elapsed_time, unsigned char * s)
 {
 	update_variables(elapsed_time);
 
@@ -76,19 +76,12 @@ void LCD::draw(Screen& s)
 	// 2 -> dark gray
 	// 3 -> black
 
-	unsigned int rowstride = s.rowstride;
-	unsigned int n_channels = s.n_channels;
-	unsigned char *my_pixels = s.pixels;
-
 	for (unsigned int i = 0; i < 160; i++)
 	{
 		for (unsigned int j = 0; j < 144; j++)
 		{
-			unsigned char *p = my_pixels + j * rowstride + i * n_channels;
-			unsigned char color = 255 - (pixels[i][j] * 85);
-			p[0] = color;
-			p[1] = color;
-			p[2] = color;
+			//Conversion to RGB format is done in the ADA world
+			s[i+144*j] = pixels[i][j];
 
 		/* We do it in a nicer way
 			if (pixels[i][j] == 1) {

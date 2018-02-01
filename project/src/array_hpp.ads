@@ -17,10 +17,10 @@ package array_hpp is
 -- the type generated is actually a record of type c_array_unsigned_char65536
 
 
-   type c_array_sprite40 is array (0 .. 40) of sprite_hpp.Class_Sprite.Sprite;
-   type c_array_unsigned_char65536 is array (0 .. 65536) of unsigned_char;
-   type c_array_int144 is array (0 .. 144) of int;
-   type c_array_c_array160 is array (0 .. 160) of c_array_int144;
+   type c_array_sprite40 is array (0 .. 39) of sprite_hpp.Class_Sprite.Sprite;
+   type c_array_unsigned_char65536 is array (0 .. 65535) of unsigned_char;
+   type c_array_int144 is array (0 .. 143) of int;
+   type c_array_c_array160 is array (0 .. 159) of c_array_int144;
 
    -- Manual check done
    package template_array_c_array_160 is

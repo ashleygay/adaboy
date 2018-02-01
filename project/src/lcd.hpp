@@ -13,7 +13,6 @@
 
 #include <memory.hpp>
 #include <video.hpp>
-#include <screen.hpp>
 
 
 enum LCDState {Mode0, Mode1, Mode2, Mode3};
@@ -93,7 +92,7 @@ class LCD
 
 		void update_variables(int elapsed_time);
 
-		void step(int elapsed_time, Screen& s);
+		void step(int elapsed_time, unsigned char* s);
 
 		/*render the tile pixels for the current line*/
 		void render_tiles(int current_line);
@@ -112,7 +111,7 @@ class LCD
 
 		void check_interrupt_stat(int num_bit);
 
-		void draw(Screen& s);
+		void draw(unsigned char * s);
 
 		void draw_scanline();
 
