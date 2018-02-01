@@ -41,17 +41,13 @@ LINARO_GZ="gcc-linaro-6.3.1-2017.05-i686_arm-eabi.tar.xz"
 }
 
 # We forward the X server so that the container can use a GUI
-# TODO: add linaro toolchain
 {
 	docker run -e DISPLAY=$DISPLAY\
 	-v /tmp/.X11-unix:/tmp/.X11-unix \
-	-v $CUR_PATH/${LINARO_GZ%.tar.*}/bin/:/usr/gnat/bin/ \
-	-v $CUR_PATH/${LINARO_GZ%.tar.*}/libexec/gcc/:/lib/gcc \
+	-v $CUR_PATH/${GNAT_GZ%.tar.*}/:/usr/gnat/ \
+	-v $CUR_PATH/${LINARO_GZ%.tar.*}/libexec/gcc/arm-eabi/6.3.1/cc1plus:/usr/gnat/libexec/gcc/arm-eabi/6.3.1/cc1plus \
+	-v $CUR_PATH/${LINARO_GZ%.tar.*}/bin/arm-eabi-g++:/usr/gnat/bin/arm-eabi-g++ \
 	-v $CUR_PATH/project:/home/gps/ada/ \
 	-v ~/.vimrc:/home/gps/.vimrc \
 	-t -i ada:latest
 }
-
-#	-v $CUR_PATH/${GNAT_GZ%.tar.*}/bin:/usr/gnat/bin \
-#	-v $CUR_PATH/${LINARO_GZ%.tar.*}/bin/arm-eabi-g++:/usr/gnat/bin/arm-eabi-g++ \
-#	-v $CUR_PATH/${LINARO_GZ%.tar.*}/bin/arm-eabi-c++:/usr/gnat/bin/arm-eabi-c++ \
