@@ -68,7 +68,7 @@ void LCD::step(int elapsed_time, unsigned char * s)
 	}
 }
 
-void LCD::draw(Screen& s)
+void LCD::draw(unsigned char * s)
 {
 	// Each pixel is an unsigned char:
 	// 0 -> white
