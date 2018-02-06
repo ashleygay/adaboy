@@ -1,13 +1,6 @@
 # AdaBoy
-Ada project for EPITA
 
-* Group members:
-  + Corentin Gay
-  + Arnaud Bastie
-  + Pierre-Adrien Estanove
-  + Pierre Chavanne
-
-  Corentin Gay and Arnaud Bastie worked on the project.
+Fork of: https://github.com/corentingay/ada_epita for personnal tinkering
 
 * We are porting a gameboy emulator made in C++ to a STM32F7.
 
