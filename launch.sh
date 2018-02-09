@@ -39,7 +39,7 @@ LINARO_GZ="gcc-linaro-6.3.1-2017.05-i686_arm-eabi.tar.xz"
 # Setup and build the container here
 {
 	xhost +local:docker
-	#docker build -t ada project/
+	docker build -t ada project/
 }
 
 # We forward the X server so that the container can use a GUI
