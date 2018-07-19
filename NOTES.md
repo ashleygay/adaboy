@@ -3,6 +3,10 @@ C++ since the GNAT toolchain for ARM does not have a C++ compiler.
 We managed to compile and ruin C++ and Ada together on X86_64, but
 we did not manage to do the same on ARM.
 
++ Solutions:
+  + We had to use the linaro compiler as a C++ compiler, as well as final linker.
+  + We produce an executable that we can strip and test
+
 + Problems encountered:
   + undefined reference `__cxxa_pure_virtual()`
     We did not manage to get rid of that error, it is related to our use of
@@ -17,7 +21,7 @@ we did not manage to do the same on ARM.
     * Those builtins are used to guarantee threadsafe static initialization,
       but they are not present for our target.
       To get rid of that error, we disable the functionnality by adding
-      `-fno-threadsage-statics` to config.gpr
+      `-fno-threadsafe-statics` to config.gpr
 
   + undefined reference to `__aeabi_ldivmod'
     * Related to the use of 64bits division, we did not manage to fix that error
@@ -38,6 +42,9 @@ that we know how to use such as a Makefile.
    + https://gcc.gnu.org/onlinedocs/gcc-4.9.2/gnat_ugn/Generating-Ada-Bindings-for-C-and-C_002b_002b-headers.html#Generating-Ada-Bindings-for-C-and-C_002b_002b-headers
 
    +https://gcc.gnu.org/onlinedocs/gnat_ugn/Interfacing-with-C_002b_002b-at-the-Class-Level.html
+
+Maybe not the right linaro compiler, we miss a library for hard float with the
+fpu of the stm32f746
 
 * Other interesting links:
    + Practical bare metal in c++ : reddit post + actual blog : https://arobenko.gitbooks.io/bare_metal_cpp/content/

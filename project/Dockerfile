@@ -62,6 +62,16 @@ ENV LC_ALL en_US.UTF-8
 
 RUN useradd -ms /bin/bash gps
 RUN echo "export PATH=/usr/gnat/bin:\$PATH" >> /home/gps/.bashrc
+
+WORKDIR /home/gps
+
+RUN wget "mirrors.cdn.adacore.com/art/591c6413c7a447af2deed0e3" -O gnat.tar.gz
+RUN tar -xvf gnat.tar.gz
+RUN rm gnat.tar.gz
+
+WORKDIR /home/gps/gnat-gpl-2017-arm-elf-linux-bin
+RUN echo -e "\n\ny\ny\n\n" | ./doinstall
+
 USER gps
 WORKDIR /home/gps
 
@@ -75,6 +85,8 @@ WORKDIR /home/gps/stlink/build/Release
 RUN mkdir ~/.stlink_install
 RUN make install DESTDIR=~/.stlink_install
 # End of the install
+
+RUN echo "set -o vi" >> /home/gps/.bashrc
 
 USER gps
 WORKDIR /home/gps

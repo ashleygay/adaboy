@@ -1,8 +1,8 @@
 with Last_Chance_Handler; pragma Unreferenced (Last_Chance_Handler);
 
 with STM32.Board;         use STM32.Board;
---  with STM32.DMA2D;         use STM32.DMA2D;
 with STM32.DMA2D_Bitmap;  use STM32.DMA2D_Bitmap;
+
 with HAL;                 use HAL;
 with HAL.Bitmap;          use HAL.Bitmap;
 
@@ -18,8 +18,6 @@ is
    pixels_array : uchar_array (0 .. 23039);
    ptr : constant access unsigned_char := pixels_array (pixels_array'First)'Access;
 
-   function Bitmap_Buffer return not null Any_Bitmap_Buffer;
-
    function Bitmap_Buffer return not null Any_Bitmap_Buffer is
    begin
       if Display.Hidden_Buffer (1).all not in DMA2D_Bitmap_Buffer then
@@ -33,8 +31,8 @@ is
    Y : Natural;
 
    pix : unsigned_char := 0;
-   pixx : size_t := 0;
-   pixy : size_t := 0;
+   pix_x : size_t := 0;
+   pix_y : size_t := 0;
 
    Width : Natural;
    Height : Natural;
@@ -53,13 +51,13 @@ begin
       X := 0;
       Y := 0;
 
-      pixx := 0;
-      pixy := 0;
+      pix_x := 0;
+      pix_y := 0;
 
       Bitmap_Buffer.Set_Pixel ((Width / 2, Height / 2), HAL.Bitmap.Red);
       while X < 160 loop
          while Y < 144 loop
-            pix := pixels_array (pixy * 144 + pixx);
+            pix := pixels_array (pix_y * 144 + pix_x);
             if pix = 0 then
                Bitmap_Buffer.Set_Pixel ((X, Y), HAL.Bitmap.White);
             elsif pix = 1 then
@@ -70,12 +68,12 @@ begin
                Bitmap_Buffer.Set_Pixel ((X, Y), HAL.Bitmap.Black);
             end if;
             Y := Y + 1;
-            pixy := pixy + 1;
+            pix_y := pix_y + 1;
          end loop;
          Y := 0;
          X := X + 1;
-         pixy := 0;
-         pixx := pixx + 1;
+         pix_y := 0;
+         pix_x := pix_x + 1;
       end loop;
       Display.Update_Layers;
 

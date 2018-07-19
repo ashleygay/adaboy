@@ -1,2 +1,3 @@
 gprclean prj.gpr
-gprbuild -v prj.gpr -bargs:C++ c_compiler_name=g++ -largs -nostdlib
+gprbuild -v prj.gpr
+# ./final_link.sh
